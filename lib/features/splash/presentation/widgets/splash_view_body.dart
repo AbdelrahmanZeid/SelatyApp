@@ -3,26 +3,10 @@ import 'package:selaty/core/utils/app_assets.dart';
 import 'package:selaty/core/utils/app_funcation.dart';
 import 'package:selaty/core/utils/app_size.dart';
 
-class SplashViewBody extends StatefulWidget {
+class SplashViewBody extends StatelessWidget {
   const SplashViewBody({super.key});
 
-  @override
-  State<SplashViewBody> createState() => _SplashViewBodyState();
-}
-
-class _SplashViewBodyState extends State<SplashViewBody> {
-  @override
-  // void initState() {
-  //   Future.delayed(
-  //     const Duration(seconds: 4),
-  //     () => navigation(
-  //       context,
-  //       "/onBoardingView",
-  //     ),
-  //   );
-  //   super.initState();
-  // }
-
+  
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -61,5 +45,3 @@ class _SplashViewBodyState extends State<SplashViewBody> {
     );
   }
 }
-
-

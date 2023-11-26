@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:selaty/core/utils/app_route.dart';
+import 'package:selaty/core/routes/app_route.dart';
 import 'package:selaty/core/utils/theme_manager.dart';
 
 class Selaty extends StatelessWidget {

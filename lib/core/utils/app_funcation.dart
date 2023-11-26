@@ -3,13 +3,13 @@ import 'package:go_router/go_router.dart';
 import 'package:selaty/core/utils/app_assets.dart';
 import 'package:selaty/core/utils/app_size.dart';
 
-void navigation(BuildContext context, String path) {
+void navigation( context, String path) {
   GoRouter.of(context).push(
     path,
   );
 }
-void navigationWithReplace(BuildContext context, String path) {
-  GoRouter.of(context).push(
+void navigationWithReplace( context, String path) {
+  GoRouter.of(context).pushReplacement(
     path,
   );
 }

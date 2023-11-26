@@ -1,5 +1,5 @@
-class AppAssets {
-  AppAssets._();
+class Assets {
+  Assets._();
   
   /// Assets for assetsImagesFruitOne
   /// assets/images/fruit_one.jpg
@@ -8,6 +8,10 @@ class AppAssets {
   /// Assets for assetsImagesFruitTwo
   /// assets/images/fruit_two.jpg
   static const String assetsImagesFruitTwo = "assets/images/fruit_two.jpg";
+
+  /// Assets for assetsImagesGreyFruit
+  /// assets/images/grey_fruit.jpg
+  static const String assetsImagesGreyFruit = "assets/images/grey_fruit.jpg";
 
   /// Assets for assetsImagesMain
   /// assets/images/main.jpg

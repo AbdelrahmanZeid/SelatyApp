@@ -1,4 +1,5 @@
 import 'package:go_router/go_router.dart';
+import 'package:selaty/features/on_boarding/presentaion/views/on_boarding_view.dart';
 import 'package:selaty/features/splash/presentation/views/splash_view.dart';
 
 final GoRouter router = GoRouter(
@@ -7,6 +8,12 @@ final GoRouter router = GoRouter(
       path: '/',
       builder: (context, GoRouterState state) {
         return const SplashView();
+      },
+    ),
+    GoRoute(
+      path: '/onBoardingView',
+      builder: (context, GoRouterState state) {
+        return const OnBoardingView();
       },
     ),
   ],

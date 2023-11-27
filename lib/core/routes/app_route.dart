@@ -21,7 +21,7 @@ final GoRouter router = GoRouter(
     GoRoute(
       path: "/login",
       builder: (context, state) {
-        return const LoginView();
+        return const AuthView();
       },
     ),
   ],

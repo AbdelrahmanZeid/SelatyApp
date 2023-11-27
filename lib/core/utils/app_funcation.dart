@@ -19,7 +19,7 @@ Widget getGreyFruitImage() {
     bottom: 0,
     right: 0,
     child: Image.asset(
-      Assets.assetsImagesGreyFruit,
+      Assets.assetsImagesGreyFruitImage,
       width: AppSize.getWidth(
         170,
       ),

@@ -11,4 +11,7 @@ class AppStrings {
   static const alreadyHaveAccount = "لديك حساب بالفعل؟";
 
   static const forgetPassword = "هل نسيت كلمه السر";
+  static const onBoardingOneTtile = "البحث بالقرب منك";
+  static const onBoardingOneSubTtile =
+      "ابحث عن المتاجر المفضله التي تريدها في موقعك أو حيك";
 }

@@ -14,4 +14,12 @@ class AppStrings {
   static const onBoardingOneTtile = "البحث بالقرب منك";
   static const onBoardingOneSubTtile =
       "ابحث عن المتاجر المفضله التي تريدها في موقعك أو حيك";
+
+  static const onBoardingTwoTtile = "عروض طازجه وجوده";
+  static const onBoardingTwoSubTtile =
+      "جميع العناصر لها نضاره حقيقيه  وهي مخصص لاحتياجاتك";
+
+  static const onBoardingThreeTitle = "تسليم سريع للمنزل";
+  static const onBoardingThreeSubTtile =
+      "جميع العناصر لها نضاره حقيقيه  وهي مخصص لاحتياجاتك";
 }

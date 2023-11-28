@@ -3,12 +3,17 @@ import 'package:go_router/go_router.dart';
 import 'package:selaty/core/utils/app_assets.dart';
 import 'package:selaty/core/utils/app_size.dart';
 
-void navigation( context, String path) {
+void navigation(context, String path) {
   GoRouter.of(context).push(
     path,
   );
 }
-void navigationWithReplace( context, String path) {
+
+void goBack(context) {
+  GoRouter.of(context).pop();
+}
+
+void navigationWithReplace(context, String path) {
   GoRouter.of(context).pushReplacement(
     path,
   );
@@ -29,5 +34,3 @@ Widget getGreyFruitImage() {
     ),
   );
 }
-
-

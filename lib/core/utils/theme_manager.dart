@@ -10,5 +10,6 @@ class ThemeManager {
             statusBarBrightness: Brightness.dark,
           ),
         ),
+        fontFamily: 'Pacifico'
       );
 }

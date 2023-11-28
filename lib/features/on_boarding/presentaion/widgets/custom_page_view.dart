@@ -35,7 +35,7 @@ class _CustomPageViewState extends State<CustomPageView> {
             ),
             () => navigation(
               context,
-              "/login",
+              "/auth",
             ),
           );
         }

@@ -29,6 +29,14 @@ class Assets {
   /// assets/images/on_boarding_two.jpg
   static const String assetsImagesOnBoardingTwo = "assets/images/on_boarding_two.jpg";
 
+  /// Assets for assetsImagesPhoto20231128130503
+  /// assets/images/photo_2023-11-28_13-05-03.jpg
+  static const String assetsImagesPhoto20231128130503 = "assets/images/photo_2023-11-28_13-05-03.jpg";
+
+  /// Assets for assetsImagesPhoto20231128130505
+  /// assets/images/photo_2023-11-28_13-05-05.jpg
+  static const String assetsImagesPhoto20231128130505 = "assets/images/photo_2023-11-28_13-05-05.jpg";
+
   /// Assets for assetsImagesSplash
   /// assets/images/splash.jpg
   static const String assetsImagesSplash = "assets/images/splash.jpg";

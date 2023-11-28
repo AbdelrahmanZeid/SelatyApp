@@ -1,11 +1,12 @@
+
 import 'package:flutter/material.dart';
 
-class CustomTextField extends StatelessWidget {
-  CustomTextField(
+class CustomCheckPhoneNumberTextField extends StatelessWidget {
+  CustomCheckPhoneNumberTextField(
       {super.key,
       this.textInputType,
       this.suffixIcon,
-      this.perfixIcon,
+      this.perfix,
       required this.lable,
       this.onChanged,
       required this.obscureText,
@@ -13,7 +14,7 @@ class CustomTextField extends StatelessWidget {
   final String lable;
 
   IconButton? suffixIcon;
-  IconButton? perfixIcon;
+  Widget? perfix;
   TextInputType? textInputType;
 
   final Function(String value)? onChanged;
@@ -23,26 +24,24 @@ class CustomTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextField(
+      // style: TextStyle(
+      //   color: Colors.red,
+      // ),
+
       keyboardType: textInputType,
       obscureText: obscureText,
       onChanged: onChanged,
-      textAlign: TextAlign.right,
-      
       decoration: InputDecoration(
-        prefixIcon:perfixIcon ,
+        prefix: perfix,
+        //   prefixText: "+20",
+      //  prefixIcon: perfix,
         alignLabelWithHint: true,
-       suffixIcon: suffixIcon,
-        label: Align(
-          alignment: Alignment.centerRight,
-          child: Text(
-            lable,
-          ),
+        suffixIcon: suffixIcon,
+        label: Text(
+          lable,
         ),
-        border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(
-            5,
-          ),
-        ),
+        // border: InputBorder.none,
+        border: OutlineInputBorder(),
       ),
     );
   }

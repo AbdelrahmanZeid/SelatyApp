@@ -37,6 +37,10 @@ class Assets {
   /// assets/images/photo_2023-11-28_13-05-05.jpg
   static const String assetsImagesPhoto20231128130505 = "assets/images/photo_2023-11-28_13-05-05.jpg";
 
+  /// Assets for assetsImagesPhoto20231128141726
+  /// assets/images/photo_2023-11-28_14-17-26.jpg
+  static const String assetsImagesPhoto20231128141726 = "assets/images/photo_2023-11-28_14-17-26.jpg";
+
   /// Assets for assetsImagesSplash
   /// assets/images/splash.jpg
   static const String assetsImagesSplash = "assets/images/splash.jpg";

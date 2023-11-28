@@ -1,14 +1,17 @@
+
 import 'package:flutter/material.dart';
 import 'package:selaty/core/utils/app_assets.dart';
 import 'package:selaty/core/utils/app_funcation.dart';
+import 'package:selaty/core/utils/app_size.dart';
+import 'package:selaty/core/utils/app_strings.dart';
 
-class CustomAppBar extends StatelessWidget {
-  const CustomAppBar({super.key});
-
+class CustomCheckPhoneNumberAppBar extends StatelessWidget {
+ CustomCheckPhoneNumberAppBar({this.text,super.key});
+  String? text;
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      // mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         GestureDetector(
           onTap: () => goBack(
@@ -18,8 +21,12 @@ class CustomAppBar extends StatelessWidget {
             padding: const EdgeInsets.only(
               left: 8,
             ),
-            width: 40,
-            height: 40,
+            width: AppSize.getWidth(
+              30,
+            ),
+            height: AppSize.getHeight(
+              40,
+            ),
             decoration: BoxDecoration(
               border: Border.all(),
               borderRadius: BorderRadius.circular(
@@ -33,6 +40,30 @@ class CustomAppBar extends StatelessWidget {
             ),
           ),
         ),
+        SizedBox(
+          width: AppSize.getWidth(
+            110,
+          ),
+        ),
+        Align(
+          alignment: Alignment.centerRight,
+          child: Text(
+            text!,
+            // textAlign: TextAlign.right,
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              color: Colors.grey.shade700,
+              fontSize: AppSize.getFontSize(
+                18,
+              ),
+            ),
+          ),
+        ),
+        SizedBox(
+          width: AppSize.getWidth(
+            15,
+          ),
+        ),
         Container(
           padding: const EdgeInsets.only(
             left: 0,
@@ -40,7 +71,7 @@ class CustomAppBar extends StatelessWidget {
           width: 40,
           height: 40,
           decoration: BoxDecoration(
-           // border: Border.all(),
+            // border: Border.all(),
             borderRadius: BorderRadius.circular(
               10,
             ),

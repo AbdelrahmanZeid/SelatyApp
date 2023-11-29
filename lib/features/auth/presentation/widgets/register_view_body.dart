@@ -1,6 +1,6 @@
-
 import 'package:flutter/material.dart';
 import 'package:selaty/core/utils/app_assets.dart';
+import 'package:selaty/core/utils/app_funcation.dart';
 import 'package:selaty/core/utils/app_size.dart';
 import 'package:selaty/core/utils/app_strings.dart';
 import 'package:selaty/features/auth/presentation/widgets/custom_app_bar.dart';
@@ -84,9 +84,7 @@ class RegisterViewBody extends StatelessWidget {
             CustomButton(
               color: Colors.greenAccent,
               text: AppStrings.login,
-              onPressed: (){
-                
-              },
+              onPressed: () {},
             ),
             const SizedBox(
               height: 30,
@@ -138,12 +136,17 @@ class RegisterViewBody extends StatelessWidget {
                     ),
                   ),
                 ),
-              
-                Text(
-                  AppStrings.alreadyHaveAccount,
-                  style: TextStyle(
-                    fontSize: AppSize.getFontSize(
-                      15,
+                GestureDetector(
+                  onTap: () => navigationWithReplace(
+                    context,
+                    "/login",
+                  ),
+                  child: Text(
+                    AppStrings.alreadyHaveAccount,
+                    style: TextStyle(
+                      fontSize: AppSize.getFontSize(
+                        15,
+                      ),
                     ),
                   ),
                 ),

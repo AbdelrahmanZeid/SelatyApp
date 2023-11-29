@@ -34,21 +34,23 @@ class CustomAppBar extends StatelessWidget {
           ),
         ),
         Container(
-          padding: const EdgeInsets.only(
-            left: 0,
-          ),
-          width: 40,
-          height: 40,
-          decoration: BoxDecoration(
-           // border: Border.all(),
-            borderRadius: BorderRadius.circular(
-              10,
+            padding: const EdgeInsets.only(
+              left: 8,
+            ),
+            width: 40,
+            height: 40,
+            decoration: BoxDecoration(
+              border: Border.all(),
+              borderRadius: BorderRadius.circular(
+                10,
+              ),
+            ),
+            child: const Icon(
+              Icons.arrow_back_ios,
+              color: Colors.black,
+              size: 17,
             ),
           ),
-          child: Image.asset(
-            Assets.assetsImagesPhoto20231128141726,
-          ),
-        ),
       ],
     );
   }

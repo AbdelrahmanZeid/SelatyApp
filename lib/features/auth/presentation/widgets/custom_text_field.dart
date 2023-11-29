@@ -13,7 +13,7 @@ class CustomTextField extends StatelessWidget {
   final String lable;
 
   IconButton? suffixIcon;
-  IconButton? perfixIcon;
+  Widget? perfixIcon;
   TextInputType? textInputType;
 
   final Function(String value)? onChanged;

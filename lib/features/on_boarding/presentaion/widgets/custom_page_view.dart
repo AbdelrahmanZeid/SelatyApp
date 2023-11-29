@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:selaty/core/utils/app_funcation.dart';
 import 'package:selaty/core/utils/app_size.dart';
@@ -42,9 +41,11 @@ class _CustomPageViewState extends State<CustomPageView> {
       },
       itemBuilder: (context, index) {
         return Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.end,
+          padding: const EdgeInsets.all(
+            8.0,
+          ),
+          child: ListView(
+            // crossAxisAlignment: CrossAxisAlignment.end,
             children: [
               SizedBox(
                 height: AppSize.getHeight(
@@ -86,8 +87,12 @@ class _CustomPageViewState extends State<CustomPageView> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Container(
-                    width: 48,
-                    height: 48,
+                    width: AppSize.getWidth(
+                      48,
+                    ),
+                    height: AppSize.getHeight(
+                      48,
+                    ),
                     decoration: BoxDecoration(
                       color: onBoardingList[index].color,
                       borderRadius: BorderRadius.circular(

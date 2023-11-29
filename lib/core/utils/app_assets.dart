@@ -17,6 +17,18 @@ class Assets {
   /// assets/images/main.jpg
   static const String assetsImagesMain = "assets/images/main.jpg";
 
+  /// Assets for assetsImagesOnBoarding1
+  /// assets/images/on_boarding_1.jpg
+  static const String assetsImagesOnBoarding1 = "assets/images/on_boarding_1.jpg";
+
+  /// Assets for assetsImagesOnBoarding2
+  /// assets/images/on_boarding_2.jpg
+  static const String assetsImagesOnBoarding2 = "assets/images/on_boarding_2.jpg";
+
+  /// Assets for assetsImagesOnBoarding3
+  /// assets/images/on_boarding_3.jpg
+  static const String assetsImagesOnBoarding3 = "assets/images/on_boarding_3.jpg";
+
   /// Assets for assetsImagesOnBoardingOne
   /// assets/images/on_boarding_one.jpg
   static const String assetsImagesOnBoardingOne = "assets/images/on_boarding_one.jpg";
@@ -44,4 +56,8 @@ class Assets {
   /// Assets for assetsImagesSplash
   /// assets/images/splash.jpg
   static const String assetsImagesSplash = "assets/images/splash.jpg";
+
+  /// Assets for assetsImagesSudiaa
+  /// assets/images/sudiaa.jpg
+  static const String assetsImagesSudiaa = "assets/images/sudiaa.jpg";
 }

@@ -30,13 +30,15 @@ class SplashViewBody extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: 50,
-              width: 50,
-              child: CircularProgressIndicator(
-                valueColor: AlwaysStoppedAnimation<Color>(
-                  Colors.green.shade400,
+              height: AppSize.getHeight(50,),
+              width: AppSize.getWidth(50,),
+              child: Center(
+                child: CircularProgressIndicator(
+                  valueColor: AlwaysStoppedAnimation<Color>(
+                    Colors.green.shade400,
+                  ),
+                  strokeWidth: 5.5,
                 ),
-                strokeWidth: 5.5,
               ),
             ),
           ],

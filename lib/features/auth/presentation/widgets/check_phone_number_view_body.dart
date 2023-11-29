@@ -1,4 +1,6 @@
+
 import 'package:flutter/material.dart';
+import 'package:selaty/core/utils/app_assets.dart';
 import 'package:selaty/core/utils/app_funcation.dart';
 import 'package:selaty/core/utils/app_size.dart';
 import 'package:selaty/core/utils/app_strings.dart';
@@ -13,7 +15,7 @@ class CheckPhoneNumberViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(
-        horizontal: 10,
+        horizontal: 5,
       ),
       child: SingleChildScrollView(
         child: Column(
@@ -23,7 +25,9 @@ class CheckPhoneNumberViewBody extends StatelessWidget {
                 15,
               ),
             ),
-          CustomCheckPhoneNumberAppBar(text: AppStrings.checkPhoneNumber,),
+            CustomCheckPhoneNumberAppBar(
+              text: AppStrings.checkPhoneNumber,
+            ),
             SizedBox(
               height: AppSize.getHeight(
                 5,
@@ -34,7 +38,7 @@ class CheckPhoneNumberViewBody extends StatelessWidget {
               textAlign: TextAlign.right,
               style: TextStyle(
                 //fontWeight: FontWeight.bold,
-                color: Colors.grey.shade700,
+                color: Colors.grey.shade400,
                 fontSize: AppSize.getFontSize(
                   18,
                 ),
@@ -48,15 +52,12 @@ class CheckPhoneNumberViewBody extends StatelessWidget {
             CustomCheckPhoneNumberTextField(
               lable: "",
               obscureText: false,
-              perfix: Row(
-                children: [
-                  Icon(
-                    Icons.abc,
-                  ),
-                  Text(
-                    "+20",
-                  ),
-                ],
+              textInputType: TextInputType.phone,
+              perfix: Image.asset(
+                Assets.assetsImagesSudiaa,
+                width: 75,
+                height: 25,
+                
               ),
               suffixIcon: IconButton(
                 onPressed: () {},

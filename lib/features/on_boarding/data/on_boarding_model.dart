@@ -17,19 +17,19 @@ class OnBoardingModel {
 
 final List<OnBoardingModel> onBoardingList = [
   OnBoardingModel(
-    image: Assets.assetsImagesOnBoardingOne,
+    image: Assets.assetsImagesOnBoarding1,
     title: AppStrings.onBoardingOneTtile,
     subTitle: AppStrings.onBoardingOneSubTtile,
     color: Colors.red,
   ),
   OnBoardingModel(
-    image: Assets.assetsImagesOnBoardingTwo,
+    image: Assets.assetsImagesOnBoarding2,
     title: AppStrings.onBoardingTwoTtile,
     subTitle: AppStrings.onBoardingTwoSubTtile,
     color: Colors.green,
   ),
   OnBoardingModel(
-    image: Assets.assetsImagesOnBoardingThree,
+    image: Assets.assetsImagesOnBoarding3,
     title: AppStrings.onBoardingThreeTitle,
     subTitle: AppStrings.onBoardingThreeSubTtile,
     color: Colors.deepPurple,

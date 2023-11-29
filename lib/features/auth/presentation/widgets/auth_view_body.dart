@@ -43,7 +43,7 @@ class AuthViewBody extends StatelessWidget {
               CustomButton(
                 text: AppStrings.loginBtnName,
                 color: Colors.red,
-                onPressed: () => navigation(
+                onPressed: () => navigationWithReplace(
                   context,
                   "/login",
                 ),
@@ -56,7 +56,7 @@ class AuthViewBody extends StatelessWidget {
               CustomButton(
                 text: AppStrings.registerName,
                 color: Colors.green,
-                onPressed: () => navigation(
+                onPressed: () => navigationWithReplace(
                   context,
                   "/register",
                 ),

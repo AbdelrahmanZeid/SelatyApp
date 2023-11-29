@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:selaty/core/utils/app_color.dart';
 import 'package:selaty/core/utils/app_funcation.dart';
 import 'package:selaty/core/utils/app_size.dart';
 
@@ -11,6 +12,11 @@ class CustomCheckPhoneNumberAppBar extends StatelessWidget {
     return Row(
       // mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
+         SizedBox(
+          width: AppSize.getWidth(
+         10,
+          ),
+        ),
         GestureDetector(
           onTap: () => goBack(
             context,
@@ -26,7 +32,8 @@ class CustomCheckPhoneNumberAppBar extends StatelessWidget {
               40,
             ),
             decoration: BoxDecoration(
-              border: Border.all(),
+              color: Colors.white,
+            //  border: Border.all(),
               borderRadius: BorderRadius.circular(
                 10,
               ),
@@ -50,7 +57,7 @@ class CustomCheckPhoneNumberAppBar extends StatelessWidget {
             
             style: TextStyle(
               fontWeight: FontWeight.bold,
-              color: Colors.grey.shade700,
+              color: AppColor.appTextColor2,
               fontSize: AppSize.getFontSize(
                 18,
               ),
@@ -59,7 +66,7 @@ class CustomCheckPhoneNumberAppBar extends StatelessWidget {
         ),
         SizedBox(
           width: AppSize.getWidth(
-            20,
+         30,
           ),
         ),
        Container(
@@ -73,13 +80,14 @@ class CustomCheckPhoneNumberAppBar extends StatelessWidget {
               40,
             ),
             decoration: BoxDecoration(
-              border: Border.all(),
+             // border: Border.all(),
+              color: Colors.white,
               borderRadius: BorderRadius.circular(
                 10,
               ),
             ),
             child: const Icon(
-              Icons.ac_unit,
+              Icons.notification_important,
               color: Colors.black,
               size: 17,
             ),

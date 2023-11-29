@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:selaty/core/utils/app_color.dart';
 
 class CustomTextField extends StatelessWidget {
   CustomTextField(
@@ -27,20 +28,22 @@ class CustomTextField extends StatelessWidget {
       obscureText: obscureText,
       onChanged: onChanged,
       textAlign: TextAlign.right,
-      
       decoration: InputDecoration(
-        prefixIcon:perfixIcon ,
+        prefixIcon: perfixIcon,
         alignLabelWithHint: true,
-       suffixIcon: suffixIcon,
+        suffixIcon: suffixIcon,
         label: Align(
           alignment: Alignment.centerRight,
           child: Text(
             lable,
+            style: const TextStyle(
+              color: AppColor.appTextColor,
+            ),
           ),
         ),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(
-            5,
+            15,
           ),
         ),
       ),

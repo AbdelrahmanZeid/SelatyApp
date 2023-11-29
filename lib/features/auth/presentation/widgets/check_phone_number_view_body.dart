@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:selaty/core/utils/app_assets.dart';
+import 'package:selaty/core/utils/app_color.dart';
 import 'package:selaty/core/utils/app_funcation.dart';
 import 'package:selaty/core/utils/app_size.dart';
 import 'package:selaty/core/utils/app_strings.dart';
@@ -17,70 +18,73 @@ class CheckPhoneNumberViewBody extends StatelessWidget {
       padding: const EdgeInsets.symmetric(
         horizontal: 5,
       ),
-      child: SingleChildScrollView(
-        child: Column(
-          children: [
-            SizedBox(
-              height: AppSize.getHeight(
-                15,
-              ),
-            ),
-            CustomCheckPhoneNumberAppBar(
-              text: AppStrings.checkPhoneNumber,
-            ),
-            SizedBox(
-              height: AppSize.getHeight(
-                5,
-              ),
-            ),
-            Text(
-              AppStrings.weSendCode,
-              textAlign: TextAlign.right,
-              style: TextStyle(
-                //fontWeight: FontWeight.bold,
-                color: Colors.grey.shade400,
-                fontSize: AppSize.getFontSize(
-                  18,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal:5,),
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              SizedBox(
+                height: AppSize.getHeight(
+                  15,
                 ),
               ),
-            ),
-            SizedBox(
-              height: AppSize.getHeight(
-                40,
+              CustomCheckPhoneNumberAppBar(
+                text: AppStrings.checkPhoneNumber,
               ),
-            ),
-            CustomCheckPhoneNumberTextField(
-              lable: "",
-              obscureText: false,
-              textInputType: TextInputType.phone,
-              perfix: Image.asset(
-                Assets.assetsImagesSudiaa,
-                width: 75,
-                height: 25,
+              SizedBox(
+                height: AppSize.getHeight(
+                  5,
+                ),
+              ),
+              Text(
+                AppStrings.weSendCode,
+                textAlign: TextAlign.right,
+                style: TextStyle(
                 
-              ),
-              suffixIcon: IconButton(
-                onPressed: () {},
-                icon: const Icon(
-                  Icons.cancel_outlined,
-                  color: Colors.redAccent,
+                  color: AppColor.appTextColor,
+                  fontSize: AppSize.getFontSize(
+                    18,
+                  ),
                 ),
               ),
-            ),
-            SizedBox(
-              height: AppSize.getHeight(
-                20,
+              SizedBox(
+                height: AppSize.getHeight(
+                  40,
+                ),
               ),
-            ),
-            CustomButton(
-              color: Colors.greenAccent,
-              text: AppStrings.confirm,
-              onPressed: () => navigation(
-                context,
-                "/verifyphonenumber",
+              CustomCheckPhoneNumberTextField(
+                lable: "",
+                obscureText: false,
+                textInputType: TextInputType.phone,
+                perfix: Image.asset(
+                  Assets.assetsImagesSudiaa,
+                  width: 75,
+                  height: 25,
+                  
+                ),
+                suffixIcon: IconButton(
+                  onPressed: () {},
+                  icon: const Icon(
+                    Icons.cancel_outlined,
+                    color: Colors.redAccent,
+                  ),
+                ),
               ),
-            ),
-          ],
+              SizedBox(
+                height: AppSize.getHeight(
+                  20,
+                ),
+              ),
+              CustomButton(
+                color: AppColor.btnColor1,
+                text: AppStrings.confirm,
+                onPressed: () => navigation(
+                  context,
+                  "/verifyphonenumber",
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

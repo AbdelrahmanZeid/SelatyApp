@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:selaty/core/utils/app_assets.dart';
+import 'package:selaty/core/utils/app_color.dart';
 import 'package:selaty/core/utils/app_funcation.dart';
 import 'package:selaty/core/utils/app_size.dart';
 
@@ -32,10 +33,10 @@ class SplashViewBody extends StatelessWidget {
             SizedBox(
               height: AppSize.getHeight(50,),
               width: AppSize.getWidth(50,),
-              child: Center(
+              child:const Center(
                 child: CircularProgressIndicator(
                   valueColor: AlwaysStoppedAnimation<Color>(
-                    Colors.green.shade400,
+                    AppColor.circleIndacatorColor,
                   ),
                   strokeWidth: 5.5,
                 ),

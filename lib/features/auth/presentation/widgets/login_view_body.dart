@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:selaty/core/utils/app_assets.dart';
+import 'package:selaty/core/utils/app_color.dart';
 import 'package:selaty/core/utils/app_funcation.dart';
 import 'package:selaty/core/utils/app_size.dart';
 import 'package:selaty/core/utils/app_strings.dart';
@@ -45,7 +46,7 @@ class LoginViewBody extends StatelessWidget {
               perfixIcon: IconButton(
                 icon: const Icon(
                   Icons.check_circle_outline,
-                  color: Colors.greenAccent,
+                  color: AppColor.btnColor1,
                 ),
                 onPressed: () {},
               ),
@@ -79,7 +80,7 @@ class LoginViewBody extends StatelessWidget {
               height: 22,
             ),
             CustomButton(
-              color: Colors.greenAccent,
+              color: AppColor.btnColor1,
               text: AppStrings.loginBtnName,
               onPressed: () {},
             ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:selaty/core/utils/app_assets.dart';
+import 'package:selaty/core/utils/app_color.dart';
 import 'package:selaty/core/utils/app_funcation.dart';
 import 'package:selaty/core/utils/app_size.dart';
 import 'package:selaty/core/utils/app_strings.dart';
@@ -32,6 +33,7 @@ class RegisterViewBody extends StatelessWidget {
               AppStrings.newAccount,
               style: TextStyle(
                 fontSize: 28,
+                color: AppColor.appTextColor2
               ),
             ),
             const SizedBox(
@@ -41,7 +43,7 @@ class RegisterViewBody extends StatelessWidget {
               AppStrings.enterYourData,
               style: TextStyle(
                 fontSize: 17,
-                color: Colors.grey,
+                color: AppColor.appTextColor,
               ),
             ),
             const SizedBox(
@@ -60,7 +62,7 @@ class RegisterViewBody extends StatelessWidget {
               perfixIcon: IconButton(
                 icon: const Icon(
                   Icons.check_circle_outline,
-                  color: Colors.greenAccent,
+                  color: AppColor.onBoardingTwoColor,
                 ),
                 onPressed: () {},
               ),
@@ -82,7 +84,7 @@ class RegisterViewBody extends StatelessWidget {
               height: 40,
             ),
             CustomButton(
-              color: Colors.greenAccent,
+              color: AppColor.onBoardingTwoColor,
               text: AppStrings.login,
               onPressed: () {},
             ),

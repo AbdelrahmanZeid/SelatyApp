@@ -1,5 +1,6 @@
-
 import 'package:flutter/material.dart';
+import 'package:selaty/core/utils/app_color.dart';
+import 'package:selaty/core/utils/app_size.dart';
 
 class CustomCheckPhoneNumberTextField extends StatelessWidget {
   CustomCheckPhoneNumberTextField(
@@ -24,24 +25,30 @@ class CustomCheckPhoneNumberTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextField(
-      // style: TextStyle(
-      //   color: Colors.red,
-      // ),
-
       keyboardType: textInputType,
       obscureText: obscureText,
       onChanged: onChanged,
       decoration: InputDecoration(
+        filled: true,
+        fillColor: Colors.white,
         prefix: perfix,
-        //   prefixText: "+20",
-      //  prefixIcon: perfix,
+
         alignLabelWithHint: true,
         suffixIcon: suffixIcon,
-        label: Text(
-          lable,
+        label: Align(
+          alignment: Alignment.centerRight,
+          child: Text(
+            lable,
+            style: TextStyle(
+              color: AppColor.appTextColor,
+              fontSize: AppSize.getFontSize(
+                14,
+              ),
+            ),
+          ),
         ),
         // border: InputBorder.none,
-        border: OutlineInputBorder(),
+        border: InputBorder.none,
       ),
     );
   }

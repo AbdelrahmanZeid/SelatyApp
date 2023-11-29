@@ -1,6 +1,7 @@
 
 import 'package:go_router/go_router.dart';
 import 'package:selaty/features/auth/presentation/views/auth_view.dart';
+import 'package:selaty/features/auth/presentation/views/change_pass_success_view.dart';
 import 'package:selaty/features/auth/presentation/views/change_password_view.dart';
 import 'package:selaty/features/auth/presentation/views/check_phone_number_view.dart';
 import 'package:selaty/features/auth/presentation/views/login_view.dart';
@@ -57,6 +58,12 @@ final GoRouter router = GoRouter(
       path: "/changepassword",
       builder: (context, state) {
         return const ChangePasswordView();
+      },
+    ),
+    GoRoute(
+      path: "/changepasssuccess",
+      builder: (context, state) {
+        return const ChangePassSuccessView();
       },
     ),
   ],

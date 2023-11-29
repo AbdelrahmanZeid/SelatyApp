@@ -45,7 +45,6 @@ class _CustomPageViewState extends State<CustomPageView> {
             8.0,
           ),
           child: ListView(
-            // crossAxisAlignment: CrossAxisAlignment.end,
             children: [
               SizedBox(
                 height: AppSize.getHeight(
@@ -62,25 +61,31 @@ class _CustomPageViewState extends State<CustomPageView> {
                   50,
                 ),
               ),
-              Text(
-                onBoardingList[index].title,
-                style: TextStyle(
-                  color: onBoardingList[index].color,
-                  fontSize: 25,
-                  fontWeight: FontWeight.bold,
+              Align(
+                alignment: Alignment.centerRight,
+                child: Text(
+                  onBoardingList[index].title,
+                  style: TextStyle(
+                    color: onBoardingList[index].color,
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
-              Text(
-                onBoardingList[index].subTitle,
-                style: TextStyle(
-                  color: onBoardingList[index].color,
-                  fontSize: 20,
+              Align(
+                alignment: Alignment.centerRight,
+                child: Text(
+                  onBoardingList[index].subTitle,
+                  style: TextStyle(
+                    color: onBoardingList[index].color,
+                    fontSize: 20,
+                  ),
+                  textAlign: TextAlign.right,
                 ),
-                textAlign: TextAlign.right,
               ),
               SizedBox(
                 height: AppSize.getHeight(
-                  120,
+                 80,
                 ),
               ),
               Row(

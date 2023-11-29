@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:selaty/core/utils/app_assets.dart';
+import 'package:selaty/core/utils/app_color.dart';
 import 'package:selaty/core/utils/app_strings.dart';
 
 class OnBoardingModel {
@@ -20,18 +21,18 @@ final List<OnBoardingModel> onBoardingList = [
     image: Assets.assetsImagesOnBoarding1,
     title: AppStrings.onBoardingOneTtile,
     subTitle: AppStrings.onBoardingOneSubTtile,
-    color: Colors.red,
+    color: AppColor.onBoardingOneColor,
   ),
   OnBoardingModel(
     image: Assets.assetsImagesOnBoarding2,
     title: AppStrings.onBoardingTwoTtile,
     subTitle: AppStrings.onBoardingTwoSubTtile,
-    color: Colors.green,
+    color: AppColor.btnColor1,
   ),
   OnBoardingModel(
     image: Assets.assetsImagesOnBoarding3,
     title: AppStrings.onBoardingThreeTitle,
     subTitle: AppStrings.onBoardingThreeSubTtile,
-    color: Colors.deepPurple,
+    color: AppColor.onBoardingThreeColor,
   ),
 ];

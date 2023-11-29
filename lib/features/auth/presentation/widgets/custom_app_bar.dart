@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:selaty/core/utils/app_assets.dart';
 import 'package:selaty/core/utils/app_funcation.dart';
 
 class CustomAppBar extends StatelessWidget {

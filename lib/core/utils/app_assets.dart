@@ -29,18 +29,6 @@ class Assets {
   /// assets/images/on_boarding_3.jpg
   static const String assetsImagesOnBoarding3 = "assets/images/on_boarding_3.jpg";
 
-  /// Assets for assetsImagesOnBoardingOne
-  /// assets/images/on_boarding_one.jpg
-  static const String assetsImagesOnBoardingOne = "assets/images/on_boarding_one.jpg";
-
-  /// Assets for assetsImagesOnBoardingThree
-  /// assets/images/on_boarding_three.jpg
-  static const String assetsImagesOnBoardingThree = "assets/images/on_boarding_three.jpg";
-
-  /// Assets for assetsImagesOnBoardingTwo
-  /// assets/images/on_boarding_two.jpg
-  static const String assetsImagesOnBoardingTwo = "assets/images/on_boarding_two.jpg";
-
   /// Assets for assetsImagesPhoto20231128130503
   /// assets/images/photo_2023-11-28_13-05-03.jpg
   static const String assetsImagesPhoto20231128130503 = "assets/images/photo_2023-11-28_13-05-03.jpg";
@@ -52,6 +40,10 @@ class Assets {
   /// Assets for assetsImagesPhoto20231128141726
   /// assets/images/photo_2023-11-28_14-17-26.jpg
   static const String assetsImagesPhoto20231128141726 = "assets/images/photo_2023-11-28_14-17-26.jpg";
+
+  /// Assets for assetsImagesPhoto20231129232735
+  /// assets/images/photo_2023-11-29_23-27-35.jpg
+  static const String assetsImagesPhoto20231129232735 = "assets/images/photo_2023-11-29_23-27-35.jpg";
 
   /// Assets for assetsImagesSplash
   /// assets/images/splash.jpg

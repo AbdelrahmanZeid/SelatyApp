@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:selaty/core/utils/app_assets.dart';
+import 'package:selaty/core/utils/app_color.dart';
 import 'package:selaty/core/utils/app_funcation.dart';
 import 'package:selaty/core/utils/app_size.dart';
 import 'package:selaty/core/utils/app_strings.dart';
@@ -42,7 +43,7 @@ class AuthViewBody extends StatelessWidget {
               ),
               CustomButton(
                 text: AppStrings.loginBtnName,
-                color: Colors.red,
+                color: AppColor.onBoardingOneColor,
                 onPressed: () => navigationWithReplace(
                   context,
                   "/login",
@@ -55,7 +56,7 @@ class AuthViewBody extends StatelessWidget {
               ),
               CustomButton(
                 text: AppStrings.registerName,
-                color: Colors.green,
+                color: AppColor.btnColor1,
                 onPressed: () => navigationWithReplace(
                   context,
                   "/register",

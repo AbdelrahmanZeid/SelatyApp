@@ -82,7 +82,10 @@ class LoginViewBody extends StatelessWidget {
             CustomButton(
               color: AppColor.btnColor1,
               text: AppStrings.loginBtnName,
-              onPressed: () {},
+              onPressed: () => navigationWithReplace(
+                context,
+                "/home",
+              ),
             ),
             const SizedBox(
               height: 25,

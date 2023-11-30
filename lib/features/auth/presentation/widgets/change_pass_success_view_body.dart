@@ -44,7 +44,7 @@ class ChangePassSuccessViewBody extends StatelessWidget {
             color: Colors.white,
             text: AppStrings.done,
             txtColor: AppColor.onBoardingOneColor,
-            onPressed: () => navigation(
+            onPressed: () => navigationWithReplace(
               context,
               "/login",
             ),

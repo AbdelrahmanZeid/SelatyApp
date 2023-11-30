@@ -7,6 +7,7 @@ import 'package:selaty/features/auth/presentation/views/check_phone_number_view.
 import 'package:selaty/features/auth/presentation/views/login_view.dart';
 import 'package:selaty/features/auth/presentation/views/register_view.dart';
 import 'package:selaty/features/auth/presentation/views/verfiy_phone_number.dart';
+import 'package:selaty/features/home/presentation/views/home_view.dart';
 import 'package:selaty/features/on_boarding/presentaion/views/on_boarding_view.dart';
 import 'package:selaty/features/splash/presentation/views/splash_view.dart';
 
@@ -24,6 +25,8 @@ final GoRouter router = GoRouter(
         return const OnBoardingView();
       },
     ),
+
+    // auth route
     GoRoute(
       path: "/auth",
       builder: (context, state) {
@@ -64,6 +67,14 @@ final GoRouter router = GoRouter(
       path: "/changepasssuccess",
       builder: (context, state) {
         return const ChangePassSuccessView();
+      },
+    ),
+
+    //home route
+    GoRoute(
+      path: "/home",
+      builder: (context, state) {
+        return const HomeView();
       },
     ),
   ],

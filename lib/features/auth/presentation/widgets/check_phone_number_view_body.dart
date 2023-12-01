@@ -58,8 +58,8 @@ class CheckPhoneNumberViewBody extends StatelessWidget {
                 textInputType: TextInputType.phone,
                 perfix: Image.asset(
                   Assets.assetsImagesSudiaa,
-                  width: 75,
-                  height: 25,
+                  width: 90,
+                  height: 30,
                   
                 ),
                 suffixIcon: IconButton(

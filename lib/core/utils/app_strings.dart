@@ -1,5 +1,4 @@
 class AppStrings {
-
   //auth strings
   static const loginBtnName = "تسجيل الدخول";
   static const registerName = "انشئ حساب";
@@ -41,8 +40,17 @@ class AppStrings {
   static const changePassword = "تغيير كلمه المرور";
   static const enterNewPass = "ادخل كلمه المرور الجديده";
   static const currentPass = "كلمه المرور الحاليه";
-  static const newPass = "كلمه المرو الجديده";
+  static const newPass = "كلمه المرور الجديده";
   static const change = "تغيير";
   static const yourpassHere = "كلمه المرور الخاصه بك هنا";
-  static const done='تم';
+  static const done = 'تم';
+
+  //home strings
+  static const bestValue = "القيمه الافضل ";
+  static const highSeller = "اعلي مبيعات";
+  static const category = "التصنيفات";
+  static const mostSell = "الاكثر مبيعا";
+  static const shopping = "تسوق حسب العروض";
+  static const fresh = "طازج وسريع";
+  static const takeChance = "انتهز القرصه";
 }

@@ -6,6 +6,7 @@ class ThemeManager {
  static  ThemeData getAppTheme(context) => ThemeData(
   scaffoldBackgroundColor: AppColor.scaffoldColor,
         appBarTheme: AppBarTheme(
+          backgroundColor: AppColor.scaffoldColor,
           systemOverlayStyle: SystemUiOverlayStyle(
             statusBarColor: Theme.of(context).scaffoldBackgroundColor,
             statusBarIconBrightness: Brightness.dark,

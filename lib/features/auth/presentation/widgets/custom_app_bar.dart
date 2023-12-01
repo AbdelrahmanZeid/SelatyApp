@@ -33,9 +33,9 @@ class CustomAppBar extends StatelessWidget {
           ),
         ),
         Container(
-            padding: const EdgeInsets.only(
-              left: 8,
-            ),
+            // padding: const EdgeInsets.only(
+            //   left: 8,
+            // ),
             width: 40,
             height: 40,
             decoration: BoxDecoration(
@@ -45,7 +45,7 @@ class CustomAppBar extends StatelessWidget {
               ),
             ),
             child: const Icon(
-              Icons.arrow_back_ios,
+              Icons.shopping_bag_outlined,
               color: Colors.black,
               size: 17,
             ),

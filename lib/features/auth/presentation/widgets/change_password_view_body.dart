@@ -1,11 +1,10 @@
-
 import 'package:flutter/material.dart';
 import 'package:selaty/core/utils/app_color.dart';
 import 'package:selaty/core/utils/app_funcation.dart';
 import 'package:selaty/core/utils/app_size.dart';
 import 'package:selaty/core/utils/app_strings.dart';
 import 'package:selaty/features/auth/presentation/widgets/custom_button.dart';
-import 'package:selaty/features/auth/presentation/widgets/custom_check_phone_number_app_bar.dart';
+import 'package:selaty/features/auth/presentation/widgets/custom_change_password_app_bar.dart';
 import 'package:selaty/features/auth/presentation/widgets/custom_check_phone_number_text_field.dart';
 
 class ChangePasswordViewBody extends StatelessWidget {
@@ -25,7 +24,7 @@ class ChangePasswordViewBody extends StatelessWidget {
                 10,
               ),
             ),
-            CustomCheckPhoneNumberAppBar(
+            CustomChangePasswordAppBar(
               text: AppStrings.changePassword,
             ),
             SizedBox(
@@ -48,10 +47,10 @@ class ChangePasswordViewBody extends StatelessWidget {
               ),
             ),
             CustomCheckPhoneNumberTextField(
-              lable:AppStrings.currentPass,
+              lable: AppStrings.currentPass,
               obscureText: true,
               textInputType: TextInputType.phone,
-              perfix:const Icon(Icons.visibility_off),
+              perfix: const Icon(Icons.visibility_off),
             ),
             SizedBox(
               height: AppSize.getHeight(
@@ -59,11 +58,10 @@ class ChangePasswordViewBody extends StatelessWidget {
               ),
             ),
             CustomCheckPhoneNumberTextField(
-                            lable:AppStrings.newPass,
-
+              lable: AppStrings.newPass,
               obscureText: true,
               textInputType: TextInputType.phone,
-              perfix:const Icon(Icons.visibility_off),
+              perfix: const Icon(Icons.visibility_off),
             ),
             SizedBox(
               height: AppSize.getHeight(

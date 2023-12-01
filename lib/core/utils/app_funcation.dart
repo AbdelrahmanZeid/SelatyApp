@@ -34,3 +34,21 @@ Widget getGreyFruitImage() {
     ),
   );
 }
+//home view function
+Widget getLeading(IconData icon) => Padding(
+      padding: const EdgeInsets.only(
+        left: 8,
+      ),
+      child: Container(
+        
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(
+            10,
+          ),
+          color: Colors.white,
+        ),
+        child: Icon(
+          icon,
+        ),
+      ),
+    );

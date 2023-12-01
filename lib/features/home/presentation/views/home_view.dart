@@ -1,11 +1,13 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
+import 'package:selaty/core/utils/app_assets.dart';
 
 import 'package:selaty/core/utils/app_color.dart';
 import 'package:selaty/core/utils/app_funcation.dart';
 import 'package:selaty/core/utils/app_size.dart';
 import 'package:selaty/core/utils/app_strings.dart';
 import 'package:selaty/features/home/presentation/widgets/best_value.dart';
+import 'package:selaty/features/home/presentation/widgets/category_list_view.dart';
 import 'package:selaty/features/home/presentation/widgets/custom_action_widget.dart';
 import 'package:selaty/features/home/presentation/widgets/custom_search_bar.dart';
 
@@ -118,7 +120,44 @@ class HomeViewBody extends StatelessWidget {
             ),
           ),
         ),
+        SliverToBoxAdapter(
+          child: SizedBox(
+            height: AppSize.getHeight(
+              10,
+            ),
+          ),
+        ),
+        const SliverToBoxAdapter(
+          child: CategoryListView(),
+        ),
+        SliverToBoxAdapter(
+          child: SizedBox(
+            height: AppSize.getHeight(
+              10,
+            ),
+          ),
+        ),
+        const SliverToBoxAdapter(
+          child: Padding(
+            padding: EdgeInsets.only(
+              right: 15,
+            ),
+            child: Align(
+              alignment: Alignment.centerRight,
+              child: Text(
+                AppStrings.mostSell,
+                style: TextStyle(
+                  color: AppColor.appTextColor2,
+                  fontSize: 25,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+          ),
+        ),
       ],
     );
   }
 }
+
+

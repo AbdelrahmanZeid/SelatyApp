@@ -17,6 +17,14 @@ class Assets {
   /// assets/images/4.jpg
   static const String assetsImages4 = "assets/images/4.jpg";
 
+  /// Assets for assetsImagesBestSellOne
+  /// assets/images/best_sell_one.jpg
+  static const String assetsImagesBestSellOne = "assets/images/best_sell_one.jpg";
+
+  /// Assets for assetsImagesBestSellTwo
+  /// assets/images/best_sell_two.jpg
+  static const String assetsImagesBestSellTwo = "assets/images/best_sell_two.jpg";
+
   /// Assets for assetsImagesCard1
   /// assets/images/card1.PNG
   static const String assetsImagesCard1 = "assets/images/card1.PNG";

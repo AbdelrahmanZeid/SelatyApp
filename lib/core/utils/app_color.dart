@@ -26,5 +26,14 @@ class AppColor {
   static const Color scaffoldColor = Color(
     0xffFDFDFF,
   );
+  static const Color yellow = Color(
+    0xffF4BF57,
+  );
+  static const Color green = Color(
+    0xff5E9D5E,
+  );
+  static const Color grey = Color(
+    0xffE8E8E8,
+  );
 }
 

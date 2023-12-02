@@ -38,7 +38,7 @@ class AuthViewBody extends StatelessWidget {
               ),
               SizedBox(
                 height: AppSize.getHeight(
-                  15,
+                  25,
                 ),
               ),
               CustomButton(
@@ -51,7 +51,7 @@ class AuthViewBody extends StatelessWidget {
               ),
               SizedBox(
                 height: AppSize.getHeight(
-                  15,
+                 20,
                 ),
               ),
               CustomButton(

@@ -20,8 +20,10 @@ class Selaty extends StatelessWidget {
         child,
       ) =>
           MaterialApp.router(
+            
         debugShowCheckedModeBanner: false,
         routerConfig: router,
+        
         theme: ThemeManager.getAppTheme(
           context,
         ),

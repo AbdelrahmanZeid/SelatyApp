@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
-import 'package:selaty/core/utils/app_color.dart';
-import 'package:selaty/core/utils/app_funcation.dart';
-import 'package:selaty/core/utils/app_size.dart';
-import 'package:selaty/core/utils/app_strings.dart';
-import 'package:selaty/features/auth/presentation/widgets/custom_check_phone_number_app_bar.dart';
+import '../../../../core/utils/app_color.dart';
+import '../../../../core/utils/app_funcation.dart';
+import '../../../../core/utils/app_size.dart';
+import '../../../../core/utils/app_strings.dart';
+import 'custom_check_phone_number_app_bar.dart';
 
 class VerifyPhoneNumberViewBody extends StatelessWidget {
   const VerifyPhoneNumberViewBody({super.key});

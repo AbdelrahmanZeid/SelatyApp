@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:selaty/core/utils/app_color.dart';
-import 'package:selaty/core/utils/app_size.dart';
-import 'package:selaty/features/home/data/models/category_model.dart';
+import '../../../../core/utils/app_color.dart';
+import '../../../../core/utils/app_size.dart';
+import '../../data/models/category_model.dart';
 
 class CategoryItem extends StatelessWidget {
   const CategoryItem({super.key, required this.categoryModel});

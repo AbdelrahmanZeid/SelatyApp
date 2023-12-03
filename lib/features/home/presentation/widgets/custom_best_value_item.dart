@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'package:selaty/features/home/data/models/card_model.dart';
+import '../../data/models/card_model.dart';
 
 class CustomBestValueItem extends StatelessWidget {
   const CustomBestValueItem({

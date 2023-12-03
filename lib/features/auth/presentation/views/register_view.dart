@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:selaty/features/auth/presentation/widgets/register_view_body.dart';
+import '../widgets/register_view_body.dart';
 
 class RegisterView extends StatelessWidget {
   const RegisterView({super.key});

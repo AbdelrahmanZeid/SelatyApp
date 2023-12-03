@@ -1,8 +1,8 @@
 
 import 'package:flutter/material.dart';
-import 'package:selaty/core/utils/app_size.dart';
-import 'package:selaty/features/home/data/models/category_model.dart';
-import 'package:selaty/features/home/presentation/widgets/category_item.dart';
+import '../../../../core/utils/app_size.dart';
+import '../../data/models/category_model.dart';
+import 'category_item.dart';
 
 class CategoryListView extends StatelessWidget {
   const CategoryListView({super.key});

@@ -1,8 +1,8 @@
 import 'package:card_swiper/card_swiper.dart';
 import 'package:flutter/material.dart';
-import 'package:selaty/core/utils/app_size.dart';
-import 'package:selaty/features/home/data/models/card_model.dart';
-import 'package:selaty/features/home/presentation/widgets/custom_best_value_item.dart';
+import '../../../../core/utils/app_size.dart';
+import '../../data/models/card_model.dart';
+import 'custom_best_value_item.dart';
 
 class BestValue extends StatelessWidget {
   const BestValue({super.key});

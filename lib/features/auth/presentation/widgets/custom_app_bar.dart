@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:selaty/core/utils/app_funcation.dart';
+
+import '../../../../core/utils/app_funcation.dart';
 
 class CustomAppBar extends StatelessWidget {
   const CustomAppBar({super.key});

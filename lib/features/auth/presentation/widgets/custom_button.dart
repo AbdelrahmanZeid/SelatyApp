@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:selaty/core/utils/app_size.dart';
+import 'package:selaty/core/utils/app_funcation.dart';
+
+import '../../../../core/utils/app_size.dart';
 
 class CustomButton extends StatelessWidget {
   CustomButton({
@@ -20,12 +22,19 @@ class CustomButton extends StatelessWidget {
       style: ElevatedButton.styleFrom(
         primary: color,
         // backgroundColor: color,
-        minimumSize: Size(
+        minimumSize: isPortrait(context)? Size(
           AppSize.getWidth(
             360,
           ),
           AppSize.getHeight(
             60,
+          ),
+        ):Size(
+          AppSize.getWidth(
+            360,
+          ),
+          AppSize.getHeight(
+            45,
           ),
         ),
         shape: RoundedRectangleBorder(
@@ -39,8 +48,10 @@ class CustomButton extends StatelessWidget {
         text,
         style: TextStyle(
           color: txtColor,
-          fontSize: AppSize.getFontSize(
+          fontSize:isPortrait(context)? AppSize.getFontSize(
             22,
+          ):AppSize.getFontSize(
+            18,
           ),
         ),
       ),

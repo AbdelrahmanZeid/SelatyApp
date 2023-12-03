@@ -1,9 +1,9 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:selaty/core/utils/app_funcation.dart';
+import '../../../../core/utils/app_funcation.dart';
 
-import 'package:selaty/features/splash/presentation/widgets/splash_view_body.dart';
+import '../widgets/splash_view_body.dart';
 
 class SplashView extends StatefulWidget {
   const SplashView({super.key});
@@ -18,7 +18,7 @@ class _SplashViewState extends State<SplashView> {
   void moveForwad() {
     _timer = Timer(
         const Duration(
-    seconds: 30,
+    seconds: 4,
         ),
         _goNext);
   }

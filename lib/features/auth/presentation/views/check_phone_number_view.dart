@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:selaty/features/auth/presentation/widgets/check_phone_number_view_body.dart';
+import '../widgets/check_phone_number_view_body.dart';
 
 class CheckPhoneNumberView extends StatelessWidget {
   const CheckPhoneNumberView({super.key});

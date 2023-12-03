@@ -1,8 +1,8 @@
 
 import 'package:flutter/material.dart';
-import 'package:selaty/core/utils/app_size.dart';
-import 'package:selaty/features/home/data/models/best_sell_model.dart';
-import 'package:selaty/features/home/presentation/widgets/custom_most_sell_item.dart';
+import '../../../../core/utils/app_size.dart';
+import '../../data/models/best_sell_model.dart';
+import 'custom_most_sell_item.dart';
 
 class CustomGridViewWidget extends StatelessWidget {
   const CustomGridViewWidget({super.key});

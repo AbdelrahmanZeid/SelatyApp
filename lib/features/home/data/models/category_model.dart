@@ -1,4 +1,4 @@
-import 'package:selaty/core/utils/app_assets.dart';
+import '../../../../core/utils/app_assets.dart';
 
 class CategoryModel {
   final String image;

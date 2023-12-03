@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:selaty/core/utils/app_assets.dart';
-import 'package:selaty/core/utils/app_color.dart';
-import 'package:selaty/core/utils/app_strings.dart';
+import '../../../core/utils/app_assets.dart';
+import '../../../core/utils/app_color.dart';
+import '../../../core/utils/app_strings.dart';
 
 class OnBoardingModel {
   final String image;

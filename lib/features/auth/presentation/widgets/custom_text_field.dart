@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:selaty/core/utils/app_color.dart';
+
+import '../../../../core/utils/app_color.dart';
 
 class CustomTextField extends StatelessWidget {
   CustomTextField(

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:selaty/core/utils/app_color.dart';
-import 'package:selaty/core/utils/app_size.dart';
+import '../../../../core/utils/app_color.dart';
+import '../../../../core/utils/app_size.dart';
 
 class CustomCheckPhoneNumberTextField extends StatelessWidget {
   CustomCheckPhoneNumberTextField(

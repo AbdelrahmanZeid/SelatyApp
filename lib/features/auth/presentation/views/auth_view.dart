@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:selaty/features/auth/presentation/widgets/auth_view_body.dart';
+import '../widgets/auth_view_body.dart';
 
 class AuthView extends StatelessWidget {
   const AuthView({super.key});

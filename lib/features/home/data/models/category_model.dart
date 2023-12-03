@@ -1,36 +1,51 @@
-
 import 'package:selaty/core/utils/app_assets.dart';
 
 class CategoryModel {
   final String image;
+  final String bgImage;
+  final String title;
   CategoryModel({
     required this.image,
+    required this.bgImage,
+    required this.title,
   });
 }
 
 List<CategoryModel> catList = [
   CategoryModel(
-    image: Assets.assetsImages1,
+    image: Assets.assetsImagesChicken,
+    bgImage: Assets.assetsImagesFruitTwo,
+    title: "دواجن",
   ),
   CategoryModel(
-    image: Assets.assetsImages2,
+    image: Assets.assetsImagesChicken,
+    bgImage: Assets.assetsImagesFruitTwo,
+    title: "فواكه",
   ),
   CategoryModel(
-    image: Assets.assetsImages3,
+    image: Assets.assetsImagesChicken,
+    bgImage: Assets.assetsImagesFruitTwo,
+    title: "خضروات",
   ),
   CategoryModel(
-    image: Assets.assetsImages4,
+    image: Assets.assetsImagesChicken,
+    bgImage: Assets.assetsImagesFruitTwo,
+    title: "دواجن",
   ),
   CategoryModel(
-    image: Assets.assetsImages1,
+    image: Assets.assetsImagesChicken,
+    bgImage: Assets.assetsImagesFruitTwo,
+    title: "دواجن",
   ),
   CategoryModel(
-    image: Assets.assetsImages2,
+    image: Assets.assetsImagesChicken,
+    bgImage: Assets.assetsImagesFruitTwo,
+    title: "دواجن",
   ),
   CategoryModel(
-    image: Assets.assetsImages3,
+    image: Assets.assetsImagesChicken,
+    bgImage: Assets.assetsImagesFruitTwo,
+    title: "دواجن",
   ),
-  CategoryModel(
-    image: Assets.assetsImages4,
-  ),
+
 ];

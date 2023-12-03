@@ -15,7 +15,7 @@ class BestSellModel {
 List<BestSellModel> bestSellList = [
   BestSellModel(
     image: Assets.assetsImagesBestSellOne,
-    type: "فواكه",
+    type: "فواكهه",
     price: "50",
   ),
   BestSellModel(
@@ -25,7 +25,7 @@ List<BestSellModel> bestSellList = [
   ),
   BestSellModel(
     image: Assets.assetsImagesBestSellOne,
-    type: "فواكه",
+    type: "فواكهه",
     price: "200",
   ),
   BestSellModel(

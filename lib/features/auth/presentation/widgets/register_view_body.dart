@@ -84,7 +84,7 @@ class RegisterViewBody extends StatelessWidget {
               height: 40,
             ),
             CustomButton(
-              color: AppColor.onBoardingTwoColor,
+              color: AppColor.btnColor1,
               text: AppStrings.login,
               onPressed: () {},
             ),

@@ -1,4 +1,3 @@
-
 import 'package:card_swiper/card_swiper.dart';
 import 'package:flutter/material.dart';
 import 'package:selaty/core/utils/app_size.dart';
@@ -18,7 +17,9 @@ class BestValue extends StatelessWidget {
         autoplay: true,
         itemCount: 3,
         itemBuilder: (context, index) {
-          return CustomBestValueItem(card: cardsList[index],);
+          return CustomBestValueItem(
+            card: cardsList[index],
+          );
         },
       ),
     );

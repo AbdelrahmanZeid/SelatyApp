@@ -19,28 +19,44 @@ void navigationWithReplace(context, String path) {
   );
 }
 
-Widget getGreyFruitImage() {
-  return Positioned(
-    bottom: 0,
-    right: 0,
-    child: Image.asset(
-      Assets.assetsImagesGreyFruitImage,
-      width: AppSize.getWidth(
-        170,
-      ),
-      height: AppSize.getHeight(
-        170,
-      ),
-    ),
-  );
+Widget getGreyFruitImage(context) {
+  return getOrientation(context) == Orientation.portrait
+      ? Positioned(
+        bottom: -275,
+          right: 0,
+          child: Center(
+            child: Image.asset(
+              Assets.assetsImagesGreyFruitImage,
+              width: AppSize.getWidth(
+                170,
+              ),
+              height: AppSize.getHeight(
+                170,
+              ),
+            ),
+          ),
+        )
+      : Positioned(
+          bottom: -27,
+          right: -70,
+          child: Image.asset(
+            Assets.assetsImagesGreyFruitImage,
+            width: AppSize.getWidth(
+              120,
+            ),
+            height: AppSize.getHeight(
+              120,
+            ),
+          ),
+        );
 }
+
 //home view function
 Widget getLeading(IconData icon) => Padding(
       padding: const EdgeInsets.only(
         left: 8,
       ),
       child: Container(
-        
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(
             10,
@@ -52,3 +68,7 @@ Widget getLeading(IconData icon) => Padding(
         ),
       ),
     );
+
+getOrientation(context) {
+  return MediaQuery.of(context).orientation;
+}

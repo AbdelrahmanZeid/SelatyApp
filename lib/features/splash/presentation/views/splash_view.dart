@@ -1,10 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
-import 'package:selaty/core/utils/app_assets.dart';
 import 'package:selaty/core/utils/app_funcation.dart';
-import 'package:selaty/core/utils/app_size.dart';
 
 import 'package:selaty/features/splash/presentation/widgets/splash_view_body.dart';
 
@@ -21,7 +18,7 @@ class _SplashViewState extends State<SplashView> {
   void moveForwad() {
     _timer = Timer(
         const Duration(
-          seconds: 4,
+    seconds: 30,
         ),
         _goNext);
   }
@@ -47,11 +44,14 @@ class _SplashViewState extends State<SplashView> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return  getOrientation(context)==Orientation.portrait? Scaffold(
       appBar: AppBar(),
       body: const SafeArea(
         child: SplashViewBody(),
       ),
+    ):const Scaffold(
+    
+      body: SplashViewBody(),
     );
   }
 }

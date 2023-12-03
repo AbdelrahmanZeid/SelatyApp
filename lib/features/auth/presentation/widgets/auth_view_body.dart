@@ -13,7 +13,33 @@ class AuthViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        getGreyFruitImage(),
+      getOrientation(context)==Orientation.portrait?   Positioned(
+                bottom: -5,
+                right: 0,
+                child: Center(
+                  child: Image.asset(
+                    Assets.assetsImagesGreyFruitImage,
+                    width: AppSize.getWidth(
+                      170,
+                    ),
+                    height: AppSize.getHeight(
+                      170,
+                    ),
+                  ),
+                ),
+              ):Positioned(
+                bottom: -27,
+                right: -70,
+                child: Image.asset(
+                  Assets.assetsImagesGreyFruitImage,
+                  width: AppSize.getWidth(
+                    120,
+                  ),
+                  height: AppSize.getHeight(
+                    120,
+                  ),
+                ),
+              ),
         Padding(
           padding: const EdgeInsets.symmetric(
             horizontal: 10,

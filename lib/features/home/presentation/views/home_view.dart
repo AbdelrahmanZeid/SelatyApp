@@ -5,9 +5,11 @@ import 'package:selaty/core/utils/app_color.dart';
 import 'package:selaty/core/utils/app_funcation.dart';
 import 'package:selaty/core/utils/app_size.dart';
 import 'package:selaty/core/utils/app_strings.dart';
+import 'package:selaty/features/home/data/models/card_model.dart';
 import 'package:selaty/features/home/presentation/widgets/best_value.dart';
 import 'package:selaty/features/home/presentation/widgets/category_list_view.dart';
 import 'package:selaty/features/home/presentation/widgets/custom_action_widget.dart';
+import 'package:selaty/features/home/presentation/widgets/custom_best_value_item.dart';
 import 'package:selaty/features/home/presentation/widgets/custom_grid_view.dart';
 import 'package:selaty/features/home/presentation/widgets/custom_search_bar.dart';
 
@@ -165,7 +167,56 @@ class HomeViewBody extends StatelessWidget {
         const SliverToBoxAdapter(
           child: CustomGridViewWidget(),
         ),
+        SliverToBoxAdapter(
+          child: SizedBox(
+            height: AppSize.getHeight(
+              10,
+            ),
+          ),
+        ),
+        SliverToBoxAdapter(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 5,),
+            child: CustomBestValueItem(
+              card: cardsList[1],
+            ),
+          ),
+        ),
+         SliverToBoxAdapter(
+          child: SizedBox(
+            height: AppSize.getHeight(
+              10,
+            ),
+          ),
+        ),
+          const SliverToBoxAdapter(
+          child: Padding(
+            padding: EdgeInsets.only(
+              right: 15,
+            ),
+            child: Align(
+              alignment: Alignment.centerRight,
+              child: Text(
+                AppStrings.shopping,
+                style: TextStyle(
+                  color: AppColor.appTextColor2,
+                  fontSize: 25,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+          ),
+        ),
       ],
     );
+  }
+}
+
+class CustomShoppingWidget extends StatelessWidget {
+  const CustomShoppingWidget({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Placeholder();
   }
 }

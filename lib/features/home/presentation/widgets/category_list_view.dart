@@ -12,12 +12,17 @@ class CategoryListView extends StatelessWidget {
     return SizedBox(
       height: AppSize.getHeight(
         100,
+        
       ),
       child: ListView.builder(
+     //  padding: EdgeInsets.symmetric(horizontal: 10,),
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) {
-          return CategoryItem(
-            categoryModel: catList[index],
+          return Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 3,),
+            child: CategoryItem(
+              categoryModel: catList[index],
+            ),
           );
         },
         itemCount: catList.length,

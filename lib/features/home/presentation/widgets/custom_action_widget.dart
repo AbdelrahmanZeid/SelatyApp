@@ -9,12 +9,13 @@ class CustomActionWidget extends StatelessWidget {
     return const Row(
       children: [
         Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
               "Abdelrahman Ibrahem",
             ),
             Text(
-              "zeid4643@gmail.com",
+              "Sadat city",
             ),
           ],
         ),

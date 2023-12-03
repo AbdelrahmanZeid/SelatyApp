@@ -11,7 +11,7 @@ class CustomGridViewWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       height: AppSize.getHeight(
-        800,
+        350,
       ),
       width: double.infinity,
       child: GridView.builder(

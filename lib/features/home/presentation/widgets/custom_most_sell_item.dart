@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:selaty/core/utils/app_color.dart';
 import 'package:selaty/core/utils/app_size.dart';
@@ -51,6 +50,9 @@ class CustomMostSellItem extends StatelessWidget {
                   alignment: Alignment.centerRight,
                   child: Text(
                     "جديد",
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
                   ),
                 ),
               ),
@@ -64,7 +66,10 @@ class CustomMostSellItem extends StatelessWidget {
           Image.asset(
             bsetSellModel.image,
             width: double.infinity,
-            height: AppSize.getHeight(40,),
+            height: AppSize.getHeight(
+              40,
+            ),
+            fit: BoxFit.fill,
           ),
           SizedBox(
             height: AppSize.getHeight(
@@ -102,16 +107,17 @@ class CustomMostSellItem extends StatelessWidget {
               15,
             ),
           ),
-          Expanded(
-            child: Container(
-              width: double.infinity,
+          Container(
+            decoration: BoxDecoration(
               color: AppColor.grey,
-              child: Align(
-                alignment: Alignment.centerRight,
-                child: Text(
-                  "\$ ${bsetSellModel.price}"
-                ),
+              borderRadius: BorderRadius.circular(
+                8,
               ),
+            ),
+            width: double.infinity,
+            child: Align(
+              alignment: Alignment.centerRight,
+              child: Text("\$ ${bsetSellModel.price}"),
             ),
           ),
         ],

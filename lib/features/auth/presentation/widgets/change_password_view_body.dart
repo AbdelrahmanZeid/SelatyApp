@@ -36,14 +36,20 @@ class ChangePasswordViewBody extends StatelessWidget {
               AppStrings.enterNewPass,
               style: TextStyle(
                 color: AppColor.appTextColor,
-                fontSize: AppSize.getFontSize(
+                fontSize:isPortrait(context)? AppSize.getFontSize(
                   20,
+                ):AppSize.getFontSize(
+                  14,
                 ),
               ),
             ),
-            SizedBox(
+          isPortrait(context)?  SizedBox(
               height: AppSize.getHeight(
                 45,
+              ),
+            ): SizedBox(
+              height: AppSize.getHeight(
+                30,
               ),
             ),
             CustomCheckPhoneNumberTextField(
@@ -52,9 +58,13 @@ class ChangePasswordViewBody extends StatelessWidget {
               textInputType: TextInputType.phone,
               perfix: const Icon(Icons.visibility_off),
             ),
-            SizedBox(
+         isPortrait(context)?   SizedBox(
               height: AppSize.getHeight(
                 20,
+              ),
+            ):  SizedBox(
+              height: AppSize.getHeight(
+                8,
               ),
             ),
             CustomCheckPhoneNumberTextField(
@@ -63,9 +73,13 @@ class ChangePasswordViewBody extends StatelessWidget {
               textInputType: TextInputType.phone,
               perfix: const Icon(Icons.visibility_off),
             ),
-            SizedBox(
+          isPortrait(context)?  SizedBox(
               height: AppSize.getHeight(
                 15,
+              ),
+            ):  SizedBox(
+              height: AppSize.getHeight(
+                8,
               ),
             ),
             CustomButton(

@@ -45,9 +45,13 @@ class _CustomPageViewState extends State<CustomPageView> {
           ),
           child: ListView(
             children: [
-              SizedBox(
+           isPortrait(context)?   SizedBox(
                 height: AppSize.getHeight(
                   30,
+                ),
+              ):SizedBox(
+                height: AppSize.getHeight(
+                 5,
                 ),
               ),
               isPortrait(context)
@@ -94,9 +98,13 @@ class _CustomPageViewState extends State<CustomPageView> {
                   textAlign: TextAlign.right,
                 ),
               ),
-              SizedBox(
+           isPortrait(context)?  SizedBox(
                 height: AppSize.getHeight(
                   60,
+                ),
+              ): SizedBox(
+                height: AppSize.getHeight(
+                  40,
                 ),
               ),
               Row(
@@ -143,7 +151,7 @@ class _CustomPageViewState extends State<CustomPageView> {
                           ),
                         ),
                   const Spacer(
-                    flex: 3,
+                    flex: 8,
                   ),
                   SmoothPageIndicator(
                     controller: widget.controller,

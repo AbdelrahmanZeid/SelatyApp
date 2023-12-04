@@ -18,9 +18,13 @@ class AuthViewBody extends StatelessWidget {
       ),
       child: ListView(
         children: [
-          SizedBox(
+       isPortrait(context)?   SizedBox(
             height: AppSize.getHeight(
               35,
+            ),
+          ):  SizedBox(
+            height: AppSize.getHeight(
+              10,
             ),
           ),
           Center(

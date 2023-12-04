@@ -26,10 +26,12 @@ class LoginViewBody extends StatelessWidget {
               height: 10,
             ),
             const CustomAppBar(),
-            const SizedBox(
+          isPortrait(context)?  const  SizedBox(
               height: 35,
+            ):const  SizedBox(
+              height: 5,
             ),
-            Center(
+       isPortrait(context)?     Center(
               child: Image.asset(
                 Assets.assetsImagesMain,
                 width: AppSize.getWidth(
@@ -37,6 +39,16 @@ class LoginViewBody extends StatelessWidget {
                 ),
                 height: AppSize.getHeight(
                   200,
+                ),
+              ),
+            ):   Center(
+              child: Image.asset(
+                Assets.assetsImagesMain,
+                width: AppSize.getWidth(
+                  200,
+                ),
+                height: AppSize.getHeight(
+                  100,
                 ),
               ),
             ),
@@ -90,9 +102,13 @@ class LoginViewBody extends StatelessWidget {
             const SizedBox(
               height: 25,
             ),
-            SizedBox(
+         isPortrait(context)?   SizedBox(
               height: AppSize.getHeight(
-                85,
+                75,
+              ),
+            ): SizedBox(
+              height: AppSize.getHeight(
+                30,
               ),
             ),
             Row(
@@ -101,16 +117,20 @@ class LoginViewBody extends StatelessWidget {
                 Text(
                   AppStrings.loginBtnName,
                   style: TextStyle(
-                    fontSize: AppSize.getFontSize(
+                    fontSize:isPortrait(context)? AppSize.getFontSize(
                       15,
+                    ):AppSize.getFontSize(
+                      10,
                     ),
                   ),
                 ),
                 Text(
                   AppStrings.alreadyHaveAccount,
                   style: TextStyle(
-                    fontSize: AppSize.getFontSize(
+                    fontSize:isPortrait(context)? AppSize.getFontSize(
                       15,
+                    ): AppSize.getFontSize(
+                      10,
                     ),
                   ),
                 ),

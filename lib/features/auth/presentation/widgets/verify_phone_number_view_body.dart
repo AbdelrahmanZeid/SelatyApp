@@ -37,23 +37,28 @@ class VerifyPhoneNumberViewBody extends StatelessWidget {
               child: Text(
                 AppStrings.enterOtpCode,
                 style: TextStyle(
-                  fontSize: AppSize.getFontSize(
+                  fontSize:isPortrait(context)? AppSize.getFontSize(
                     18,
+                  ):AppSize.getFontSize(
+                    14,
                   ),
                   fontWeight: FontWeight.bold,
                   color: AppColor.appTextColor,
                 ),
               ),
             ),
-            SizedBox(
+         isPortrait(context)?   SizedBox(
               height: AppSize.getHeight(
                 60,
+              ),
+            ): SizedBox(
+              height: AppSize.getHeight(
+                40,
               ),
             ),
             PinCodeTextField(
               keyboardType: TextInputType.number,
               keyboardAppearance: Brightness.dark,
-            // backgroundColor: Colors.redAccent,
               appContext: context,
               length: 4,
               onChanged: (value) {},
@@ -62,9 +67,7 @@ class VerifyPhoneNumberViewBody extends StatelessWidget {
                   context,
                   "/changepassword",
                 );
-                print("Completed: $value");
               },
-              // Add any additional customization options
             ),
             SizedBox(
               height: AppSize.getHeight(
@@ -74,8 +77,10 @@ class VerifyPhoneNumberViewBody extends StatelessWidget {
             Text(
               AppStrings.dontReciveTheCode,
               style: TextStyle(
-                fontSize: AppSize.getFontSize(
+                fontSize:isPortrait(context)? AppSize.getFontSize(
                   20,
+                ):AppSize.getFontSize(
+                  15,
                 ),
                 color: AppColor.appTextColor,
               ),
@@ -83,8 +88,10 @@ class VerifyPhoneNumberViewBody extends StatelessWidget {
             Text(
               AppStrings.resendCode,
               style: TextStyle(
-                fontSize: AppSize.getFontSize(
+                fontSize:isPortrait(context)? AppSize.getFontSize(
                   18,
+                ):AppSize.getFontSize(
+                  14,
                 ),
                 color: AppColor.onBoardingOneColor,
               ),

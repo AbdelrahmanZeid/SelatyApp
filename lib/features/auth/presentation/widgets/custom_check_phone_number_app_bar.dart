@@ -1,30 +1,21 @@
-
 import 'package:flutter/material.dart';
 import '../../../../core/utils/app_color.dart';
 import '../../../../core/utils/app_funcation.dart';
 import '../../../../core/utils/app_size.dart';
 
 class CustomCheckPhoneNumberAppBar extends StatelessWidget {
- CustomCheckPhoneNumberAppBar({this.text,super.key});
+  CustomCheckPhoneNumberAppBar({this.text, super.key});
   String? text;
   @override
   Widget build(BuildContext context) {
     return Row(
-      // mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-         SizedBox(
-          width: AppSize.getWidth(
-         10,
-          ),
-        ),
+        const Spacer(),
         GestureDetector(
           onTap: () => goBack(
             context,
           ),
           child: Container(
-            // padding: const EdgeInsets.only(
-            //   left: 8,
-            // ),
             width: AppSize.getWidth(
               40,
             ),
@@ -46,54 +37,57 @@ class CustomCheckPhoneNumberAppBar extends StatelessWidget {
             ),
           ),
         ),
-        SizedBox(
-          width: AppSize.getWidth(
-          80,
-          ),
+
+        const Spacer(
+          flex: 3,
         ),
         Align(
           alignment: Alignment.centerRight,
           child: Text(
             text!,
-            
             style: TextStyle(
               fontWeight: FontWeight.bold,
               color: AppColor.appTextColor2,
-              fontSize: AppSize.getFontSize(
-                18,
-              ),
+              fontSize: isPortrait(context)
+                  ? AppSize.getFontSize(
+                      18,
+                    )
+                  : AppSize.getFontSize(
+                      13,
+                    ),
             ),
           ),
         ),
-        SizedBox(
+        // SizedBox(
+        //   width: AppSize.getWidth(
+        //  30,
+        //   ),
+        // ),
+        Spacer(),
+        Container(
+          // padding: const EdgeInsets.only(
+          //   left: 8,
+          // ),
           width: AppSize.getWidth(
-         30,
+            40,
+          ),
+          height: AppSize.getHeight(
+            40,
+          ),
+          decoration: BoxDecoration(
+            // border: Border.all(),
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(
+              10,
+            ),
+          ),
+          child: const Icon(
+            Icons.shopping_bag_outlined,
+            color: Colors.black,
+            size: 17,
           ),
         ),
-       Container(
-            // padding: const EdgeInsets.only(
-            //   left: 8,
-            // ),
-            width: AppSize.getWidth(
-              40,
-            ),
-            height: AppSize.getHeight(
-              40,
-            ),
-            decoration: BoxDecoration(
-             // border: Border.all(),
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(
-                10,
-              ),
-            ),
-            child: const Icon(
-             Icons.shopping_bag_outlined,
-              color: Colors.black,
-              size: 17,
-            ),
-          ),
-          
+      const  Spacer(),
       ],
     );
   }

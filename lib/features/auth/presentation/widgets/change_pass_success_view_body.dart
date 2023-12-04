@@ -12,46 +12,140 @@ class ChangePassSuccessViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(
-        horizontal: 65,
-      ),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Image.asset(
-            Assets.assetsImagesPhoto20231129232735,
-          ),
-          SizedBox(
-            height: AppSize.getHeight(
-              25,
+    return isPortrait(context)
+        ? Padding(
+            padding: const EdgeInsets.symmetric(
+              horizontal: 55,
+              vertical: 120,
             ),
-          ),
-          Text(
-            AppStrings.yourpassHere,
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: AppSize.getFontSize(
-                18,
+            child: SingleChildScrollView(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  isPortrait(context)
+                      ? Image.asset(
+                          Assets.assetsImagesPhoto20231129232735,
+                        )
+                      : Image.asset(
+                          Assets.assetsImagesPhoto20231129232735,
+                          height: AppSize.getHeight(
+                            170,
+                          ),
+                          width: AppSize.getWidth(
+                            150,
+                          ),
+                        ),
+                  isPortrait(context)
+                      ? SizedBox(
+                          height: AppSize.getHeight(
+                            25,
+                          ),
+                        )
+                      : SizedBox(
+                          height: AppSize.getHeight(
+                            15,
+                          ),
+                        ),
+                  Text(
+                    AppStrings.yourpassHere,
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: isPortrait(context)
+                          ? AppSize.getFontSize(
+                              18,
+                            )
+                          : AppSize.getFontSize(
+                              14,
+                            ),
+                    ),
+                  ),
+                  SizedBox(
+                    height: AppSize.getHeight(
+                      25,
+                    ),
+                  ),
+                  CustomButton(
+                    color: Colors.white,
+                    text: AppStrings.done,
+                    txtColor: AppColor.onBoardingOneColor,
+                    onPressed: () => navigationWithReplace(
+                      context,
+                      "/login",
+                    ),
+                  ),
+                ],
               ),
             ),
-          ),
-          SizedBox(
-            height: AppSize.getHeight(
-              25,
+          )
+        : SingleChildScrollView(
+            child: Center(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                   SizedBox(
+                    height: AppSize.getHeight(
+                      25,
+                    ),
+                  ),
+                  isPortrait(context)
+                      ? Image.asset(
+                          Assets.assetsImagesPhoto20231129232735,
+                        )
+                      : Image.asset(
+                          Assets.assetsImagesPhoto20231129232735,
+                          height: AppSize.getHeight(
+                            170,
+                          ),
+                          width: AppSize.getWidth(
+                            150,
+                          ),
+                        ),
+                  isPortrait(context)
+                      ? SizedBox(
+                          height: AppSize.getHeight(
+                            25,
+                          ),
+                        )
+                      : SizedBox(
+                          height: AppSize.getHeight(
+                            15,
+                          ),
+                        ),
+                  Text(
+                    AppStrings.yourpassHere,
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: isPortrait(context)
+                          ? AppSize.getFontSize(
+                              18,
+                            )
+                          : AppSize.getFontSize(
+                              12,
+                            ),
+                    ),
+                  ),
+                  SizedBox(
+                    height: AppSize.getHeight(
+                      20,
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 230,),
+                    child: CustomButton(
+                      color: Colors.white,
+                      text: AppStrings.done,
+                      txtColor: AppColor.onBoardingOneColor,
+                      onPressed: () => navigationWithReplace(
+                        context,
+                        "/login",
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
-          ),
-          CustomButton(
-            color: Colors.white,
-            text: AppStrings.done,
-            txtColor: AppColor.onBoardingOneColor,
-            onPressed: () => navigationWithReplace(
-              context,
-              "/login",
-            ),
-          ),
-        ],
-      ),
-    );
+          );
   }
 }

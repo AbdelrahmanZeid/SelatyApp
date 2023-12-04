@@ -31,7 +31,7 @@ class CustomButton extends StatelessWidget {
           ),
         ):Size(
           AppSize.getWidth(
-            360,
+           360,
           ),
           AppSize.getHeight(
             45,
@@ -51,7 +51,7 @@ class CustomButton extends StatelessWidget {
           fontSize:isPortrait(context)? AppSize.getFontSize(
             22,
           ):AppSize.getFontSize(
-            18,
+            16,
           ),
         ),
       ),

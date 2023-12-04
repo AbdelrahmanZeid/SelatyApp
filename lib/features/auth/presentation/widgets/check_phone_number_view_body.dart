@@ -1,19 +1,25 @@
 
 import 'package:flutter/material.dart';
+import 'package:intl_phone_field/intl_phone_field.dart';
 
-import '../../../../core/utils/app_assets.dart';
 import '../../../../core/utils/app_color.dart';
 import '../../../../core/utils/app_funcation.dart';
 import '../../../../core/utils/app_size.dart';
 import '../../../../core/utils/app_strings.dart';
 import 'custom_button.dart';
 import 'custom_check_phone_number_app_bar.dart';
-import 'custom_check_phone_number_text_field.dart';
 
-class CheckPhoneNumberViewBody extends StatelessWidget {
+class CheckPhoneNumberViewBody extends StatefulWidget {
   const CheckPhoneNumberViewBody({super.key});
 
   @override
+  State<CheckPhoneNumberViewBody> createState() => _CheckPhoneNumberViewBodyState();
+}
+
+class _CheckPhoneNumberViewBodyState extends State<CheckPhoneNumberViewBody> {
+  @override
+
+final controller=TextEditingController();
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(
@@ -43,8 +49,10 @@ class CheckPhoneNumberViewBody extends StatelessWidget {
                 style: TextStyle(
                 
                   color: AppColor.appTextColor,
-                  fontSize: AppSize.getFontSize(
+                  fontSize:isPortrait(context)? AppSize.getFontSize(
                     18,
+                  ):AppSize.getFontSize(
+                    14,
                   ),
                 ),
               ),
@@ -53,24 +61,23 @@ class CheckPhoneNumberViewBody extends StatelessWidget {
                   40,
                 ),
               ),
-              CustomCheckPhoneNumberTextField(
-                lable: "",
-                obscureText: false,
-                textInputType: TextInputType.phone,
-                perfix: Image.asset(
-                  Assets.assetsImagesSudiaa,
-                  width: 90,
-                  height: 30,
-                  
+               IntlPhoneField(
+              languageCode: "ar",
+              initialCountryCode: 'EG',
+              disableLengthCheck: true,
+              keyboardType: TextInputType.phone,
+              controller: controller,
+              textAlign: TextAlign.left,
+              dropdownIconPosition: IconPosition.leading,
+              decoration: const InputDecoration(
+                border: UnderlineInputBorder(),
+                suffixIcon: Icon(
+                  Icons.highlight_remove_sharp,
+                  color: Colors.green,
                 ),
-                suffixIcon: IconButton(
-                  onPressed: () {},
-                  icon: const Icon(
-                    Icons.cancel_outlined,
-                    color: Colors.redAccent,
-                  ),
-                ),
+                hintTextDirection: TextDirection.rtl,
               ),
+            ),
               SizedBox(
                 height: AppSize.getHeight(
                   20,

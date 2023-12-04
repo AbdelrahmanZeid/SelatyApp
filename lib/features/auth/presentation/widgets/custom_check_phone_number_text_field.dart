@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:selaty/core/utils/app_funcation.dart';
 import '../../../../core/utils/app_color.dart';
 import '../../../../core/utils/app_size.dart';
 
@@ -41,8 +42,10 @@ class CustomCheckPhoneNumberTextField extends StatelessWidget {
             lable,
             style: TextStyle(
               color: AppColor.appTextColor,
-              fontSize: AppSize.getFontSize(
+              fontSize:isPortrait(context)? AppSize.getFontSize(
                 14,
+              ):AppSize.getFontSize(
+                10,
               ),
             ),
           ),

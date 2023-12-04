@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import '../../../../core/utils/app_color.dart';
 import '../../../../core/utils/app_funcation.dart';
@@ -12,13 +11,12 @@ class CustomChangePasswordAppBar extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-      
+        const Spacer(),
         GestureDetector(
           onTap: () => goBack(
             context,
           ),
           child: Container(
-           
             width: AppSize.getWidth(
               40,
             ),
@@ -40,10 +38,8 @@ class CustomChangePasswordAppBar extends StatelessWidget {
             ),
           ),
         ),
-        SizedBox(
-          width: AppSize.getWidth(
-            80,
-          ),
+        const Spacer(
+          flex: 4,
         ),
         Align(
           alignment: Alignment.centerRight,
@@ -52,21 +48,18 @@ class CustomChangePasswordAppBar extends StatelessWidget {
             style: TextStyle(
               fontWeight: FontWeight.bold,
               color: AppColor.appTextColor2,
-              fontSize: AppSize.getFontSize(
-                18,
-              ),
+              fontSize: isPortrait(context)
+                  ? AppSize.getFontSize(
+                      18,
+                    )
+                  : AppSize.getFontSize(
+                      13,
+                    ),
             ),
           ),
         ),
-        SizedBox(
-          width: AppSize.getWidth(
-            30,
-          ),
-        ),
+        const Spacer(),
         Container(
-          // padding: const EdgeInsets.only(
-          //   left: 8,
-          // ),
           width: AppSize.getWidth(
             40,
           ),
@@ -86,6 +79,7 @@ class CustomChangePasswordAppBar extends StatelessWidget {
             size: 17,
           ),
         ),
+        const Spacer(),
       ],
     );
   }

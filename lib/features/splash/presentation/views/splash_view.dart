@@ -24,7 +24,7 @@ class _SplashViewState extends State<SplashView> {
   }
 
   void _goNext() {
-    navigation(
+    navigationWithReplace(
       context,
       "/onboarding",
     );

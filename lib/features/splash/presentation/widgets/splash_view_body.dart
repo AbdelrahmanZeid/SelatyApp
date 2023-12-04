@@ -7,7 +7,6 @@ import '../../../../core/utils/app_size.dart';
 class SplashViewBody extends StatelessWidget {
   const SplashViewBody({super.key});
 
-  
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -18,26 +17,36 @@ class SplashViewBody extends StatelessWidget {
               15,
             ),
           ),
-       getOrientation(context)==Orientation.portrait?   Center(
-            child: Image.asset(
-              Assets.assetsImagesSplash,
-            ),
-          ):Center(
-            child: Image.asset(
-              Assets.assetsImagesSplash,
-              width: AppSize.getWidth(100,),
-              height: AppSize.getHeight(250,),
-            ),
-          ),
+          getOrientation(context) == Orientation.portrait
+              ? Center(
+                  child: Image.asset(
+                    Assets.assetsImagesSplash,
+                  ),
+                )
+              : Center(
+                  child: Image.asset(
+                    Assets.assetsImagesSplash,
+                    width: AppSize.getWidth(
+                      100,
+                    ),
+                    height: AppSize.getHeight(
+                      250,
+                    ),
+                  ),
+                ),
           SizedBox(
             height: AppSize.getHeight(
               70,
             ),
           ),
           SizedBox(
-            height: AppSize.getHeight(50,),
-            width: AppSize.getWidth(50,),
-            child:const Center(
+            height: AppSize.getHeight(
+              50,
+            ),
+            width: AppSize.getWidth(
+              50,
+            ),
+            child: const Center(
               child: CircularProgressIndicator(
                 valueColor: AlwaysStoppedAnimation<Color>(
                   AppColor.circleIndacatorColor,

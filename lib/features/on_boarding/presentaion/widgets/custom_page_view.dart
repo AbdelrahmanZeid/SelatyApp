@@ -31,7 +31,7 @@ class _CustomPageViewState extends State<CustomPageView> {
             const Duration(
               seconds: 3,
             ),
-            () => navigation(
+            () => navigationWithReplace(
               context,
               "/auth",
             ),
@@ -108,7 +108,6 @@ class _CustomPageViewState extends State<CustomPageView> {
                 ),
               ),
               Row(
-                // mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   Spacer(),
                   isPortrait(context)

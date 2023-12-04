@@ -18,17 +18,9 @@ class HomeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
+    return const SafeArea(
       child: Scaffold(
-        appBar: AppBar(
-          leading: getLeading(
-            Icons.shopping_bag_outlined,
-          ),
-          actions: const [
-            CustomActionWidget(),
-          ],
-        ),
-        body: const HomeViewBody(),
+        body: HomeViewBody(),
       ),
     );
   }
@@ -41,6 +33,21 @@ class HomeViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustomScrollView(
       slivers: [
+        SliverToBoxAdapter(
+          child: Row(
+            children: [
+              const Spacer(),
+              getLeading(
+                Icons.shopping_bag_outlined,
+              ),
+              const Spacer(
+                flex: 6,
+              ),
+              const CustomActionWidget(),
+              const Spacer(),
+            ],
+          ),
+        ),
         SliverToBoxAdapter(
           child: SizedBox(
             height: AppSize.getHeight(
@@ -139,21 +146,46 @@ class HomeViewBody extends StatelessWidget {
             ),
           ),
         ),
-        const SliverToBoxAdapter(
+        SliverToBoxAdapter(
           child: Padding(
-            padding: EdgeInsets.only(
+            padding: const EdgeInsets.only(
               right: 15,
+              left: 15,
             ),
-            child: Align(
-              alignment: Alignment.centerRight,
-              child: Text(
-                AppStrings.mostSell,
-                style: TextStyle(
-                  color: AppColor.appTextColor2,
-                  fontSize: 25,
-                  fontWeight: FontWeight.bold,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Row(
+                  children: [
+                    Text(
+                      "مشاهده الكل",
+                      style: TextStyle(
+                        color: AppColor.appTextColor,
+                        fontSize: AppSize.getFontSize(
+                          15,
+                        ),
+                      ),
+                    ),
+                    const Icon(
+                      Icons.arrow_right_sharp,
+                    ),
+                  ],
                 ),
-              ),
+                const Spacer(),
+                Align(
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    AppStrings.mostSell,
+                    style: TextStyle(
+                      color: AppColor.appTextColor2,
+                      fontSize: AppSize.getFontSize(
+                        25,
+                      ),
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              ],
             ),
           ),
         ),
@@ -176,34 +208,60 @@ class HomeViewBody extends StatelessWidget {
         ),
         SliverToBoxAdapter(
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 5,),
+            padding: const EdgeInsets.symmetric(
+              horizontal: 5,
+            ),
             child: CustomBestValueItem(
               card: cardsList[1],
             ),
           ),
         ),
-         SliverToBoxAdapter(
+        SliverToBoxAdapter(
           child: SizedBox(
             height: AppSize.getHeight(
               10,
             ),
           ),
         ),
-          const SliverToBoxAdapter(
+        SliverToBoxAdapter(
           child: Padding(
-            padding: EdgeInsets.only(
+            padding: const EdgeInsets.only(
               right: 15,
+              left: 15,
             ),
-            child: Align(
-              alignment: Alignment.centerRight,
-              child: Text(
-                AppStrings.shopping,
-                style: TextStyle(
-                  color: AppColor.appTextColor2,
-                  fontSize: 25,
-                  fontWeight: FontWeight.bold,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Text(
+                      "مشاهده الكل",
+                      style: TextStyle(
+                        color: AppColor.appTextColor,
+                        fontSize: AppSize.getFontSize(
+                          15,
+                        ),
+                      ),
+                    ),
+                    const Icon(
+                      Icons.arrow_right_sharp,
+                    ),
+                  ],
                 ),
-              ),
+                const Spacer(),
+                const Align(
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    AppStrings.shopping,
+                    style: TextStyle(
+                      color: AppColor.appTextColor2,
+                      fontSize: 25,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              ],
             ),
           ),
         ),
@@ -212,11 +270,282 @@ class HomeViewBody extends StatelessWidget {
   }
 }
 
-class CustomShoppingWidget extends StatelessWidget {
-  const CustomShoppingWidget({super.key});
+// class CustomShoppingWidget extends StatelessWidget {
+//   const CustomShoppingWidget({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return const Placeholder();
-  }
-}
+//   @override
+//   Widget build(BuildContext context) {
+//     return const Placeholder();
+//   }
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// class HomeViewBody extends StatelessWidget {
+//   const HomeViewBody({super.key});
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return CustomScrollView(
+//       slivers: [
+//         SliverToBoxAdapter(
+//           child: SizedBox(
+//             height: AppSize.getHeight(
+//               15,
+//             ),
+//           ),
+//         ),
+//         const SliverToBoxAdapter(
+//           child: CustomSearchBar(),
+//         ),
+//         SliverToBoxAdapter(
+//           child: Row(
+//             mainAxisAlignment: MainAxisAlignment.end,
+//             children: [
+//               const Text(
+//                 AppStrings.highSeller,
+//                 style: TextStyle(
+//                   color: AppColor.appTextColor,
+//                   fontSize: 15,
+//                 ),
+//               ),
+//               SizedBox(
+//                 width: AppSize.getWidth(
+//                   10,
+//                 ),
+//               ),
+//               const Padding(
+//                 padding: EdgeInsets.only(
+//                   right: 15,
+//                 ),
+//                 child: Text(
+//                   AppStrings.bestValue,
+//                   style: TextStyle(
+//                     color: AppColor.appTextColor2,
+//                     fontSize: 20,
+//                   ),
+//                 ),
+//               ),
+//             ],
+//           ),
+//         ),
+//         SliverToBoxAdapter(
+//           child: SizedBox(
+//             height: AppSize.getHeight(
+//               15,
+//             ),
+//           ),
+//         ),
+//         const SliverToBoxAdapter(
+//           child: Padding(
+//             padding: EdgeInsets.symmetric(
+//               horizontal: 15,
+//             ),
+//             child: BestValue(),
+//           ),
+//         ),
+//         SliverToBoxAdapter(
+//           child: SizedBox(
+//             height: AppSize.getHeight(
+//               15,
+//             ),
+//           ),
+//         ),
+//         const SliverToBoxAdapter(
+//           child: Padding(
+//             padding: EdgeInsets.only(
+//               right: 15,
+//             ),
+//             child: Align(
+//               alignment: Alignment.centerRight,
+//               child: Text(
+//                 AppStrings.category,
+//                 style: TextStyle(
+//                   color: AppColor.appTextColor2,
+//                   fontSize: 25,
+//                   fontWeight: FontWeight.bold,
+//                 ),
+//               ),
+//             ),
+//           ),
+//         ),
+//         SliverToBoxAdapter(
+//           child: SizedBox(
+//             height: AppSize.getHeight(
+//               10,
+//             ),
+//           ),
+//         ),
+//         const SliverToBoxAdapter(
+//           child: CategoryListView(),
+//         ),
+//         SliverToBoxAdapter(
+//           child: SizedBox(
+//             height: AppSize.getHeight(
+//               10,
+//             ),
+//           ),
+//         ),
+//         const SliverToBoxAdapter(
+//           child: Padding(
+//             padding: EdgeInsets.only(
+//               right: 15,
+//             ),
+//             child: Align(
+//               alignment: Alignment.centerRight,
+//               child: Text(
+//                 AppStrings.mostSell,
+//                 style: TextStyle(
+//                   color: AppColor.appTextColor2,
+//                   fontSize: 25,
+//                   fontWeight: FontWeight.bold,
+//                 ),
+//               ),
+//             ),
+//           ),
+//         ),
+//         SliverToBoxAdapter(
+//           child: SizedBox(
+//             height: AppSize.getHeight(
+//               10,
+//             ),
+//           ),
+//         ),
+//         const SliverToBoxAdapter(
+//           child: CustomGridViewWidget(),
+//         ),
+//         SliverToBoxAdapter(
+//           child: SizedBox(
+//             height: AppSize.getHeight(
+//               10,
+//             ),
+//           ),
+//         ),
+//         SliverToBoxAdapter(
+//           child: Padding(
+//             padding: const EdgeInsets.symmetric(horizontal: 5,),
+//             child: CustomBestValueItem(
+//               card: cardsList[1],
+//             ),
+//           ),
+//         ),
+//          SliverToBoxAdapter(
+//           child: SizedBox(
+//             height: AppSize.getHeight(
+//               10,
+//             ),
+//           ),
+//         ),
+//           const SliverToBoxAdapter(
+//           child: Padding(
+//             padding: EdgeInsets.only(
+//               right: 15,
+//             ),
+//             child: Align(
+//               alignment: Alignment.centerRight,
+//               child: Text(
+//                 AppStrings.shopping,
+//                 style: TextStyle(
+//                   color: AppColor.appTextColor2,
+//                   fontSize: 25,
+//                   fontWeight: FontWeight.bold,
+//                 ),
+//               ),
+//             ),
+//           ),
+//         ),
+//       ],
+//     );
+//   }
+// }

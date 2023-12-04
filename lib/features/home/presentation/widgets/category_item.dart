@@ -10,7 +10,7 @@ class CategoryItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AspectRatio(
-      aspectRatio: .9,
+      aspectRatio: .95,
       child: Container(
         decoration: BoxDecoration(
           color: Colors.white,
@@ -46,24 +46,29 @@ class CategoryItem extends StatelessWidget {
                   top: -28,
                   left: 25,
                   child: CircleAvatar(
-                    backgroundColor: AppColor.yellow,
+                    backgroundColor: Colors.white,
                     radius: 26,
-                    child: ClipRRect(
-                      borderRadius:const BorderRadius.only(
-                        bottomLeft: Radius.circular(
-                          8,
+                    child: CircleAvatar(
+                      backgroundColor: categoryModel.color,
+                      radius: 22,
+                      child: ClipRRect(
+                        borderRadius:const BorderRadius.only(
+                          bottomLeft: Radius.circular(
+                            8,
+                          ),
+                          bottomRight: Radius.circular(
+                            8,
+                          ),
                         ),
-                        bottomRight: Radius.circular(
-                          8,
-                        ),
-                      ),
-                      child: SvgPicture.asset(
-                        categoryModel.image,
-                        width: AppSize.getWidth(
-                          30,
-                        ),
-                        height: AppSize.getHeight(
-                          30,
+                        child: SvgPicture.asset(
+                          categoryModel.image,
+                          color: Colors.white,
+                          width: AppSize.getWidth(
+                            30,
+                          ),
+                          height: AppSize.getHeight(
+                            30,
+                          ),
                         ),
                       ),
                     ),

@@ -11,11 +11,29 @@ class CustomMostSellItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: AppSize.getHeight(
+        220,
+      ),
+      width: AppSize.getWidth(
+        120,
+      ),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(
           12,
         ),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey.withOpacity(
+              0.5,
+            ),
+            blurRadius: 3,
+            offset: const Offset(
+              0,
+              5,
+            ),
+          ),
+        ],
       ),
       child: Column(
         children: [
@@ -61,30 +79,30 @@ class CustomMostSellItem extends StatelessWidget {
           ),
           SizedBox(
             height: AppSize.getHeight(
-              10,
+              5,
             ),
           ),
           Image.asset(
             bsetSellModel.image,
             width: double.infinity,
             height: AppSize.getHeight(
-              40,
+              80,
             ),
             fit: BoxFit.fill,
           ),
           SizedBox(
             height: AppSize.getHeight(
-              15,
+              8,
             ),
           ),
           Align(
             alignment: Alignment.centerRight,
             child: Container(
               width: AppSize.getWidth(
-                80,
+                60,
               ),
               height: AppSize.getHeight(
-                20,
+                18,
               ),
               decoration: BoxDecoration(
                 color: AppColor.yellow,
@@ -103,12 +121,22 @@ class CustomMostSellItem extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(
-            height: AppSize.getHeight(
-              15,
+          const Padding(
+            padding: EdgeInsets.all(
+              5.0,
+            ),
+            child: Align(
+              alignment: Alignment.centerRight,
+              child: Text(
+                '5Kg',
+              ),
             ),
           ),
+          const Spacer(),
           Container(
+            height: AppSize.getHeight(
+              30,
+            ),
             decoration: BoxDecoration(
               color: AppColor.grey,
               borderRadius: BorderRadius.circular(
@@ -116,9 +144,39 @@ class CustomMostSellItem extends StatelessWidget {
               ),
             ),
             width: double.infinity,
-            child: Align(
-              alignment: Alignment.centerRight,
-              child: Text("\$ ${bsetSellModel.price}"),
+            child: Stack(
+              clipBehavior: Clip.none,
+              children: [
+               
+                Align(
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    " \$ ${bsetSellModel.price}",
+                    style: TextStyle(
+                      fontSize: AppSize.getFontSize(
+                        15,
+                      ),
+                    ),
+                  ),
+                ),
+                 Positioned(
+                  left:10,
+                  top: -7,
+                  child: Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(
+                        15,
+                      ),
+                      color: AppColor.onBoardingOneColor,
+                    ),
+                    child: const Icon(
+                      Icons.abc,
+                      size: 30,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+              ],
             ),
           ),
         ],

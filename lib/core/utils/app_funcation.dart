@@ -52,22 +52,19 @@ void navigationWithReplace(context, String path) {
 // }
 
 //home view function
-Widget getLeading(IconData icon) => Padding(
-      padding: const EdgeInsets.only(
-        left: 8,
-      ),
-      child: Container(
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(
-            10,
-          ),
-          color: Colors.white,
-        ),
-        child: Icon(
-          icon,
-        ),
-      ),
-    );
+Widget getLeading(IconData icon) => Container(
+  width: AppSize.getWidth(40,),
+  height: AppSize.getHeight(40,),
+  decoration: BoxDecoration(
+    borderRadius: BorderRadius.circular(
+      15,
+    ),
+    color: Colors.white,
+  ),
+  child: Icon(
+    icon,
+  ),
+);
 
 getOrientation(context) {
   return MediaQuery.of(context).orientation;

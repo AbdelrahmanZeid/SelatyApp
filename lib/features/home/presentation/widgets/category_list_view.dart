@@ -15,7 +15,6 @@ class CategoryListView extends StatelessWidget {
         
       ),
       child: ListView.builder(
-     //  padding: EdgeInsets.symmetric(horizontal: 10,),
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) {
           return Padding(

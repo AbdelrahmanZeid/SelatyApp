@@ -1,14 +1,14 @@
-
 import 'package:flutter/material.dart';
+import 'package:selaty/core/utils/app_size.dart';
 
 class CustomActionWidget extends StatelessWidget {
   const CustomActionWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Row(
+    return Row(
       children: [
-        Column(
+        const Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
@@ -19,8 +19,13 @@ class CustomActionWidget extends StatelessWidget {
             ),
           ],
         ),
-        CircleAvatar(
-          radius: 45,
+        SizedBox(
+          width: AppSize.getWidth(
+            10,
+          ),
+        ),
+        const CircleAvatar(
+          radius: 28,
         ),
       ],
     );

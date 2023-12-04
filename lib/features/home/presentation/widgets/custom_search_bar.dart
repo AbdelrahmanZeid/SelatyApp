@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import '../../../../core/utils/app_color.dart';
 import '../../../../core/utils/app_size.dart';
@@ -16,7 +15,7 @@ class CustomSearchBar extends StatelessWidget {
             300,
           ),
           height: AppSize.getHeight(
-            50,
+            45,
           ),
           child: const TextField(
             decoration: InputDecoration(
@@ -41,10 +40,10 @@ class CustomSearchBar extends StatelessWidget {
         ),
         Container(
           width: AppSize.getWidth(
-            45,
+            42,
           ),
           height: AppSize.getHeight(
-            45,
+            42,
           ),
           decoration: BoxDecoration(
             color: AppColor.onBoardingOneColor,
@@ -53,7 +52,9 @@ class CustomSearchBar extends StatelessWidget {
             ),
           ),
           child: const Icon(
-            Icons.alarm,
+            Icons.filter_list_outlined,
+            color: Colors.white,
+            size: 25,
           ),
         ),
       ],

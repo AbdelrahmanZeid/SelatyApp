@@ -1,4 +1,5 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
+import 'package:dynamic_height_grid_view/dynamic_height_grid_view.dart';
 import 'package:flutter/material.dart';
 
 import 'package:selaty/core/utils/app_color.dart';
@@ -11,7 +12,9 @@ import 'package:selaty/features/home/presentation/widgets/category_list_view.dar
 import 'package:selaty/features/home/presentation/widgets/custom_action_widget.dart';
 import 'package:selaty/features/home/presentation/widgets/custom_best_value_item.dart';
 import 'package:selaty/features/home/presentation/widgets/custom_grid_view.dart';
+import 'package:selaty/features/home/presentation/widgets/custom_most_sell_item.dart';
 import 'package:selaty/features/home/presentation/widgets/custom_search_bar.dart';
+import 'package:selaty/features/home/presentation/widgets/custom_watch_all_widget.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -155,22 +158,7 @@ class HomeViewBody extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                Row(
-                  children: [
-                    Text(
-                      "مشاهده الكل",
-                      style: TextStyle(
-                        color: AppColor.appTextColor,
-                        fontSize: AppSize.getFontSize(
-                          15,
-                        ),
-                      ),
-                    ),
-                    const Icon(
-                      Icons.arrow_right_sharp,
-                    ),
-                  ],
-                ),
+                const CustomWatchAllTextWidget(),
                 const Spacer(),
                 Align(
                   alignment: Alignment.centerRight,
@@ -223,34 +211,18 @@ class HomeViewBody extends StatelessWidget {
             ),
           ),
         ),
-        SliverToBoxAdapter(
+        const SliverToBoxAdapter(
           child: Padding(
-            padding: const EdgeInsets.only(
+            padding: EdgeInsets.only(
               right: 15,
               left: 15,
             ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    Text(
-                      "مشاهده الكل",
-                      style: TextStyle(
-                        color: AppColor.appTextColor,
-                        fontSize: AppSize.getFontSize(
-                          15,
-                        ),
-                      ),
-                    ),
-                    const Icon(
-                      Icons.arrow_right_sharp,
-                    ),
-                  ],
-                ),
-                const Spacer(),
-                const Align(
+                CustomWatchAllTextWidget(),
+                Spacer(),
+                Align(
                   alignment: Alignment.centerRight,
                   child: Text(
                     AppStrings.shopping,
@@ -265,20 +237,155 @@ class HomeViewBody extends StatelessWidget {
             ),
           ),
         ),
+        SliverToBoxAdapter(
+          child: SizedBox(
+            height: AppSize.getHeight(
+              10,
+            ),
+          ),
+        ),
+        const SliverToBoxAdapter(
+          child: CustomShoppingGridView(),
+        ),
       ],
     );
   }
 }
 
-// class CustomShoppingWidget extends StatelessWidget {
-//   const CustomShoppingWidget({super.key});
+class CustomShoppingGridView extends StatelessWidget {
+  const CustomShoppingGridView({super.key});
 
-//   @override
-//   Widget build(BuildContext context) {
-//     return const Placeholder();
-//   }
-// }
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      height: AppSize.getHeight(
+        300,
+      ),
+      width: double.infinity,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(
+          horizontal: 4,
+        ),
+        child: DynamicHeightGridView(
+          mainAxisSpacing: 12,
+          shrinkWrap: true,
+          physics: const NeverScrollableScrollPhysics(),
+          builder: (BuildContext context, int index) {
+            return CustomShoppingWidget(
+              shoppingModel: shoppindList[index],
+            );
+          },
+          itemCount: 6,
+          crossAxisCount: 3,
+        ),
+      ),
+    );
+  }
+}
 
+class CustomShoppingWidget extends StatelessWidget {
+  const CustomShoppingWidget({super.key, required this.shoppingModel});
+  final ShoppingModel shoppingModel;
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: AppSize.getHeight(
+        100,
+      ),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(
+          12,
+        ),
+        color: shoppingModel.color,
+      ),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Text(
+            shoppingModel.upperTitle,
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: AppSize.getFontSize(
+                15,
+              ),
+            ),
+          ),
+          Text(
+            shoppingModel.middleTitle,
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: AppSize.getFontSize(
+                25,
+              ),
+            ),
+          ),
+          Text(
+            shoppingModel.lowerTitle,
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: AppSize.getFontSize(
+                15,
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class ShoppingModel {
+  final Color color;
+  final String upperTitle;
+  final String middleTitle;
+  final String lowerTitle;
+  ShoppingModel({
+    required this.middleTitle,
+    required this.color,
+    required this.upperTitle,
+    required this.lowerTitle,
+  });
+}
+
+List<ShoppingModel> shoppindList = [
+  ShoppingModel(
+    color: AppColor.purple,
+    upperTitle: 'صفه',
+    lowerTitle: 'خصم',
+    middleTitle: "30%",
+  ),
+  ShoppingModel(
+    color: AppColor.blue,
+    upperTitle: 'صفه',
+    lowerTitle: 'خصم',
+    middleTitle: "40%",
+  ),
+  ShoppingModel(
+    color: AppColor.red,
+    upperTitle: 'صفه',
+    lowerTitle: 'خصم',
+    middleTitle: "50%",
+  ),
+  ShoppingModel(
+    color: AppColor.lightBlue,
+    upperTitle: 'صفه',
+    lowerTitle: 'خصم',
+    middleTitle: "70%",
+  ),
+  ShoppingModel(
+    color: AppColor.darkGreen,
+    upperTitle: 'صفه',
+    lowerTitle: 'خصم',
+    middleTitle: "20%",
+  ),
+  ShoppingModel(
+    color: AppColor.yellow,
+    upperTitle: 'صفه',
+    lowerTitle: 'خصم',
+    middleTitle: "30%",
+  ),
+];
 
 
 

@@ -114,10 +114,10 @@ class _CustomPageViewState extends State<CustomPageView> {
                   isPortrait(context)
                       ? Container(
                         width: AppSize.getWidth(
-                          48,
+                          55,
                         ),
                         height: AppSize.getHeight(
-                          48,
+                          50,
                         ),
                         decoration: BoxDecoration(
                           color: onBoardingList[index].color,
@@ -133,7 +133,7 @@ class _CustomPageViewState extends State<CustomPageView> {
                       )
                       : Container(
                           width: AppSize.getWidth(
-                            48,
+                            22,
                           ),
                           height: AppSize.getHeight(
                             48,

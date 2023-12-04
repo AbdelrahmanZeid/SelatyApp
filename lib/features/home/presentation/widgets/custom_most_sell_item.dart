@@ -121,14 +121,14 @@ class CustomMostSellItem extends StatelessWidget {
               ),
             ),
           ),
-          const Padding(
-            padding: EdgeInsets.all(
+          Padding(
+            padding: const EdgeInsets.all(
               5.0,
             ),
             child: Align(
               alignment: Alignment.centerRight,
               child: Text(
-                '5Kg',
+                '${bsetSellModel.weight}Kg',
               ),
             ),
           ),
@@ -147,7 +147,6 @@ class CustomMostSellItem extends StatelessWidget {
             child: Stack(
               clipBehavior: Clip.none,
               children: [
-               
                 Align(
                   alignment: Alignment.centerRight,
                   child: Text(
@@ -159,8 +158,8 @@ class CustomMostSellItem extends StatelessWidget {
                     ),
                   ),
                 ),
-                 Positioned(
-                  left:10,
+                Positioned(
+                  left: 10,
                   top: -7,
                   child: Container(
                     decoration: BoxDecoration(

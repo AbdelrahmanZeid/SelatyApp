@@ -6,7 +6,6 @@ class OnBoardingViewBody extends StatelessWidget {
   OnBoardingViewBody({super.key});
   PageController controller = PageController();
 
-  // int currentIndex=0;
   @override
   Widget build(BuildContext context) {
     return Expanded(

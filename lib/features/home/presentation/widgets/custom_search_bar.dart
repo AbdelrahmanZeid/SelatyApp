@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:selaty/core/utils/app_funcation.dart';
 import '../../../../core/utils/app_color.dart';
 import '../../../../core/utils/app_size.dart';
 
@@ -39,8 +40,10 @@ class CustomSearchBar extends StatelessWidget {
           ),
         ),
         Container(
-          width: AppSize.getWidth(
+          width:isPortrait(context)? AppSize.getWidth(
             42,
+          ):AppSize.getWidth(
+            22,
           ),
           height: AppSize.getHeight(
             42,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:selaty/core/utils/app_funcation.dart';
 
 import '../../../../core/utils/app_color.dart';
 import '../../../../core/utils/app_size.dart';
@@ -11,11 +12,15 @@ class CustomMostSellItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: AppSize.getHeight(
+      height:isPortrait(context)? AppSize.getHeight(
         220,
+      ): AppSize.getHeight(
+        230,
       ),
-      width: AppSize.getWidth(
+      width:isPortrait(context)? AppSize.getWidth(
         120,
+      ):AppSize.getWidth(
+        100,
       ),
       decoration: BoxDecoration(
         color: Colors.white,
@@ -98,8 +103,10 @@ class CustomMostSellItem extends StatelessWidget {
           Align(
             alignment: Alignment.centerRight,
             child: Container(
-              width: AppSize.getWidth(
+              width:isPortrait(context)? AppSize.getWidth(
                 60,
+              ):AppSize.getWidth(
+                45,
               ),
               height: AppSize.getHeight(
                 18,
@@ -134,8 +141,10 @@ class CustomMostSellItem extends StatelessWidget {
           ),
           const Spacer(),
           Container(
-            height: AppSize.getHeight(
+            height:isPortrait(context)? AppSize.getHeight(
               30,
+            ):AppSize.getHeight(
+              40,
             ),
             decoration: BoxDecoration(
               color: AppColor.grey,
@@ -152,8 +161,10 @@ class CustomMostSellItem extends StatelessWidget {
                   child: Text(
                     " \$ ${bsetSellModel.price}",
                     style: TextStyle(
-                      fontSize: AppSize.getFontSize(
+                      fontSize:isPortrait(context)? AppSize.getFontSize(
                         15,
+                      ):AppSize.getFontSize(
+                        11,
                       ),
                     ),
                   ),
@@ -163,14 +174,16 @@ class CustomMostSellItem extends StatelessWidget {
                   top: -7,
                   child: Container(
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(
+                      borderRadius:isPortrait(context)? BorderRadius.circular(
                         15,
+                      ): BorderRadius.circular(
+                        18,
                       ),
                       color: AppColor.onBoardingOneColor,
                     ),
-                    child: const Icon(
+                    child: Icon(
                       Icons.abc,
-                      size: 30,
+                      size:isPortrait(context)? 30:35,
                       color: Colors.white,
                     ),
                   ),

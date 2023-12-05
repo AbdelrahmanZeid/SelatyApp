@@ -1,5 +1,6 @@
 import 'package:dynamic_height_grid_view/dynamic_height_grid_view.dart';
 import 'package:flutter/material.dart';
+import 'package:selaty/core/utils/app_funcation.dart';
 import '../../../../core/utils/app_size.dart';
 import '../../data/models/best_sell_model.dart';
 import 'custom_most_sell_item.dart';
@@ -10,8 +11,10 @@ class CustomGridViewWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: AppSize.getHeight(
+      height:isPortrait(context)? AppSize.getHeight(
         455,
+      ): AppSize.getHeight(
+        478,
       ),
       width: double.infinity,
       child: Padding(

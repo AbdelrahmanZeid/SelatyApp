@@ -1,5 +1,6 @@
 import 'package:card_swiper/card_swiper.dart';
 import 'package:flutter/material.dart';
+import 'package:selaty/core/utils/app_funcation.dart';
 import '../../../../core/utils/app_size.dart';
 import '../../data/models/card_model.dart';
 import 'custom_best_value_item.dart';
@@ -10,8 +11,10 @@ class BestValue extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: AppSize.getHeight(
+      height:isPortrait(context)? AppSize.getHeight(
         150,
+      ):AppSize.getHeight(
+        170,
       ),
       child: Swiper(
         autoplay: true,

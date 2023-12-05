@@ -23,29 +23,44 @@ List<CategoryModel> catList = [
     title: "دواجن", color: AppColor.green,
   ),
   CategoryModel(
-    image: Assets.assetsImagesChicken,
+    image: Assets.assetsImagesFruits,
     bgImage: Assets.assetsImagesFruitTwo,
-    title: "فواكه", color: AppColor.grey,
+    title: "فواكه", color: AppColor.blue,
   ),
   CategoryModel(
-    image: Assets.assetsImagesChicken,
+    image: Assets.assetsImagesVegetables,
     bgImage: Assets.assetsImagesFruitTwo,
     title: "خضروات", color: AppColor.yellow,
   ),
   CategoryModel(
     image: Assets.assetsImagesChicken,
     bgImage: Assets.assetsImagesFruitTwo,
-    title: "دواجن", color: AppColor.onBoardingOneColor,
+    title: "دواجن", color: AppColor.red,
+  ),
+  CategoryModel(
+    image: Assets.assetsImagesFruits,
+    bgImage: Assets.assetsImagesFruitTwo,
+    title: "فواكه", color: AppColor.lightBlue,
+  ),
+  CategoryModel(
+    image: Assets.assetsImagesVegetables,
+    bgImage: Assets.assetsImagesFruitTwo,
+    title: "خضروات", color: AppColor.grey,
   ),
   CategoryModel(
     image: Assets.assetsImagesChicken,
     bgImage: Assets.assetsImagesFruitTwo,
-    title: "فواكه", color: AppColor.green,
+    title: "دواجن", color: AppColor.yellow,
   ),
   CategoryModel(
     image: Assets.assetsImagesChicken,
     bgImage: Assets.assetsImagesFruitTwo,
-    title: "دواجن", color: AppColor.grey,
+    title: "دواجن", color: AppColor.yellow,
+  ),
+  CategoryModel(
+    image: Assets.assetsImagesChicken,
+    bgImage: Assets.assetsImagesFruitTwo,
+    title: "دواجن", color: AppColor.yellow,
   ),
   CategoryModel(
     image: Assets.assetsImagesChicken,

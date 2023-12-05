@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:selaty/core/utils/app_funcation.dart';
 import '../../../../core/utils/app_size.dart';
 import '../../data/models/category_model.dart';
 
@@ -9,7 +10,7 @@ class CategoryItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AspectRatio(
-      aspectRatio: .95,
+      aspectRatio:isPortrait(context)? .95:1,
       child: Container(
         decoration: BoxDecoration(
           color: Colors.white,
@@ -43,7 +44,7 @@ class CategoryItem extends StatelessWidget {
                 ),
                 Positioned(
                   top: -28,
-                  left: 25,
+                  left: 28,
                   child: CircleAvatar(
                     backgroundColor: Colors.white,
                     radius: 26,

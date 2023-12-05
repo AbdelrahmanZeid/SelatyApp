@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:selaty/core/utils/app_color.dart';
+import 'package:selaty/core/utils/app_funcation.dart';
 import 'package:selaty/core/utils/app_size.dart';
 
 class CustomWatchAllTextWidget extends StatelessWidget {
@@ -14,8 +15,10 @@ class CustomWatchAllTextWidget extends StatelessWidget {
                       "مشاهده الكل",
                       style: TextStyle(
                         color: AppColor.appTextColor,
-                        fontSize: AppSize.getFontSize(
+                        fontSize:isPortrait(context)? AppSize.getFontSize(
                           15,
+                        ): AppSize.getFontSize(
+                          10,
                         ),
                       ),
                     ),

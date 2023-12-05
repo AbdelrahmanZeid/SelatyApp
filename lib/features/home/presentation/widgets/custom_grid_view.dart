@@ -12,7 +12,7 @@ class CustomGridViewWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       height:isPortrait(context)? AppSize.getHeight(
-        455,
+        460,
       ): AppSize.getHeight(
         478,
       ),

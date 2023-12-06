@@ -53,4 +53,5 @@ class AppStrings {
   static const shopping = "تسوق حسب العروض";
   static const fresh = "طازج وسريع";
   static const takeChance = "انتهز الفرصه";
+  static const discount ="خصم يصل حتي ";
 }

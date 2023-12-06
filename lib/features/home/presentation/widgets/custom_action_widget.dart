@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:selaty/core/utils/app_color.dart';
 import 'package:selaty/core/utils/app_size.dart';
 
 class CustomActionWidget extends StatelessWidget {
@@ -26,6 +27,7 @@ class CustomActionWidget extends StatelessWidget {
         ),
         const CircleAvatar(
           radius: 28,
+          backgroundColor: AppColor.lightBlue,
         ),
       ],
     );

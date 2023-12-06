@@ -41,32 +41,35 @@ class _WelcomeViewState extends State<WelcomeView> {
         backgroundColor: AppColor.darkGrey,
         body: viewsList[_selectedPageIndex],
         bottomNavigationBar: ConvexAppBar(
-          // height: AppSize.getHeight(
-          //   52,
-          // ),
+          height:isPortrait(context)? AppSize.getHeight(
+            45,
+          ):AppSize.getHeight(
+            35,
+          ),
           style: TabStyle.fixed,
-          backgroundColor: Colors.white,
+          backgroundColor:const Color(0xffF3F3F3,),
           items: [
             TabItem(
               icon: Icon(
                 Icons.shopping_cart_outlined,
                 color: _selectedPageIndex == 0 ? Colors.green : Colors.black,
               ),
-              title: 'Search',
+           title: 'Search',
             ),
             TabItem(
               icon: Icon(
                 Icons.favorite_outline,
                 color: _selectedPageIndex == 1 ? Colors.green : Colors.black,
               ),
-              title: 'favorite',
+             title: 'favorite',
             ),
             TabItem(
               icon: Image.asset(
                 Assets.assetsImagesLogo,
                 fit: BoxFit.fitWidth,
+               // color:  Color(0xffF3F3F3,),
               ),
-              title: 'Add',
+             title: 'Add',
             ),
             TabItem(
               icon: Icon(

@@ -16,12 +16,12 @@ class BestSellModel {
 
 List<BestSellModel> bestSellList = [
   BestSellModel(
-    image: Assets.assetsImagesBestSellOne,
+    image: Assets.assetsImagesMoz,
     type: "فواكه",
     price: "50", weight: '5',
   ),
   BestSellModel(
-    image: Assets.assetsImagesBestSellTwo,
+    image: Assets.assetsImagesFlfl,
     type: "خضروات",
     price: "150", weight: '10',
   ),

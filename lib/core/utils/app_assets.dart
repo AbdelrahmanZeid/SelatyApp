@@ -123,5 +123,5 @@ class Assets {
 
   /// Assets for assetsImagesVegetables (2)
   /// assets/images/vegetables (2).svg
-  static const String assetsImagesVegetables (2) = "assets/images/vegetables (2).svg";
+  static const String assetsImagesVegetables = "assets/images/vegetables (2).svg";
 }

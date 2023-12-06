@@ -6,9 +6,9 @@ import '../../../../core/utils/app_size.dart';
 import '../../data/models/best_sell_model.dart';
 
 class CustomMostSellItem extends StatelessWidget {
-  const CustomMostSellItem({super.key, required this.bsetSellModel});
+  const CustomMostSellItem({super.key, required this.bestSellModel});
 
-  final BestSellModel bsetSellModel;
+  final BestSellModel bestSellModel;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -88,7 +88,7 @@ class CustomMostSellItem extends StatelessWidget {
             ),
           ),
           Image.asset(
-            bsetSellModel.image,
+            bestSellModel.image,
             width: double.infinity,
             height: AppSize.getHeight(
               80,
@@ -120,7 +120,7 @@ class CustomMostSellItem extends StatelessWidget {
               child: Align(
                 alignment: Alignment.centerRight,
                 child: Text(
-                  bsetSellModel.type,
+                  bestSellModel.type,
                   style: const TextStyle(
                     color: Colors.white,
                   ),
@@ -135,7 +135,7 @@ class CustomMostSellItem extends StatelessWidget {
             child: Align(
               alignment: Alignment.centerRight,
               child: Text(
-                '${bsetSellModel.weight}Kg',
+                '${bestSellModel.weight}Kg',
               ),
             ),
           ),
@@ -159,7 +159,7 @@ class CustomMostSellItem extends StatelessWidget {
                 Align(
                   alignment: Alignment.centerRight,
                   child: Text(
-                    " \$ ${bsetSellModel.price}",
+                    " \$ ${bestSellModel.price}",
                     style: TextStyle(
                       fontSize:isPortrait(context)? AppSize.getFontSize(
                         15,

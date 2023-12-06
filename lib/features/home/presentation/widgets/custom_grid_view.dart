@@ -27,7 +27,7 @@ class CustomGridViewWidget extends StatelessWidget {
           physics: const NeverScrollableScrollPhysics(),
           builder: (BuildContext context, int index) {
             return CustomMostSellItem(
-              bsetSellModel: bestSellList[index],
+              bestSellModel: bestSellList[index],
             );
           },
           itemCount: 4,

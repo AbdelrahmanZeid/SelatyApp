@@ -17,6 +17,14 @@ class Assets {
   /// assets/images/4.jpg
   static const String assetsImages4 = "assets/images/4.jpg";
 
+  /// Assets for assetsImages5yar
+  /// assets/images/5yar.jpg
+  static const String assetsImages5yar = "assets/images/5yar.jpg";
+
+  /// Assets for assetsImagesApple
+  /// assets/images/apple.jpg
+  static const String assetsImagesApple = "assets/images/apple.jpg";
+
   /// Assets for assetsImagesBestSellOne
   /// assets/images/best_sell_one.jpg
   static const String assetsImagesBestSellOne = "assets/images/best_sell_one.jpg";
@@ -37,6 +45,14 @@ class Assets {
   /// assets/images/chicken.svg
   static const String assetsImagesChicken = "assets/images/chicken.svg";
 
+  /// Assets for assetsImagesFlfl
+  /// assets/images/flfl.jpg
+  static const String assetsImagesFlfl = "assets/images/flfl.jpg";
+
+  /// Assets for assetsImagesFresh
+  /// assets/images/fresh.jpg
+  static const String assetsImagesFresh = "assets/images/fresh.jpg";
+
   /// Assets for assetsImagesFruitOne
   /// assets/images/fruit_one.jpg
   static const String assetsImagesFruitOne = "assets/images/fruit_one.jpg";
@@ -53,9 +69,21 @@ class Assets {
   /// assets/images/grey_fruit_image.jpg
   static const String assetsImagesGreyFruitImage = "assets/images/grey_fruit_image.jpg";
 
+  /// Assets for assetsImagesLogo
+  /// assets/images/logo.png
+  static const String assetsImagesLogo = "assets/images/logo.png";
+
   /// Assets for assetsImagesMain
   /// assets/images/main.jpg
   static const String assetsImagesMain = "assets/images/main.jpg";
+
+  /// Assets for assetsImagesMoz
+  /// assets/images/moz.png
+  static const String assetsImagesMoz = "assets/images/moz.png";
+
+  /// Assets for assetsImagesNap
+  /// assets/images/nap.png
+  static const String assetsImagesNap = "assets/images/nap.png";
 
   /// Assets for assetsImagesOnBoarding1
   /// assets/images/on_boarding_1.jpg
@@ -95,5 +123,5 @@ class Assets {
 
   /// Assets for assetsImagesVegetables (2)
   /// assets/images/vegetables (2).svg
-  static const String assetsImagesVegetables  = "assets/images/vegetables (2).svg";
+  static const String assetsImagesVegetables (2) = "assets/images/vegetables (2).svg";
 }

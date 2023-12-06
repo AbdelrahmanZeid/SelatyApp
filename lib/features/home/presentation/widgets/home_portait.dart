@@ -1,18 +1,20 @@
-
 import 'package:flutter/material.dart';
 import 'package:selaty/core/utils/app_color.dart';
 import 'package:selaty/core/utils/app_funcation.dart';
 import 'package:selaty/core/utils/app_size.dart';
 import 'package:selaty/core/utils/app_strings.dart';
+import 'package:selaty/features/home/data/models/best_sell_model.dart';
 import 'package:selaty/features/home/data/models/card_model.dart';
 import 'package:selaty/features/home/presentation/widgets/best_value.dart';
 import 'package:selaty/features/home/presentation/widgets/category_list_view.dart';
 import 'package:selaty/features/home/presentation/widgets/custom_action_widget.dart';
 import 'package:selaty/features/home/presentation/widgets/custom_best_value_item.dart';
 import 'package:selaty/features/home/presentation/widgets/custom_grid_view.dart';
+import 'package:selaty/features/home/presentation/widgets/custom_most_sell_item.dart';
 import 'package:selaty/features/home/presentation/widgets/custom_search_bar.dart';
 import 'package:selaty/features/home/presentation/widgets/custom_shopping_grid_view.dart';
 import 'package:selaty/features/home/presentation/widgets/custom_watch_all_widget.dart';
+import 'package:selaty/features/home/presentation/widgets/fresh_list_view.dart';
 
 class HomePortait extends StatelessWidget {
   const HomePortait({
@@ -39,10 +41,8 @@ class HomePortait extends StatelessWidget {
           ),
         ),
         SliverToBoxAdapter(
-          child: SizedBox(
-            height: AppSize.getHeight(
-              15,
-            ),
+          child: addSpace(
+            15,
           ),
         ),
         const SliverToBoxAdapter(
@@ -59,10 +59,9 @@ class HomePortait extends StatelessWidget {
                   fontSize: 15,
                 ),
               ),
-              SizedBox(
-                width: AppSize.getWidth(
-                  10,
-                ),
+              addSpace(
+                0,
+                10,
               ),
               const Padding(
                 padding: EdgeInsets.only(
@@ -80,10 +79,8 @@ class HomePortait extends StatelessWidget {
           ),
         ),
         SliverToBoxAdapter(
-          child: SizedBox(
-            height: AppSize.getHeight(
-              15,
-            ),
+          child: addSpace(
+            15,
           ),
         ),
         const SliverToBoxAdapter(
@@ -95,10 +92,8 @@ class HomePortait extends StatelessWidget {
           ),
         ),
         SliverToBoxAdapter(
-          child: SizedBox(
-            height: AppSize.getHeight(
-              15,
-            ),
+          child: addSpace(
+            15,
           ),
         ),
         const SliverToBoxAdapter(
@@ -120,20 +115,16 @@ class HomePortait extends StatelessWidget {
           ),
         ),
         SliverToBoxAdapter(
-          child: SizedBox(
-            height: AppSize.getHeight(
-              10,
-            ),
+          child: addSpace(
+            10,
           ),
         ),
         const SliverToBoxAdapter(
           child: CategoryListView(),
         ),
         SliverToBoxAdapter(
-          child: SizedBox(
-            height: AppSize.getHeight(
-              10,
-            ),
+          child: addSpace(
+            10,
           ),
         ),
         SliverToBoxAdapter(
@@ -165,20 +156,16 @@ class HomePortait extends StatelessWidget {
           ),
         ),
         SliverToBoxAdapter(
-          child: SizedBox(
-            height: AppSize.getHeight(
-              10,
-            ),
+          child: addSpace(
+            10,
           ),
         ),
         const SliverToBoxAdapter(
           child: CustomGridViewWidget(),
         ),
         SliverToBoxAdapter(
-          child: SizedBox(
-            height: AppSize.getHeight(
-              10,
-            ),
+          child: addSpace(
+            10,
           ),
         ),
         SliverToBoxAdapter(
@@ -192,10 +179,8 @@ class HomePortait extends StatelessWidget {
           ),
         ),
         SliverToBoxAdapter(
-          child: SizedBox(
-            height: AppSize.getHeight(
-              10,
-            ),
+          child: addSpace(
+            10,
           ),
         ),
         const SliverToBoxAdapter(
@@ -225,14 +210,84 @@ class HomePortait extends StatelessWidget {
           ),
         ),
         SliverToBoxAdapter(
-          child: SizedBox(
-            height: AppSize.getHeight(
-              10,
-            ),
+          child: addSpace(
+            10,
           ),
         ),
         const SliverToBoxAdapter(
           child: CustomShoppingGridView(),
+        ),
+        SliverToBoxAdapter(
+          child: addSpace(
+            10,
+          ),
+        ),
+        const SliverToBoxAdapter(
+          child: Align(
+            alignment: Alignment.centerRight,
+            child: Text(
+              AppStrings.fresh,
+              style: TextStyle(
+                color: AppColor.appTextColor2,
+                fontSize: 25,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
+        ),
+        SliverToBoxAdapter(
+          child: addSpace(
+            10,
+          ),
+        ),
+        const SliverToBoxAdapter(
+          child: FreshListView(),
+        ),
+        SliverToBoxAdapter(
+          child: addSpace(
+            10,
+          ),
+        ),
+        SliverToBoxAdapter(
+          child: CustomBestValueItem(
+            card: cardsList[4],
+          ),
+        ),
+        SliverToBoxAdapter(
+          child: addSpace(
+            10,
+          ),
+        ),
+         const SliverToBoxAdapter(
+          child: Padding(
+            padding: EdgeInsets.only(
+              right: 15,
+              left: 15,
+            ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                CustomWatchAllTextWidget(),
+                Spacer(),
+                Align(
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    AppStrings.takeChance,
+                    style: TextStyle(
+                      color: AppColor.appTextColor2,
+                      fontSize: 25,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+         SliverToBoxAdapter(
+          child: addSpace(
+            10,
+          ),
         ),
       ],
     );

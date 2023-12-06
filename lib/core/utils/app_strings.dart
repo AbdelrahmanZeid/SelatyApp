@@ -52,5 +52,5 @@ class AppStrings {
   static const mostSell = "الاكثر مبيعا";
   static const shopping = "تسوق حسب العروض";
   static const fresh = "طازج وسريع";
-  static const takeChance = "انتهز القرصه";
+  static const takeChance = "انتهز الفرصه";
 }

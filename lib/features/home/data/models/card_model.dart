@@ -21,4 +21,7 @@ List<CardModel> cardsList = [
   CardModel(
     image: Assets.assetsImagesFruitTwo,
   ),
+  CardModel(
+    image: Assets.assetsImagesFresh,
+  ),
 ];

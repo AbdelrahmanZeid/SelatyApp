@@ -1,7 +1,5 @@
-
-import 'package:flutter/foundation.dart';
 import 'package:go_router/go_router.dart';
-import 'package:selaty/features/category/presentation/views/category_view.dart';
+import 'package:selaty/features/welcome/presentation/views/welcome_view.dart';
 
 import '../../features/auth/presentation/views/auth_view.dart';
 import '../../features/auth/presentation/views/change_pass_success_view.dart';
@@ -83,7 +81,7 @@ final GoRouter router = GoRouter(
     GoRoute(
       path: "/category",
       builder: (context, state) {
-        return const CategoryView();
+        return const WelcomeView();
       },
     ),
   ],

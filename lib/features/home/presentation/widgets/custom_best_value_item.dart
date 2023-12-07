@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:selaty/core/utils/app_funcation.dart';
+import 'package:selaty/core/utils/app_size.dart';
 import '../../data/models/card_model.dart';
 
 class CustomBestValueItem extends StatelessWidget {
@@ -12,7 +13,7 @@ class CustomBestValueItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      
+       height: AppSize.getHeight(180,),
       child: ClipRRect(
         borderRadius: BorderRadius.circular(
           15,

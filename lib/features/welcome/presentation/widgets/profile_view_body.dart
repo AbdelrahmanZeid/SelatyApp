@@ -1,10 +1,8 @@
 import 'package:dynamic_height_grid_view/dynamic_height_grid_view.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 import 'package:selaty/core/utils/app_color.dart';
 import 'package:selaty/core/utils/app_funcation.dart';
 import 'package:selaty/core/utils/app_size.dart';
-import 'package:selaty/features/home/presentation/widgets/custom_grid_view.dart';
 import 'package:selaty/features/welcome/presentation/widgets/category_view_app_bar.dart';
 import 'package:selaty/features/welcome/presentation/widgets/edit_profile_section.dart';
 
@@ -14,7 +12,9 @@ class ProfileViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 25,),
+      padding: const EdgeInsets.symmetric(
+        horizontal: 25,
+      ),
       child: Column(
         children: [
           addSpace(
@@ -28,19 +28,21 @@ class ProfileViewBody extends StatelessWidget {
           addSpace(
             15,
           ),
-          EditProfileGridView(),
-           addSpace(
-           12,
+          const EditProfileGridView(),
+          addSpace(
+            12,
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 8,),
+            padding: const EdgeInsets.symmetric(
+              horizontal: 8,
+            ),
             child: Row(
               children: [
                 Container(
                   decoration: BoxDecoration(
                     color: AppColor.red,
                     borderRadius: BorderRadius.circular(
-                     30,
+                      30,
                     ),
                   ),
                   height: AppSize.getHeight(
@@ -90,7 +92,7 @@ class EditProfileGridView extends StatelessWidget {
         builder: (BuildContext context, int index) {
           return const EditProfileItem();
         },
-        itemCount:9,
+        itemCount: 9,
         crossAxisCount: 3,
       ),
     );
@@ -104,7 +106,7 @@ class EditProfileItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color:const Color(
+        color: const Color(
           0xffF2F2F2,
         ),
         borderRadius: BorderRadius.circular(

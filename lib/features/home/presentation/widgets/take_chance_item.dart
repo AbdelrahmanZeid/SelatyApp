@@ -70,21 +70,32 @@ class TakeChanceItem extends StatelessWidget {
               child: Text(
                 takeChance.subTitle,
                 style: TextStyle(
-                  fontSize: AppSize.getFontSize(
+                  fontSize:isPortrait(context)? AppSize.getFontSize(
                     16,
+                  ): AppSize.getFontSize(
+                    10,
                   ),
                   fontWeight: FontWeight.w600,
                 ),
               ),
             ),
           ),
-          Image.asset(
+     isPortrait(context)?     Image.asset(
             takeChance.image,
             width: AppSize.getWidth(
               118,
             ),
             height: AppSize.getHeight(
               45,
+            ),
+            fit: BoxFit.cover,
+          ): Image.asset(
+            takeChance.image,
+            width: AppSize.getWidth(
+              118,
+            ),
+            height: AppSize.getHeight(
+              110,
             ),
             fit: BoxFit.cover,
           ),
@@ -94,8 +105,10 @@ class TakeChanceItem extends StatelessWidget {
             children: [
               Container(
                 width: double.infinity,
-                height: AppSize.getHeight(
+                height:isPortrait(context)? AppSize.getHeight(
                   28,
+                ):AppSize.getHeight(
+                  35,
                 ),
                 decoration: const BoxDecoration(
                   color: AppColor.appTextColor,
@@ -113,16 +126,22 @@ class TakeChanceItem extends StatelessWidget {
                 top: -12,
                 right: 8,
                 child: Container(
-                  width: AppSize.getWidth(
+                  width:isPortrait(context)? AppSize.getWidth(
                     25,
+                  ):AppSize.getWidth(
+                   12,
                   ),
-                  height: AppSize.getHeight(
+                  height:isPortrait(context)? AppSize.getHeight(
+                    25,
+                  ):AppSize.getHeight(
                     25,
                   ),
                   decoration: BoxDecoration(
                     color: AppColor.red,
-                    borderRadius: BorderRadius.circular(
+                    borderRadius:isPortrait(context)? BorderRadius.circular(
                       25,
+                    ):BorderRadius.circular(
+                      15,
                     ),
                   ),
                   child: const Icon(

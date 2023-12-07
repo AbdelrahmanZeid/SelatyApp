@@ -12,6 +12,8 @@ import 'package:selaty/features/home/presentation/widgets/custom_grid_view.dart'
 import 'package:selaty/features/home/presentation/widgets/custom_search_bar.dart';
 import 'package:selaty/features/home/presentation/widgets/custom_shopping_grid_view.dart';
 import 'package:selaty/features/home/presentation/widgets/custom_watch_all_widget.dart';
+import 'package:selaty/features/home/presentation/widgets/fresh_list_view.dart';
+import 'package:selaty/features/home/presentation/widgets/take_chance_lis_view.dart';
 
 class HomeLandScape extends StatelessWidget {
   const HomeLandScape({
@@ -241,6 +243,94 @@ class HomeLandScape extends StatelessWidget {
         ),
         const SliverToBoxAdapter(
           child: CustomShoppingGridView(),
+        ),
+         SliverToBoxAdapter(
+          child: addSpace(
+            8,
+          ),
+        ),
+        const SliverToBoxAdapter(
+          child: Padding(
+            padding: EdgeInsets.only(
+              right: 15,
+            ),
+            child: Align(
+              alignment: Alignment.centerRight,
+              child: Text(
+                AppStrings.fresh,
+                style: TextStyle(
+                  color: AppColor.appTextColor2,
+                  fontSize: 25,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+          ),
+        ),
+        SliverToBoxAdapter(
+          child: addSpace(
+            10,
+          ),
+        ),
+        const SliverToBoxAdapter(
+          child: FreshListView(),
+        ),
+        SliverToBoxAdapter(
+          child: addSpace(
+            10,
+          ),
+        ),
+        SliverToBoxAdapter(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 15,),
+            child: CustomBestValueItem(
+              card: cardsList[4],
+            ),
+          ),
+        ),
+        SliverToBoxAdapter(
+          child: addSpace(
+            10,
+          ),
+        ),
+        const SliverToBoxAdapter(
+          child: Padding(
+            padding: EdgeInsets.only(
+              right: 15,
+              left: 15,
+            ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                CustomWatchAllTextWidget(),
+                Spacer(),
+                Align(
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    AppStrings.takeChance,
+                    style: TextStyle(
+                      color: AppColor.appTextColor2,
+                      fontSize: 25,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+        SliverToBoxAdapter(
+          child: addSpace(
+            10,
+          ),
+        ),
+        const SliverToBoxAdapter(
+          child: TakeChanceListView(),
+        ),
+        SliverToBoxAdapter(
+          child: addSpace(
+            10,
+          ),
         ),
       ],
     );

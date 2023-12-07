@@ -255,8 +255,11 @@ class HomePortait extends StatelessWidget {
           ),
         ),
         SliverToBoxAdapter(
-          child: CustomBestValueItem(
-            card: cardsList[4],
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 15,),
+            child: CustomBestValueItem(
+              card: cardsList[4],
+            ),
           ),
         ),
         SliverToBoxAdapter(

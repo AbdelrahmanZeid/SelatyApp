@@ -44,46 +44,45 @@ class _WelcomeViewState extends State<WelcomeView> {
           height:isPortrait(context)? AppSize.getHeight(
             45,
           ):AppSize.getHeight(
-            35,
+            45,
           ),
           style: TabStyle.fixed,
-          backgroundColor:const Color(0xffF3F3F3,),
+          backgroundColor:Colors.white,
           items: [
             TabItem(
               icon: Icon(
                 Icons.shopping_cart_outlined,
                 color: _selectedPageIndex == 0 ? Colors.green : Colors.black,
               ),
-           title: 'Search',
+           title:isPortrait(context)? 'Search':null,
             ),
             TabItem(
               icon: Icon(
                 Icons.favorite_outline,
                 color: _selectedPageIndex == 1 ? Colors.green : Colors.black,
               ),
-             title: 'favorite',
+             title:isPortrait(context)? 'favorite':null,
             ),
             TabItem(
               icon: Image.asset(
                 Assets.assetsImagesLogo,
-                fit: BoxFit.fitWidth,
-               // color:  Color(0xffF3F3F3,),
+                fit: BoxFit.cover,
               ),
-             title: 'Add',
+             title:isPortrait(context)? 'Add':null,
             ),
             TabItem(
               icon: Icon(
                 Icons.notifications_outlined,
                 color: _selectedPageIndex == 3 ? Colors.green : Colors.black,
               ),
-              title: 'notification',
+              title:isPortrait(context)? 'notification':null,
             ),
             TabItem(
               icon: Icon(
                 Icons.person_outline,
                 color: _selectedPageIndex == 4 ? Colors.green : Colors.black,
               ),
-              title: 'Profile',
+              title:isPortrait(context)? 'Profile':null,
             ),
           ],
           initialActiveIndex: 2,

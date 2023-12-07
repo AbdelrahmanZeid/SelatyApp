@@ -13,13 +13,13 @@ class CategoryLandScape extends StatelessWidget {
       children: [
         SizedBox(
           height: AppSize.getHeight(
-            15,
+            8,
           ),
         ),
         const CategoryViewAppBar(),
         SizedBox(
           height: AppSize.getHeight(
-            15,
+            8,
           ),
         ),
         const CategoryGridView(),

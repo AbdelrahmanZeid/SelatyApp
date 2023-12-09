@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:selaty/core/utils/app_color.dart';
 import 'package:selaty/core/utils/app_size.dart';
 import 'package:selaty/core/utils/app_strings.dart';
 import 'package:selaty/features/welcome/presentation/widgets/category_grid_view.dart';

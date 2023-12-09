@@ -4,6 +4,7 @@ import 'package:selaty/core/utils/app_color.dart';
 import 'package:selaty/core/utils/app_funcation.dart';
 import 'package:selaty/core/utils/app_size.dart';
 import 'package:selaty/features/welcome/presentation/widgets/category_portait.dart';
+import 'package:selaty/features/welcome/presentation/widgets/category_view_body.dart';
 import 'package:selaty/features/welcome/presentation/widgets/categoy_land_scape.dart';
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 import 'package:selaty/features/welcome/presentation/widgets/favorite_view_body.dart';
@@ -51,7 +52,7 @@ class _WelcomeViewState extends State<WelcomeView> {
           items: [
             TabItem(
               icon: Icon(
-                Icons.shopping_cart_outlined,
+                Icons.search,
                 color: _selectedPageIndex == 0 ? Colors.green : Colors.black,
               ),
            title:isPortrait(context)? 'Search':null,
@@ -93,13 +94,4 @@ class _WelcomeViewState extends State<WelcomeView> {
   }
 }
 
-class CategoryViewBody extends StatelessWidget {
-  const CategoryViewBody({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return isPortrait(context)
-        ? const CategoryPortait()
-        : const CategoryLandScape();
-  }
-}

@@ -41,28 +41,6 @@ List<CategoryModel> catList = [
     title: "دواجن",
     color: AppColor.red,
   ),
-  CategoryModel(
-    image: Assets.assetsImagesFruits,
-    bgImage: Assets.assetsImagesFruitTwo,
-    title: "فواكه",
-    color: AppColor.lightBlue,
-  ),
-  CategoryModel(
-    image: Assets.assetsImagesVegetables,
-    bgImage: Assets.assetsImagesFruitTwo,
-    title: "خضروات",
-    color: AppColor.grey,
-  ),
-  CategoryModel(
-    image: Assets.assetsImagesChicken,
-    bgImage: Assets.assetsImagesFruitTwo,
-    title: "دواجن",
-    color: AppColor.yellow,
-  ),
-  CategoryModel(
-    image: Assets.assetsImagesFruits,
-    bgImage: Assets.assetsImagesFruitTwo,
-    title: "فواكه",
-    color: AppColor.lightBlue,
-  ),
+  
+  
 ];

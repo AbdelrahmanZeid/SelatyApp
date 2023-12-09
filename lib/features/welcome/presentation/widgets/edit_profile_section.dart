@@ -46,9 +46,9 @@ class EditProfileSection extends StatelessWidget {
         ),
         const Positioned(
           top: -60,
-          left: 105,
+          left: 115,
           child: CircleAvatar(
-            radius: 56,
+            radius: 50,
           ),
         ),
         Positioned(

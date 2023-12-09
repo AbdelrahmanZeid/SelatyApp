@@ -4,3 +4,4 @@ import 'app.dart';
 main() => runApp(
       const Selaty(),
     );
+    

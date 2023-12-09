@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:selaty/core/utils/app_funcation.dart';
 import 'package:selaty/core/utils/app_size.dart';
-import 'package:selaty/core/utils/app_strings.dart';
 
 class CategoryViewAppBar extends StatelessWidget {
-  const CategoryViewAppBar({super.key});
-
+  const CategoryViewAppBar({super.key, this.title, required this.txtColor});
+  final String? title;
+  final Color txtColor;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -33,18 +33,25 @@ class CategoryViewAppBar extends StatelessWidget {
               ),
               color: Colors.white,
             ),
-            child: const Icon(
-              size: 20,
-              Icons.shopping_bag_outlined,
-              color: Colors.black,
+            child: GestureDetector(
+              onTap: () => navigation(
+                context,
+                "/emptybag",
+              ),
+              child: const Icon(
+                size: 20,
+                Icons.shopping_bag_outlined,
+                color: Colors.black,
+              ),
             ),
           ),
           const Spacer(),
-          const Text(
-            AppStrings.category,
+          Text(
+            title!,
             style: TextStyle(
               fontSize: 18,
               fontWeight: FontWeight.w600,
+              color: txtColor,
             ),
           ),
           const Spacer(),

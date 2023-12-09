@@ -1,4 +1,5 @@
 import 'package:go_router/go_router.dart';
+import 'package:selaty/features/welcome/presentation/views/empty_bag_view.dart';
 import 'package:selaty/features/welcome/presentation/views/welcome_view.dart';
 
 import '../../features/auth/presentation/views/auth_view.dart';
@@ -82,6 +83,12 @@ final GoRouter router = GoRouter(
       path: "/category",
       builder: (context, state) {
         return const WelcomeView();
+      },
+    ),
+    GoRoute(
+      path: "/emptybag",
+      builder: (context, state) {
+        return const EmptyBag();
       },
     ),
   ],

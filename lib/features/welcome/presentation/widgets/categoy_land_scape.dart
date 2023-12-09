@@ -16,7 +16,7 @@ class CategoryLandScape extends StatelessWidget {
             8,
           ),
         ),
-        const CategoryViewAppBar(),
+        const CategoryViewAppBar(txtColor: Colors.black,),
         SizedBox(
           height: AppSize.getHeight(
             8,

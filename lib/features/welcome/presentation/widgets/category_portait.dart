@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:selaty/core/utils/app_color.dart';
 import 'package:selaty/core/utils/app_size.dart';
+import 'package:selaty/core/utils/app_strings.dart';
 import 'package:selaty/features/welcome/presentation/widgets/category_grid_view.dart';
 import 'package:selaty/features/welcome/presentation/widgets/category_view_app_bar.dart';
 
@@ -15,7 +17,9 @@ class CategoryPortait extends StatelessWidget {
             15,
           ),
         ),
-        const CategoryViewAppBar(),
+        const CategoryViewAppBar(
+          title: AppStrings.category, txtColor: Colors.black,
+        ),
         SizedBox(
           height: AppSize.getHeight(
             15,

@@ -20,7 +20,10 @@ class ProfileViewBody extends StatelessWidget {
           addSpace(
             10,
           ),
-          const CategoryViewAppBar(),
+          const CategoryViewAppBar(
+            txtColor: Colors.black,
+            title: "",
+          ),
           addSpace(
             10,
           ),

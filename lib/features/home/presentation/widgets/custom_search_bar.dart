@@ -15,8 +15,10 @@ class CustomSearchBar extends StatelessWidget {
           width: AppSize.getWidth(
             300,
           ),
-          height: AppSize.getHeight(
+          height:isPortrait(context)? AppSize.getHeight(
             45,
+          ):AppSize.getHeight(
+            35,
           ),
           child: const TextField(
             decoration: InputDecoration(
@@ -45,8 +47,10 @@ class CustomSearchBar extends StatelessWidget {
           ):AppSize.getWidth(
             22,
           ),
-          height: AppSize.getHeight(
-            42,
+          height:isPortrait(context)? AppSize.getHeight(
+            45,
+          ):AppSize.getHeight(
+            35,
           ),
           decoration: BoxDecoration(
             color: AppColor.onBoardingOneColor,

@@ -49,7 +49,7 @@ class CategoryViewAppBar extends StatelessWidget {
           Text(
             title!,
             style: TextStyle(
-              fontSize: 18,
+              fontSize:isPortrait(context)? 18:22,
               fontWeight: FontWeight.w600,
               color: txtColor,
             ),

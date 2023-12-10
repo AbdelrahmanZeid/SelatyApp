@@ -11,56 +11,80 @@ class SearchViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Stack(
-          children: [
-            Container(
-              height: AppSize.getHeight(
-                150,
-              ),
-              width: double.infinity,
-              decoration: const BoxDecoration(
-                color: Color(
-                  0xff5DB15C,
-                ),
-              ),
-            ),
-            Column(
-              children: [
-                addSpace(
-                  20,
-                ),
-                const CategoryViewAppBar(
-                  title: " الفاكهه",
-                  txtColor: Colors.white,
-                ),
-                addSpace(
-                  60,
-                ),
-                CircleAvatar(
-                  radius: 45,
-                  backgroundColor: Colors.white,
-                  child: CircleAvatar(
-                    radius: 40,
-                    child: Image.asset(
-                      Assets.assetsImagesFruits,
-                    ),
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+          Stack(
+            children: [
+              Container(
+                height: isPortrait(context)
+                    ? AppSize.getHeight(
+                        150,
+                      )
+                    : AppSize.getHeight(
+                        80,
+                      ),
+                width: double.infinity,
+                decoration: const BoxDecoration(
+                  color: Color(
+                    0xff5DB15C,
                   ),
                 ),
-              ],
-            ),
-          ],
-        ),
-        addSpace(
-          18,
-        ),
-        const CustomSearchBar(),
-        addSpace(
-          18,
-        ),
-        const CategoryGridView(),
-      ],
+              ),
+              Column(
+                children: [
+                  addSpace(
+                    20,
+                  ),
+                  const CategoryViewAppBar(
+                    title: " الفاكهه",
+                    txtColor: Colors.white,
+                  ),
+                  // addSpace(
+                  //   60,
+                  // ),
+                  isPortrait(context)
+                      ? CircleAvatar(
+                          radius: 45,
+                          backgroundColor: Colors.white,
+                          child: CircleAvatar(
+                            radius: 40,
+                            child: Image.asset(
+                              Assets.assetsImagesFruits,
+                            ),
+                          ),
+                        )
+                      : CircleAvatar(
+                        radius: 40,
+                        backgroundColor: Colors.white,
+                        child: Positioned(
+                            top: -30,
+                          child: CircleAvatar(
+                            radius: 35,
+                            child: Image.asset(
+                              Assets.assetsImagesFruits,
+                            ),
+                          ),
+                        ),
+                      ),
+                ],
+              ),
+            ],
+          ),
+         isPortrait(context)? addSpace(
+            18,
+          ): addSpace(
+            12,
+          ),
+          const CustomSearchBar(),
+           isPortrait(context)? addSpace(
+            18,
+          ): addSpace(
+            12,
+          ),
+          const CategoryGridView(),
+        ],
+      ),
     );
   }
 }

@@ -15,65 +15,72 @@ class ProfileViewBody extends StatelessWidget {
       padding: const EdgeInsets.symmetric(
         horizontal: 25,
       ),
-      child: Column(
-        children: [
-          addSpace(
-            10,
-          ),
-          const CategoryViewAppBar(
-            txtColor: Colors.black,
-            title: "",
-          ),
-          addSpace(
-            10,
-          ),
-          const EditProfileSection(),
-          addSpace(
-            15,
-          ),
-          const EditProfileGridView(),
-          addSpace(
-            12,
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(
-              horizontal: 8,
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            addSpace(
+              10,
             ),
-            child: Row(
-              children: [
-                Container(
-                  decoration: BoxDecoration(
-                    color: AppColor.red,
-                    borderRadius: BorderRadius.circular(
-                      30,
+            const CategoryViewAppBar(
+              txtColor: Colors.black,
+              title: "",
+            ),
+            addSpace(
+              10,
+            ),
+            const EditProfileSection(),
+            addSpace(
+              15,
+            ),
+            const EditProfileGridView(),
+            addSpace(
+              12,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                horizontal: 8,
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Container(
+                    decoration: BoxDecoration(
+                      color: AppColor.red,
+                      borderRadius: BorderRadius.circular(
+                        30,
+                      ),
+                    ),
+                    height: AppSize.getHeight(
+                      110,
+                    ),
+                   width:isPortrait(context)? AppSize.getWidth(
+                      140,
+                    ):AppSize.getWidth(
+                    70,
                     ),
                   ),
-                  height: AppSize.getHeight(
-                    120,
-                  ),
-                  width: AppSize.getWidth(
-                    140,
-                  ),
-                ),
-                const Spacer(),
-                Container(
-                  decoration: BoxDecoration(
-                    color: AppColor.lightGreen,
-                    borderRadius: BorderRadius.circular(
-                      30,
+                // const Spacer(),
+                  Container(
+                    decoration: BoxDecoration(
+                      color: AppColor.lightGreen,
+                      borderRadius: BorderRadius.circular(
+                        30,
+                      ),
+                    ),
+                    height: AppSize.getHeight(
+                      110,
+                    ),
+                    width:isPortrait(context)? AppSize.getWidth(
+                      140,
+                    ):AppSize.getWidth(
+                    80,
                     ),
                   ),
-                  height: AppSize.getHeight(
-                    120,
-                  ),
-                  width: AppSize.getWidth(
-                    150,
-                  ),
-                ),
-              ],
+                ],
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
@@ -85,8 +92,8 @@ class EditProfileGridView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(
-        horizontal: 10,
+      padding:  EdgeInsets.symmetric(
+        horizontal:isPortrait(context)? 10:140,
       ),
       child: DynamicHeightGridView(
         mainAxisSpacing: 10,
@@ -116,7 +123,9 @@ class EditProfileItem extends StatelessWidget {
           30,
         ),
       ),
-      height: AppSize.getHeight(
+      height:isPortrait(context)? AppSize.getHeight(
+        90,
+      ):AppSize.getHeight(
         90,
       ),
     );

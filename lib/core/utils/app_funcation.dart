@@ -19,11 +19,15 @@ void navigationWithReplace(context, String path) {
 }
 
 //home view function
-Widget getLeading(IconData icon) => Container(
-      width: AppSize.getWidth(
+Widget getLeading(IconData icon,context) => Container(
+      width:isPortrait(context)? AppSize.getWidth(
         40,
+      ):AppSize.getWidth(
+        20,
       ),
-      height: AppSize.getHeight(
+      height:isPortrait(context)? AppSize.getHeight(
+        40,
+      ): AppSize.getHeight(
         40,
       ),
       decoration: BoxDecoration(

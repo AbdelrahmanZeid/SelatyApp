@@ -4,7 +4,6 @@ import 'package:selaty/core/utils/app_assets.dart';
 import 'package:selaty/core/utils/app_color.dart';
 import 'package:selaty/core/utils/app_funcation.dart';
 import 'package:selaty/core/utils/app_size.dart';
-import 'package:selaty/features/welcome/presentation/widgets/category_view_body.dart';
 import 'package:selaty/features/welcome/presentation/widgets/empty_bag_view_body.dart';
 import 'package:selaty/features/welcome/presentation/widgets/favorite_view_body.dart';
 import 'package:selaty/features/welcome/presentation/widgets/notification_view_body.dart';

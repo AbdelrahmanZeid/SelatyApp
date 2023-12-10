@@ -16,11 +16,15 @@ class CustomCheckPhoneNumberAppBar extends StatelessWidget {
             context,
           ),
           child: Container(
-            width: AppSize.getWidth(
+            width:isPortrait(context)? AppSize.getWidth(
               40,
+            ):AppSize.getWidth(
+             20,
             ),
-            height: AppSize.getHeight(
+            height:isPortrait(context)? AppSize.getHeight(
               40,
+            ): AppSize.getHeight(
+              35,
             ),
             decoration: BoxDecoration(
               color: Colors.white,
@@ -39,7 +43,7 @@ class CustomCheckPhoneNumberAppBar extends StatelessWidget {
         ),
 
         const Spacer(
-          flex: 3,
+          flex: 4,
         ),
         Align(
           alignment: Alignment.centerRight,
@@ -58,24 +62,20 @@ class CustomCheckPhoneNumberAppBar extends StatelessWidget {
             ),
           ),
         ),
-        // SizedBox(
-        //   width: AppSize.getWidth(
-        //  30,
-        //   ),
-        // ),
-        Spacer(),
+       
+     const   Spacer(),
         Container(
-          // padding: const EdgeInsets.only(
-          //   left: 8,
-          // ),
-          width: AppSize.getWidth(
-            40,
-          ),
-          height: AppSize.getHeight(
-            40,
-          ),
+            width:isPortrait(context)? AppSize.getWidth(
+              40,
+            ):AppSize.getWidth(
+             20,
+            ),
+            height:isPortrait(context)? AppSize.getHeight(
+              40,
+            ): AppSize.getHeight(
+              35,
+            ),
           decoration: BoxDecoration(
-            // border: Border.all(),
             color: Colors.white,
             borderRadius: BorderRadius.circular(
               10,

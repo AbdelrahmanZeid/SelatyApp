@@ -32,6 +32,7 @@ class HomePortait extends StatelessWidget {
               const Spacer(),
               getLeading(
                 Icons.shopping_bag_outlined,
+                context
               ),
               const Spacer(
                 flex: 6,

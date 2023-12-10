@@ -18,8 +18,10 @@ class EditProfileSection extends StatelessWidget {
             ),
             color: AppColor.lightGreen,
           ),
-          width: AppSize.getWidth(
+          width:isPortrait(context)? AppSize.getWidth(
             300,
+          ): AppSize.getWidth(
+           210,
           ),
           height:isPortrait(context)? AppSize.getHeight(
             110,
@@ -50,24 +52,24 @@ class EditProfileSection extends StatelessWidget {
         ),
         Positioned(
           top:isPortrait(context)? -60:-65,
-          left:isPortrait(context)? 115:280,
+          left:isPortrait(context)? 115:200,
           child: CircleAvatar(
             radius:isPortrait(context)? 50:45,
           ),
         ),
         Positioned(
-          left:isPortrait(context)? 178:325,
-          top:isPortrait(context)? 20:8,
+          left:isPortrait(context)? 178:255,
+          top:isPortrait(context)? 20:3,
           child: Container(
             width:isPortrait(context)? AppSize.getWidth(
               35,
             ):AppSize.getWidth(
-              18,
+              15,
             ),
             height:isPortrait(context)? AppSize.getHeight(
               35,
             ): AppSize.getHeight(
-              40,
+              35,
             ),
             decoration: BoxDecoration(
               color: AppColor.red,

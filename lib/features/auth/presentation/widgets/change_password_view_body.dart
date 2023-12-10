@@ -85,7 +85,7 @@ class ChangePasswordViewBody extends StatelessWidget {
             CustomButton(
               color: Colors.greenAccent,
               text: AppStrings.change,
-              onPressed: () => navigation(
+              onPressed: () => navigationWithReplace(
                 context,
                 "/changepasssuccess",
               ),

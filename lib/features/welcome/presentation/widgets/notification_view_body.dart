@@ -5,6 +5,10 @@ class NotificationViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Text("data      ;,l;l");
+    return const Center(
+      child: Text(
+        "Notifacation",
+      ),
+    );
   }
 }

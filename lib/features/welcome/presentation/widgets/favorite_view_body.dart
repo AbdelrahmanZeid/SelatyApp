@@ -5,6 +5,10 @@ class FavoriteViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Text("d");
+    return const Center(
+      child: Text(
+        "Favorite",
+      ),
+    );
   }
 }

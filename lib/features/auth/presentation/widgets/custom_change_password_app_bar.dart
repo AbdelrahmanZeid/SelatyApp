@@ -17,12 +17,20 @@ class CustomChangePasswordAppBar extends StatelessWidget {
             context,
           ),
           child: Container(
-            width: AppSize.getWidth(
-              40,
-            ),
-            height: AppSize.getHeight(
-              40,
-            ),
+            width: isPortrait(context)
+                ? AppSize.getWidth(
+                    40,
+                  )
+                : AppSize.getWidth(
+                    20,
+                  ),
+            height: isPortrait(context)
+                ? AppSize.getHeight(
+                    40,
+                  )
+                : AppSize.getHeight(
+                    35,
+                  ),
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(
@@ -60,12 +68,20 @@ class CustomChangePasswordAppBar extends StatelessWidget {
         ),
         const Spacer(),
         Container(
-          width: AppSize.getWidth(
-            40,
-          ),
-          height: AppSize.getHeight(
-            40,
-          ),
+          width: isPortrait(context)
+              ? AppSize.getWidth(
+                  40,
+                )
+              : AppSize.getWidth(
+                  20,
+                ),
+          height: isPortrait(context)
+              ? AppSize.getHeight(
+                  40,
+                )
+              : AppSize.getHeight(
+                  35,
+                ),
           decoration: BoxDecoration(
             // border: Border.all(),
             color: Colors.white,

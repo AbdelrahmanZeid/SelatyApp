@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
 
@@ -13,20 +12,22 @@ class CheckPhoneNumberViewBody extends StatefulWidget {
   const CheckPhoneNumberViewBody({super.key});
 
   @override
-  State<CheckPhoneNumberViewBody> createState() => _CheckPhoneNumberViewBodyState();
+  State<CheckPhoneNumberViewBody> createState() =>
+      _CheckPhoneNumberViewBodyState();
 }
 
 class _CheckPhoneNumberViewBodyState extends State<CheckPhoneNumberViewBody> {
   @override
-
-final controller=TextEditingController();
+  final controller = TextEditingController();
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(
         horizontal: 5,
       ),
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal:5,),
+        padding: const EdgeInsets.symmetric(
+          horizontal: 5,
+        ),
         child: SingleChildScrollView(
           child: Column(
             children: [
@@ -47,13 +48,14 @@ final controller=TextEditingController();
                 AppStrings.weSendCode,
                 textAlign: TextAlign.right,
                 style: TextStyle(
-                
                   color: AppColor.appTextColor,
-                  fontSize:isPortrait(context)? AppSize.getFontSize(
-                    18,
-                  ):AppSize.getFontSize(
-                    14,
-                  ),
+                  fontSize: isPortrait(context)
+                      ? AppSize.getFontSize(
+                          18,
+                        )
+                      : AppSize.getFontSize(
+                          14,
+                        ),
                 ),
               ),
               SizedBox(
@@ -61,23 +63,23 @@ final controller=TextEditingController();
                   40,
                 ),
               ),
-               IntlPhoneField(
-              languageCode: "ar",
-              initialCountryCode: 'EG',
-              disableLengthCheck: true,
-              keyboardType: TextInputType.phone,
-              controller: controller,
-              textAlign: TextAlign.left,
-              dropdownIconPosition: IconPosition.leading,
-              decoration: const InputDecoration(
-                border: UnderlineInputBorder(),
-                suffixIcon: Icon(
-                  Icons.highlight_remove_sharp,
-                  color: Colors.green,
+              IntlPhoneField(
+                languageCode: "ar",
+                initialCountryCode: 'EG',
+                disableLengthCheck: true,
+                keyboardType: TextInputType.phone,
+                controller: controller,
+                textAlign: TextAlign.left,
+                dropdownIconPosition: IconPosition.leading,
+                decoration: const InputDecoration(
+                  border: UnderlineInputBorder(),
+                  suffixIcon: Icon(
+                    Icons.highlight_remove_sharp,
+                    color: Colors.green,
+                  ),
+                  hintTextDirection: TextDirection.rtl,
                 ),
-                hintTextDirection: TextDirection.rtl,
               ),
-            ),
               SizedBox(
                 height: AppSize.getHeight(
                   20,

@@ -1,4 +1,3 @@
-
 import 'package:dynamic_height_grid_view/dynamic_height_grid_view.dart';
 import 'package:flutter/material.dart';
 import 'package:selaty/core/utils/app_funcation.dart';
@@ -10,15 +9,22 @@ class EditProfileGridView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding:  EdgeInsets.symmetric(
-        horizontal:isPortrait(context)? 10:140,
+      padding: EdgeInsets.symmetric(
+        horizontal: isPortrait(
+          context,
+        )
+            ? 10
+            : 140,
       ),
       child: DynamicHeightGridView(
         mainAxisSpacing: 10,
         shrinkWrap: true,
         physics: const NeverScrollableScrollPhysics(),
         builder: (BuildContext context, int index) {
-          return const EditProfileItem();
+          return const EditProfileItem(
+            icon: Icons.production_quantity_limits,
+            text: "welcome",
+          );
         },
         itemCount: 6,
         crossAxisCount: 3,

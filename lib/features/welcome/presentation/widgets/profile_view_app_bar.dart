@@ -1,9 +1,10 @@
+
 import 'package:flutter/material.dart';
 import 'package:selaty/core/utils/app_funcation.dart';
 import 'package:selaty/core/utils/app_size.dart';
 
-class CategoryViewAppBar extends StatelessWidget {
-  const CategoryViewAppBar({super.key, this.title, required this.txtColor});
+class ProfileViewAppBar extends StatelessWidget {
+  const ProfileViewAppBar({super.key, this.title, required this.txtColor});
   final String? title;
   final Color txtColor;
   @override
@@ -54,8 +55,8 @@ class CategoryViewAppBar extends StatelessWidget {
               color: txtColor,
             ),
           ),
-          const Spacer(
-            // flex: 8,
+          Spacer(
+            flex: isPortrait(context) ? 16 : 1,
           ),
           GestureDetector(
             onTap: () => goBack(

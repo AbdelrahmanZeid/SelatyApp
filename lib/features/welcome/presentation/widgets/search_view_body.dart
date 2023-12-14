@@ -40,9 +40,13 @@ class SearchViewBody extends StatelessWidget {
                     title: " الفاكهه",
                     txtColor: Colors.white,
                   ),
-                  // addSpace(
-                  //   60,
-                  // ),
+                  isPortrait(context)
+                      ? addSpace(
+                          55,
+                        )
+                      : addSpace(
+                          0,
+                        ),
                   isPortrait(context)
                       ? CircleAvatar(
                           radius: 45,
@@ -50,38 +54,43 @@ class SearchViewBody extends StatelessWidget {
                           child: CircleAvatar(
                             radius: 40,
                             child: Image.asset(
-                              Assets.assetsImagesFruits,
+                              Assets.assetsImagesChicken,
+                              fit: BoxFit.cover,
                             ),
                           ),
                         )
                       : CircleAvatar(
-                        radius: 40,
-                        backgroundColor: Colors.white,
-                        child: Positioned(
+                          radius: 40,
+                          backgroundColor: Colors.white,
+                          child: Positioned(
                             top: -30,
-                          child: CircleAvatar(
-                            radius: 35,
-                            child: Image.asset(
-                              Assets.assetsImagesFruits,
+                            child: CircleAvatar(
+                              radius: 35,
+                              child: Image.asset(
+                                Assets.assetsImagesFruits,
+                              ),
                             ),
                           ),
                         ),
-                      ),
                 ],
               ),
             ],
           ),
-         isPortrait(context)? addSpace(
-            18,
-          ): addSpace(
-            12,
-          ),
+          isPortrait(context)
+              ? addSpace(
+                  18,
+                )
+              : addSpace(
+                  12,
+                ),
           const CustomSearchBar(),
-           isPortrait(context)? addSpace(
-            18,
-          ): addSpace(
-            12,
-          ),
+          isPortrait(context)
+              ? addSpace(
+                  18,
+                )
+              : addSpace(
+                  12,
+                ),
           const CategoryGridView(),
         ],
       ),

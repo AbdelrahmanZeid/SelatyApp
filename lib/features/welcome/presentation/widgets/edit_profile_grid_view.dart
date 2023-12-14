@@ -20,7 +20,7 @@ class EditProfileGridView extends StatelessWidget {
         builder: (BuildContext context, int index) {
           return const EditProfileItem();
         },
-        itemCount: 9,
+        itemCount: 6,
         crossAxisCount: 3,
       ),
     );

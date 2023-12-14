@@ -21,7 +21,7 @@ class CustomButton extends StatelessWidget {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
         primary: color,
-        // backgroundColor: color,
+         backgroundColor: color,
         minimumSize: isPortrait(context)? Size(
           AppSize.getWidth(
             360,

@@ -89,7 +89,7 @@ class Product extends StatelessWidget {
                     ),
                   ),
                   Icon(
-                    Icons.add,
+                    Icons.remove,
                     size: 15,
                   ),
                 ],

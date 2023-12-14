@@ -59,7 +59,7 @@ class CategoryViewItem extends StatelessWidget {
               ),
               Positioned(
                 top: -35,
-                left: 53,
+                left: 55,
                 child: CircleAvatar(
                   backgroundColor: Colors.white,
                   radius: 30,
@@ -129,7 +129,7 @@ class CategoryViewItem extends StatelessWidget {
               ),
               Positioned(
                 top: -20,
-                left: 90,
+                left: 93,
                 child: CircleAvatar(
                   backgroundColor: Colors.white,
                   radius: 22,

@@ -58,8 +58,8 @@ class CategoryItem extends StatelessWidget {
                     ),
                   ),
                   Positioned(
-                    top: -28,
-                    left: 28,
+                    top:isPortrait(context)? -28:-30,
+                    left:isPortrait(context)? 32:25,
                     child: CircleAvatar(
                       backgroundColor: Colors.white,
                       radius: 26,

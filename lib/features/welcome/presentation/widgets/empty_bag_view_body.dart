@@ -35,7 +35,7 @@ class EmptyBagViewBody extends StatelessWidget {
             weight: '1kg',
           ),
           isPortrait(context)?  addSpace(
-            30,
+            25,
           ):addSpace(
             17,
           ),

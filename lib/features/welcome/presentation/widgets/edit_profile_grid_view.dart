@@ -14,7 +14,7 @@ class EditProfileGridView extends StatelessWidget {
           context,
         )
             ? 10
-            : 170,
+            : 190,
       ),
       child: DynamicHeightGridView(
         mainAxisSpacing: 10,

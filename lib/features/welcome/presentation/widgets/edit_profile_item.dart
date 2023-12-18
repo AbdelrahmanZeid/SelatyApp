@@ -13,8 +13,10 @@ class EditProfileItem extends StatelessWidget {
         color: const Color(
           0xffF2F2F2,
         ),
-        borderRadius: BorderRadius.circular(
+        borderRadius:isPortrait(context)? BorderRadius.circular(
           30,
+        ): BorderRadius.circular(
+         20,
         ),
       ),
       height: isPortrait(

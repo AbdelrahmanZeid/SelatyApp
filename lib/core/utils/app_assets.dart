@@ -113,6 +113,10 @@ class Assets {
   /// assets/images/photo_2023-11-29_23-27-35.jpg
   static const String assetsImagesPhoto20231129232735 = "assets/images/photo_2023-11-29_23-27-35.jpg";
 
+  /// Assets for assetsImagesProfile
+  /// assets/images/profile.jpg
+  static const String assetsImagesProfile = "assets/images/profile.jpg";
+
   /// Assets for assetsImagesSplash
   /// assets/images/splash.jpg
   static const String assetsImagesSplash = "assets/images/splash.jpg";

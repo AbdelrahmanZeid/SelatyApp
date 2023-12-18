@@ -19,14 +19,14 @@ class ProfileViewBody extends StatelessWidget {
         child: Column(
           children: [
             addSpace(
-             30,
+              30,
             ),
             const ProfileViewAppBar(
               txtColor: Colors.black,
               title: "",
             ),
             addSpace(
-              5,
+              25,
             ),
             const EditProfileSection(),
             addSpace(
@@ -45,18 +45,24 @@ class ProfileViewBody extends StatelessWidget {
                 children: [
                   Container(
                     decoration: BoxDecoration(
-                      color:const Color(
+                      color: const Color(
                         0xffDD434F,
                       ),
-                      borderRadius: BorderRadius.circular(
-                        30,
-                      ),
+                      borderRadius: isPortrait(context)
+                          ? BorderRadius.circular(
+                              30,
+                            )
+                          : BorderRadius.circular(
+                              20,
+                            ),
                     ),
-                    height:isPortrait(context)? AppSize.getHeight(
-                      110,
-                    ):AppSize.getHeight(
-                      90,
-                    ),
+                    height: isPortrait(context)
+                        ? AppSize.getHeight(
+                            110,
+                          )
+                        : AppSize.getHeight(
+                            75,
+                          ),
                     width: isPortrait(
                       context,
                     )
@@ -64,7 +70,7 @@ class ProfileViewBody extends StatelessWidget {
                             140,
                           )
                         : AppSize.getWidth(
-                            60,
+                            40,
                           ),
                     child: Column(
                       children: [
@@ -77,22 +83,26 @@ class ProfileViewBody extends StatelessWidget {
                                   65,
                                 )
                               : AppSize.getWidth(
-                                 25,
+                                  20,
                                 ),
-                          height:isPortrait(context)? AppSize.getHeight(
-                            60,
-                          ):AppSize.getHeight(
-                            45,
-                          ),
+                          height: isPortrait(context)
+                              ? AppSize.getHeight(
+                                  60,
+                                )
+                              : AppSize.getHeight(
+                                  40,
+                                ),
                           decoration: BoxDecoration(
                             color: const Color(
                               0xffF16C75,
                             ),
-                            borderRadius:isPortrait(context)? BorderRadius.circular(
-                              30,
-                            ):BorderRadius.circular(
-                              20,
-                            ),
+                            borderRadius: isPortrait(context)
+                                ? BorderRadius.circular(
+                                    30,
+                                  )
+                                : BorderRadius.circular(
+                                    10,
+                                  ),
                           ),
                           child: const Icon(
                             Icons.logout,
@@ -100,10 +110,13 @@ class ProfileViewBody extends StatelessWidget {
                           ),
                         ),
                         const Spacer(),
-                        const Text(
+                        Text(
                           "تسجيل الخروج",
                           style: TextStyle(
                             color: Colors.white,
+                            fontSize: AppSize.getFontSize(
+                              5,
+                            ),
                           ),
                         ),
                         const Spacer(),
@@ -113,15 +126,21 @@ class ProfileViewBody extends StatelessWidget {
                   Container(
                     decoration: BoxDecoration(
                       color: AppColor.lightGreen,
-                      borderRadius: BorderRadius.circular(
-                        30,
-                      ),
+                      borderRadius: isPortrait(context)
+                          ? BorderRadius.circular(
+                              30,
+                            )
+                          : BorderRadius.circular(
+                              20,
+                            ),
                     ),
-                    height:isPortrait(context)? AppSize.getHeight(
-                      110,
-                    ):AppSize.getHeight(
-                      90,
-                    ),
+                     height: isPortrait(context)
+                        ? AppSize.getHeight(
+                            110,
+                          )
+                        : AppSize.getHeight(
+                            75,
+                          ),
                     width: isPortrait(
                       context,
                     )
@@ -129,7 +148,7 @@ class ProfileViewBody extends StatelessWidget {
                             140,
                           )
                         : AppSize.getWidth(
-                            60,
+                            40,
                           ),
                     child: Column(
                       children: [
@@ -142,22 +161,26 @@ class ProfileViewBody extends StatelessWidget {
                                   65,
                                 )
                               : AppSize.getWidth(
-                                 25,
+                                  20,
                                 ),
-                          height:isPortrait(context)? AppSize.getHeight(
-                            60,
-                          ):AppSize.getHeight(
-                            45,
-                          ),
+                          height: isPortrait(context)
+                              ? AppSize.getHeight(
+                                  60,
+                                )
+                              : AppSize.getHeight(
+                                  40,
+                                ),
                           decoration: BoxDecoration(
                             color: const Color(
                               0xff60D5A1,
                             ),
-                            borderRadius:isPortrait(context)? BorderRadius.circular(
-                              30,
-                            ):BorderRadius.circular(
-                              20,
-                            ),
+                            borderRadius: isPortrait(context)
+                                ? BorderRadius.circular(
+                                    30,
+                                  )
+                                : BorderRadius.circular(
+                                    10,
+                                  ),
                           ),
                           child: const Icon(
                             Icons.call,

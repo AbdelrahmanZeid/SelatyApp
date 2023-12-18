@@ -34,7 +34,7 @@ class SearchViewBody extends StatelessWidget {
               Column(
                 children: [
                   addSpace(
-                    20,
+                    10,
                   ),
                   const CategoryViewAppBar(
                     title: " الفاكهه",
@@ -60,12 +60,12 @@ class SearchViewBody extends StatelessWidget {
                           ),
                         )
                       : CircleAvatar(
-                          radius: 40,
+                          radius: 35,
                           backgroundColor: Colors.white,
                           child: Positioned(
                             top: -30,
                             child: CircleAvatar(
-                              radius: 35,
+                              radius: 30,
                               child: Image.asset(
                                 Assets.assetsImagesFruits,
                               ),
@@ -81,7 +81,7 @@ class SearchViewBody extends StatelessWidget {
                   18,
                 )
               : addSpace(
-                  12,
+                  8,
                 ),
           const CustomSearchBar(),
           isPortrait(context)
@@ -89,7 +89,7 @@ class SearchViewBody extends StatelessWidget {
                   18,
                 )
               : addSpace(
-                  12,
+                  5,
                 ),
           const CategoryGridView(),
         ],

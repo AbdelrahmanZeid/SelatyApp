@@ -13,7 +13,7 @@ class CategoryLandScape extends StatelessWidget {
       children: [
         SizedBox(
           height: AppSize.getHeight(
-            8,
+           10,
           ),
         ),
         const CategoryViewAppBar(txtColor: Colors.black,title: "التصنيفات",),

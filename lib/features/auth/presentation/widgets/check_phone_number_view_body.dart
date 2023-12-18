@@ -54,13 +54,13 @@ class _CheckPhoneNumberViewBodyState extends State<CheckPhoneNumberViewBody> {
                           18,
                         )
                       : AppSize.getFontSize(
-                          14,
+                          12,
                         ),
                 ),
               ),
               SizedBox(
                 height: AppSize.getHeight(
-                  40,
+                  20,
                 ),
               ),
               IntlPhoneField(
@@ -82,7 +82,7 @@ class _CheckPhoneNumberViewBodyState extends State<CheckPhoneNumberViewBody> {
               ),
               SizedBox(
                 height: AppSize.getHeight(
-                  20,
+                  10,
                 ),
               ),
               CustomButton(

@@ -51,7 +51,7 @@ class CustomButton extends StatelessWidget {
           fontSize:isPortrait(context)? AppSize.getFontSize(
             22,
           ):AppSize.getFontSize(
-            16,
+            10,
           ),
         ),
       ),

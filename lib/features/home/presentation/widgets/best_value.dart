@@ -14,7 +14,7 @@ class BestValue extends StatelessWidget {
       height:isPortrait(context)? AppSize.getHeight(
         150,
       ):AppSize.getHeight(
-        170,
+        160,
       ),
       child: Swiper(
         autoplay: true,

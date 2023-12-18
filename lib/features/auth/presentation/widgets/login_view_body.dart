@@ -16,14 +16,14 @@ class LoginViewBody extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(
         horizontal: 15,
-        vertical: 10,
+     
       ),
       child: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
             const SizedBox(
-              height: 10,
+              height:5,
             ),
             const CustomAppBar(),
           isPortrait(context)?  const  SizedBox(
@@ -38,7 +38,7 @@ class LoginViewBody extends StatelessWidget {
                   300,
                 ),
                 height: AppSize.getHeight(
-                  200,
+                  180,
                 ),
               ),
             ):   Center(
@@ -48,7 +48,7 @@ class LoginViewBody extends StatelessWidget {
                   200,
                 ),
                 height: AppSize.getHeight(
-                  100,
+                  80,
                 ),
               ),
             ),
@@ -64,7 +64,7 @@ class LoginViewBody extends StatelessWidget {
               ),
             ),
             const SizedBox(
-              height: 15,
+              height: 10,
             ),
             CustomTextField(
               lable: AppStrings.password,
@@ -89,7 +89,7 @@ class LoginViewBody extends StatelessWidget {
               ),
             ),
             const SizedBox(
-              height: 22,
+              height: 5,
             ),
             CustomButton(
               color: AppColor.btnColor1,
@@ -104,7 +104,7 @@ class LoginViewBody extends StatelessWidget {
             ),
          isPortrait(context)?   SizedBox(
               height: AppSize.getHeight(
-                75,
+                140,
               ),
             ): SizedBox(
               height: AppSize.getHeight(
@@ -120,7 +120,7 @@ class LoginViewBody extends StatelessWidget {
                     fontSize:isPortrait(context)? AppSize.getFontSize(
                       15,
                     ):AppSize.getFontSize(
-                      10,
+                      8,
                     ),
                   ),
                 ),
@@ -130,7 +130,7 @@ class LoginViewBody extends StatelessWidget {
                     fontSize:isPortrait(context)? AppSize.getFontSize(
                       15,
                     ): AppSize.getFontSize(
-                      10,
+                      8,
                     ),
                   ),
                 ),

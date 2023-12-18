@@ -13,7 +13,7 @@ class CustomBestValueItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-       height: AppSize.getHeight(180,),
+       height:isPortrait(context)? AppSize.getHeight(180,): AppSize.getHeight(150,),
       child: ClipRRect(
         borderRadius: BorderRadius.circular(
           15,

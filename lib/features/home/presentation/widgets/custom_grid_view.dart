@@ -14,9 +14,9 @@ class CustomGridViewWidget extends StatelessWidget {
       height:isPortrait(context)? AppSize.getHeight(
         460,
       ): AppSize.getHeight(
-        478,
+       260,
       ),
-      width: double.infinity,
+      width:isPortrait(context)? double.infinity:500,
       child: Padding(
         padding: const EdgeInsets.symmetric(
           horizontal: 4,
@@ -30,8 +30,8 @@ class CustomGridViewWidget extends StatelessWidget {
               bestSellModel: bestSellList[index],
             );
           },
-          itemCount: 4,
-          crossAxisCount: 2,
+          itemCount: 3,
+          crossAxisCount:isPortrait(context)? 2:3,
         ),
       ),
     );

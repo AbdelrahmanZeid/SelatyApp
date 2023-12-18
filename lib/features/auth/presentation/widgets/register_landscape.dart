@@ -19,28 +19,28 @@ class RegisterLandScape extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(
         horizontal: 15,
-        vertical: 10,
+       
       ),
       child: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
             const SizedBox(
-              height: 10,
+              height: 5,
             ),
             const CustomAppBar(),
             const SizedBox(
-              height: 20,
+              height: 3,
             ),
             const Text(
               AppStrings.newAccount,
               style: TextStyle(
-                fontSize: 28,
+                fontSize: 25,
                 color: AppColor.appTextColor2
               ),
             ),
             const SizedBox(
-              height: 5,
+              height: 3,
             ),
             const Text(
               AppStrings.enterYourData,
@@ -50,14 +50,14 @@ class RegisterLandScape extends StatelessWidget {
               ),
             ),
             const SizedBox(
-              height: 10,
+              height: 3,
             ),
             CustomTextField(
               lable: AppStrings.name,
               obscureText: false,
             ),
             const SizedBox(
-              height: 15,
+              height: 5,
             ),
             CustomTextField(
               lable: AppStrings.emailAddress,
@@ -71,7 +71,7 @@ class RegisterLandScape extends StatelessWidget {
               ),
             ),
             const SizedBox(
-              height: 15,
+              height: 5,
             ),
             CustomTextField(
               lable: AppStrings.password,
@@ -84,7 +84,7 @@ class RegisterLandScape extends StatelessWidget {
               ),
             ),
             const SizedBox(
-              height: 30,
+              height: 10,
             ),
             CustomButton(
               color: AppColor.btnColor1,
@@ -92,7 +92,7 @@ class RegisterLandScape extends StatelessWidget {
               onPressed: () {},
             ),
             const SizedBox(
-              height:20,
+              height:10,
             ),
             Center(
               child: Text(
@@ -100,7 +100,7 @@ class RegisterLandScape extends StatelessWidget {
                 style:isPortrait(context)? const TextStyle(
                   fontSize: 18,
                 ):const TextStyle(
-                  fontSize: 22,
+                  fontSize: 18,
                 ),
               ),
             ),
@@ -113,7 +113,7 @@ class RegisterLandScape extends StatelessWidget {
                     95,
                   ),
                   height: AppSize.getHeight(
-                    60,
+                    45,
                   ),
                 ),
                 Spacer(),
@@ -123,7 +123,7 @@ class RegisterLandScape extends StatelessWidget {
                     95,
                   ),
                   height: AppSize.getHeight(
-                    60,
+                    45,
                   ),
                 ),
               ],
@@ -145,7 +145,7 @@ class RegisterLandScape extends StatelessWidget {
                     AppStrings.loginBtnName,
                     style: TextStyle(
                       fontSize: AppSize.getFontSize(
-                        10,
+                       8,
                       ),
                     ),
                   ),
@@ -155,7 +155,7 @@ class RegisterLandScape extends StatelessWidget {
                   AppStrings.alreadyHaveAccount,
                   style: TextStyle(
                     fontSize: AppSize.getFontSize(
-                      10,
+                      8,
                     ),
                   ),
                 ),

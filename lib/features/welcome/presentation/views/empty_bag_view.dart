@@ -45,7 +45,7 @@ class _EmptyBagState extends State<EmptyBag> {
                   45,
                 )
               : AppSize.getHeight(
-                 41,
+               48  ,
                 ),
           style: TabStyle.fixed,
           backgroundColor: Colors.white,
@@ -55,35 +55,35 @@ class _EmptyBagState extends State<EmptyBag> {
                 Icons.search,
                 color: _selectedPageIndex == 0 ? Colors.green : Colors.black,
               ),
-              title: isPortrait(context) ? 'Search' : null,
+              title: 'Search'  ,
             ),
             TabItem(
               icon: Icon(
                 Icons.favorite_outline,
                 color: _selectedPageIndex == 1 ? Colors.green : Colors.black,
               ),
-              title: isPortrait(context) ? 'favorite' : null,
+              title: 'favorite' ,
             ),
             TabItem(
               icon: Image.asset(
                 Assets.assetsImagesLogo,
                 fit: BoxFit.cover,
               ),
-              title: isPortrait(context) ? 'Add' : null,
+              title:  'Add' ,
             ),
             TabItem(
               icon: Icon(
                 Icons.notifications_outlined,
                 color: _selectedPageIndex == 3 ? Colors.green : Colors.black,
               ),
-              title: isPortrait(context) ? 'notification' : null,
+              title: 'notification' ,
             ),
             TabItem(
               icon: Icon(
                 Icons.person_outline,
                 color: _selectedPageIndex == 4 ? Colors.green : Colors.black,
               ),
-              title: isPortrait(context) ? 'Profile' : null,
+              title: 'Profile' ,
             ),
           ],
           initialActiveIndex: 2,

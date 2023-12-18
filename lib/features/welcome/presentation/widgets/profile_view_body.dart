@@ -19,22 +19,22 @@ class ProfileViewBody extends StatelessWidget {
         child: Column(
           children: [
             addSpace(
-              10,
+             30,
             ),
             const ProfileViewAppBar(
               txtColor: Colors.black,
               title: "",
             ),
             addSpace(
-              10,
+              5,
             ),
             const EditProfileSection(),
             addSpace(
-              15,
+              10,
             ),
             const EditProfileGridView(),
             addSpace(
-              12,
+              8,
             ),
             Padding(
               padding: const EdgeInsets.symmetric(
@@ -52,8 +52,10 @@ class ProfileViewBody extends StatelessWidget {
                         30,
                       ),
                     ),
-                    height: AppSize.getHeight(
+                    height:isPortrait(context)? AppSize.getHeight(
                       110,
+                    ):AppSize.getHeight(
+                      90,
                     ),
                     width: isPortrait(
                       context,
@@ -62,7 +64,7 @@ class ProfileViewBody extends StatelessWidget {
                             140,
                           )
                         : AppSize.getWidth(
-                            70,
+                            60,
                           ),
                     child: Column(
                       children: [
@@ -75,10 +77,12 @@ class ProfileViewBody extends StatelessWidget {
                                   65,
                                 )
                               : AppSize.getWidth(
-                                 30,
+                                 25,
                                 ),
-                          height: AppSize.getHeight(
+                          height:isPortrait(context)? AppSize.getHeight(
                             60,
+                          ):AppSize.getHeight(
+                            45,
                           ),
                           decoration: BoxDecoration(
                             color: const Color(
@@ -113,31 +117,37 @@ class ProfileViewBody extends StatelessWidget {
                         30,
                       ),
                     ),
-                    height: AppSize.getHeight(
+                    height:isPortrait(context)? AppSize.getHeight(
                       110,
+                    ):AppSize.getHeight(
+                      90,
                     ),
-                    width: isPortrait(context)
+                    width: isPortrait(
+                      context,
+                    )
                         ? AppSize.getWidth(
                             140,
                           )
                         : AppSize.getWidth(
-                            80,
+                            60,
                           ),
                     child: Column(
                       children: [
                         const Spacer(),
                         Container(
-                          width: isPortrait(
+                           width: isPortrait(
                             context,
                           )
                               ? AppSize.getWidth(
                                   65,
                                 )
                               : AppSize.getWidth(
-                                  30,
+                                 25,
                                 ),
-                          height: AppSize.getHeight(
+                          height:isPortrait(context)? AppSize.getHeight(
                             60,
+                          ):AppSize.getHeight(
+                            45,
                           ),
                           decoration: BoxDecoration(
                             color: const Color(

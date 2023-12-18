@@ -57,7 +57,7 @@ class CustomCheckPhoneNumberAppBar extends StatelessWidget {
                       18,
                     )
                   : AppSize.getFontSize(
-                      13,
+                      10,
                     ),
             ),
           ),

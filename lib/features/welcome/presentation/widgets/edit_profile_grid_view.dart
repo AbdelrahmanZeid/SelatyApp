@@ -14,7 +14,7 @@ class EditProfileGridView extends StatelessWidget {
           context,
         )
             ? 10
-            : 140,
+            : 170,
       ),
       child: DynamicHeightGridView(
         mainAxisSpacing: 10,
@@ -26,7 +26,7 @@ class EditProfileGridView extends StatelessWidget {
             text: "welcome",
           );
         },
-        itemCount: 6,
+        itemCount: 3,
         crossAxisCount: 3,
       ),
     );

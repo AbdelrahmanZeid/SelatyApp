@@ -91,7 +91,7 @@ class HomeLandScape extends StatelessWidget {
         SliverToBoxAdapter(
           child: Padding(
             padding: EdgeInsets.symmetric(
-              horizontal: isPortrait(context) ? 25 : 20,
+              horizontal: isPortrait(context) ? 25 :100,
             ),
             child: const BestValue(),
           ),
@@ -185,16 +185,18 @@ class HomeLandScape extends StatelessWidget {
         ),
         SliverToBoxAdapter(
           child: Padding(
-            padding: const EdgeInsets.symmetric(
-              horizontal: 5,
+            padding:  EdgeInsets.symmetric(
+              horizontal:isPortrait(context)? 5:100,
             ),
             child: isPortrait(context)
                 ? CustomBestValueItem(
                     card: cardsList[1],
                   )
                 : SizedBox(
-                    height: AppSize.getHeight(
+                    height:isPortrait(context)? AppSize.getHeight(
                       200,
+                    ): AppSize.getHeight(
+                      220,
                     ),
                     child: CustomBestValueItem(
                       card: cardsList[1],
@@ -283,7 +285,7 @@ class HomeLandScape extends StatelessWidget {
         ),
         SliverToBoxAdapter(
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 15,),
+            padding: const EdgeInsets.symmetric(horizontal: 100,),
             child: CustomBestValueItem(
               card: cardsList[4],
             ),

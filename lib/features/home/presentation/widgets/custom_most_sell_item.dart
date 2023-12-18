@@ -15,12 +15,12 @@ class CustomMostSellItem extends StatelessWidget {
       height:isPortrait(context)? AppSize.getHeight(
         220,
       ): AppSize.getHeight(
-        230,
+        245,
       ),
       width:isPortrait(context)? AppSize.getWidth(
         120,
       ):AppSize.getWidth(
-        100,
+       0,
       ),
       decoration: BoxDecoration(
         color: Colors.white,
@@ -53,8 +53,10 @@ class CustomMostSellItem extends StatelessWidget {
               ),
               const Spacer(),
               Container(
-                width: AppSize.getWidth(
+                width:isPortrait(context)? AppSize.getWidth(
                   30,
+                ):AppSize.getWidth(
+                  20,
                 ),
                 height: AppSize.getHeight(
                   25,
@@ -93,7 +95,7 @@ class CustomMostSellItem extends StatelessWidget {
             height: AppSize.getHeight(
               80,
             ),
-            fit: BoxFit.fill,
+            fit:isPortrait(context)? BoxFit.fill:BoxFit.cover,
           ),
           SizedBox(
             height: AppSize.getHeight(
@@ -106,7 +108,7 @@ class CustomMostSellItem extends StatelessWidget {
               width:isPortrait(context)? AppSize.getWidth(
                 60,
               ):AppSize.getWidth(
-                45,
+                30,
               ),
               height: AppSize.getHeight(
                 18,

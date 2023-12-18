@@ -21,19 +21,19 @@ class EditProfileSection extends StatelessWidget {
           width:isPortrait(context)? AppSize.getWidth(
             300,
           ): AppSize.getWidth(
-           210,
+           200,
           ),
           height:isPortrait(context)? AppSize.getHeight(
             110,
           ):AppSize.getHeight(
-            90,
+            70,
           ),
           child: Column(
             children: [
             isPortrait(context)?  addSpace(
                 65,
               ):addSpace(
-                43,
+               30,
               ),
               const Text(
                 "abdelrahman ibrahem",
@@ -51,15 +51,17 @@ class EditProfileSection extends StatelessWidget {
           ),
         ),
         Positioned(
-          top:isPortrait(context)? -60:-65,
-          left:isPortrait(context)? 115:200,
+          top:isPortrait(context)? -45:-65,
+          left:isPortrait(context)? 115:180,
           child: CircleAvatar(
-            radius:isPortrait(context)? 50:45,
+            radius:isPortrait(context)? 45:45,
+            
           ),
         ),
         Positioned(
-          left:isPortrait(context)? 178:255,
-          top:isPortrait(context)? 20:3,
+          left:isPortrait(context)? 178:225,
+          top:isPortrait(context)? 20:-13,
+        
           child: Container(
             width:isPortrait(context)? AppSize.getWidth(
               35,
@@ -69,7 +71,7 @@ class EditProfileSection extends StatelessWidget {
             height:isPortrait(context)? AppSize.getHeight(
               35,
             ): AppSize.getHeight(
-              35,
+              30,
             ),
             decoration: BoxDecoration(
               color: AppColor.red,

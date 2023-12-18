@@ -39,7 +39,7 @@ class ChangePasswordViewBody extends StatelessWidget {
                 fontSize:isPortrait(context)? AppSize.getFontSize(
                   20,
                 ):AppSize.getFontSize(
-                  14,
+                  12,
                 ),
               ),
             ),
@@ -49,7 +49,7 @@ class ChangePasswordViewBody extends StatelessWidget {
               ),
             ): SizedBox(
               height: AppSize.getHeight(
-                30,
+                25,
               ),
             ),
             CustomCheckPhoneNumberTextField(

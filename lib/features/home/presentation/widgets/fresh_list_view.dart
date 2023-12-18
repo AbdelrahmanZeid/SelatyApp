@@ -13,7 +13,7 @@ class FreshListView extends StatelessWidget {
       height:isPortrait(context)? AppSize.getHeight(
       220,
       ):AppSize.getHeight(
-      250,
+     10,
       ),
       child: ListView.builder(
         scrollDirection: Axis.horizontal,

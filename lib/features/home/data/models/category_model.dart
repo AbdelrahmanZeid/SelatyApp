@@ -35,12 +35,4 @@ List<CategoryModel> catList = [
     title: "خضروات",
     color: AppColor.yellow,
   ),
-  CategoryModel(
-    image: Assets.assetsImagesChicken,
-    bgImage: Assets.assetsImagesFruitTwo,
-    title: "دواجن",
-    color: AppColor.red,
-  ),
-  
-  
 ];

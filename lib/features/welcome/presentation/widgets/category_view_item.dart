@@ -14,7 +14,7 @@ class CategoryViewItem extends StatelessWidget {
       height:isPortrait(context)? AppSize.getHeight(
         120,
       ): AppSize.getHeight(
-        70,
+        125,
       ),
       decoration: BoxDecoration(
         color: Colors.white,
@@ -51,8 +51,10 @@ class CategoryViewItem extends StatelessWidget {
                 child: Image.asset(
                   categoryModel.bgImage,
                   width: double.infinity,
-                  height: AppSize.getHeight(
+                  height:isPortrait(context)? AppSize.getHeight(
                     40,
+                  ):AppSize.getHeight(
+                   20,
                   ),
                   fit: BoxFit.cover,
                 ),
@@ -62,7 +64,7 @@ class CategoryViewItem extends StatelessWidget {
                 left: 55,
                 child: CircleAvatar(
                   backgroundColor: Colors.white,
-                  radius: 30,
+                  radius:isPortrait(context)? 30:35,
                   child: CircleAvatar(
                     backgroundColor: categoryModel.color,
                     radius: 26,
@@ -121,21 +123,23 @@ class CategoryViewItem extends StatelessWidget {
                 child: Image.asset(
                   categoryModel.bgImage,
                   width: double.infinity,
-                  height: AppSize.getHeight(
+                  height:isPortrait(context)? AppSize.getHeight(
                     24,
+                  ):AppSize.getHeight(
+                   45,
                   ),
                   fit: BoxFit.cover,
                 ),
               ),
               Positioned(
-                top: -20,
-                left: 93,
+                top:isPortrait(context)? -20:-25,
+                left:isPortrait(context)? 93:85,
                 child: CircleAvatar(
                   backgroundColor: Colors.white,
-                  radius: 22,
+                  radius:isPortrait(context)? 22:28,
                   child: CircleAvatar(
                     backgroundColor: categoryModel.color,
-                    radius: 20,
+                    radius:isPortrait(context)? 20:25,
                     child: ClipRRect(
                       borderRadius: const BorderRadius.only(
                         bottomLeft: Radius.circular(

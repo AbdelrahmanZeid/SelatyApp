@@ -24,7 +24,7 @@ class EditProfileItem extends StatelessWidget {
               90,
             )
           : AppSize.getHeight(
-              90,
+              75,
             ),
       child: Column(
         children: [

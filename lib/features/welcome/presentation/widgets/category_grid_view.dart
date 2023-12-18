@@ -21,7 +21,7 @@ class CategoryGridView extends StatelessWidget {
             top: 5,
             bottom: 5,
           ):const EdgeInsets.symmetric(
-            horizontal: 18,
+            horizontal: 15,
             vertical: 3,
           ),
           child: CategoryViewItem(

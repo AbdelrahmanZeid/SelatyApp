@@ -114,7 +114,9 @@ class ProfileViewBody extends StatelessWidget {
                           "تسجيل الخروج",
                           style: TextStyle(
                             color: Colors.white,
-                            fontSize: AppSize.getFontSize(
+                            fontSize:isPortrait(context)? AppSize.getFontSize(
+                              15,
+                            ):AppSize.getFontSize(
                               5,
                             ),
                           ),
@@ -188,10 +190,15 @@ class ProfileViewBody extends StatelessWidget {
                           ),
                         ),
                         const Spacer(),
-                        const Text(
+                        Text(
                           "مركز الدعم",
                           style: TextStyle(
                             color: Colors.white,
+                             fontSize:isPortrait(context)? AppSize.getFontSize(
+                              15,
+                            ):AppSize.getFontSize(
+                              5,
+                            ),
                           ),
                         ),
                         const Spacer(),

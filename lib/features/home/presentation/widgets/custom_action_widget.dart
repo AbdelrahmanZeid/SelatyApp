@@ -31,16 +31,16 @@ class CustomActionWidget extends StatelessWidget {
           width:isPortrait(context)? AppSize.getWidth(
             45,
           ): AppSize.getWidth(
-           25,
+           23,
           ),
           height:isPortrait(context)? AppSize.getHeight(
-            45,
+            42,
           ):AppSize.getHeight(
             50,
           ),
           child: ClipRRect(
             borderRadius: BorderRadius.circular(
-              50,
+              60,
             ),
             child: Image.asset(
               Assets.assetsImagesProfile,

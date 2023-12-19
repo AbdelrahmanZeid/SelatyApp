@@ -48,30 +48,42 @@ class SearchViewBody extends StatelessWidget {
                           0,
                         ),
                   isPortrait(context)
-                      ? CircleAvatar(
-                          radius: 45,
-                          backgroundColor: Colors.white,
-                          child: CircleAvatar(
-                            radius: 40,
+                      ? SizedBox(
+                          width: AppSize.getWidth(
+                            78,
+                          ),
+                          height: AppSize.getHeight(
+                            75,
+                          ),
+                          // radius: 40,
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(
+                              50,
+                            ),
                             child: Image.asset(
-                              Assets.assetsImagesChicken,
+                              Assets.assetsImagesApple,
                               fit: BoxFit.cover,
                             ),
                           ),
                         )
-                      : CircleAvatar(
-                          radius: 35,
-                          backgroundColor: Colors.white,
-                          child: Positioned(
-                            top: -30,
-                            child: CircleAvatar(
-                              radius: 30,
-                              child: Image.asset(
-                                Assets.assetsImagesFruits,
-                              ),
+                      : SizedBox(
+                          width: AppSize.getWidth(
+                            28,
+                          ),
+                          height: AppSize.getHeight(
+                            58,
+                          ),
+                          // radius: 40,
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(
+                              70,
+                            ),
+                            child: Image.asset(
+                              Assets.assetsImagesApple,
+                              fit: BoxFit.cover,
                             ),
                           ),
-                        ),
+                        )
                 ],
               ),
             ],

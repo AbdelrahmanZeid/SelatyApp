@@ -62,16 +62,16 @@ class EditProfileSection extends StatelessWidget {
           left: isPortrait(context) ? 115 : 180,
           child: SizedBox(
             width:isPortrait(context)? AppSize.getWidth(
-             100,
+             98,
             ):AppSize.getWidth(
              40,
             ),
             height: AppSize.getHeight(
-            87,
+            91,
             ),
             child: ClipRRect(
               borderRadius: BorderRadius.circular(
-                50,
+                60,
               ),
               child: Image.asset(
                 Assets.assetsImagesProfile,
